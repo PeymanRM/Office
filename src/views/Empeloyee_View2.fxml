@@ -67,17 +67,17 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Eid" layoutX="191.0" layoutY="160.0" prefHeight="61.0" prefWidth="144.0" text="1">
+      <Label fx:id="Lbl_Vid" layoutX="191.0" layoutY="160.0" prefHeight="61.0" prefWidth="144.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Ename" layoutX="680.0" layoutY="159.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_Vname" layoutX="680.0" layoutY="159.0" prefHeight="67.0" prefWidth="289.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Efather" layoutX="1306.0" layoutY="155.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_Vfather" layoutX="1306.0" layoutY="155.0" prefHeight="67.0" prefWidth="289.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
@@ -87,42 +87,42 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Eaddress" layoutX="319.0" layoutY="282.0" prefHeight="67.0" prefWidth="1565.0" text="1">
+      <Label fx:id="Lbl_Vaddress" layoutX="319.0" layoutY="282.0" prefHeight="67.0" prefWidth="1565.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Edegree" layoutX="323.0" layoutY="401.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_Vdegree" layoutX="323.0" layoutY="401.0" prefHeight="67.0" prefWidth="289.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Elandline" layoutX="954.0" layoutY="398.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_Vlandline" layoutX="954.0" layoutY="398.0" prefHeight="67.0" prefWidth="289.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Ephone" layoutX="1526.0" layoutY="404.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_Vphone" layoutX="1526.0" layoutY="404.0" prefHeight="67.0" prefWidth="289.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Edept" layoutX="283.0" layoutY="563.0" prefHeight="61.0" prefWidth="144.0" text="1">
+      <Label fx:id="Lbl_Vdept" layoutX="283.0" layoutY="563.0" prefHeight="61.0" prefWidth="144.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Eposition" layoutX="964.0" layoutY="557.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_Vposition" layoutX="964.0" layoutY="557.0" prefHeight="67.0" prefWidth="289.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Esalary" layoutX="1543.0" layoutY="570.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_Vsalary" layoutX="1543.0" layoutY="570.0" prefHeight="67.0" prefWidth="289.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Button fx:id="btn_Edelete" layoutX="803.0" layoutY="889.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
+      <Button fx:id="btn_Vdelete" layoutX="803.0" layoutY="889.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
          <font>
             <Font size="35.0" />
          </font>
