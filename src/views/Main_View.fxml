@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #9790AE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.css.Main.MainView">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.css.Main.MainView">
    <children>
       <Button fx:id="btn_Empeloyees" layoutX="163.0" layoutY="687.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="411.0" text="Empeloyees">
          <font>
@@ -23,7 +22,7 @@
             <Font name="System Bold" size="45.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="583.0" layoutY="88.0" prefHeight="153.0" prefWidth="449.0" text="Main" textFill="#fff4f4">
+      <Label alignment="CENTER" layoutX="713.0" layoutY="60.0" prefHeight="153.0" prefWidth="449.0" text="Main" textFill="#fff4f4">
          <font>
             <Font size="79.0" />
          </font>
