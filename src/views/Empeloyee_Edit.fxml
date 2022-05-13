@@ -28,7 +28,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField layoutX="320.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_Ename" layoutX="320.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField layoutX="320.0" layoutY="447.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_Eaddress" layoutX="320.0" layoutY="447.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -123,7 +123,7 @@
             <Font size="29.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_Edit" layoutX="1466.0" layoutY="952.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
+      <Button fx:id="btn_Eedit" layoutX="1466.0" layoutY="952.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
             <Font size="35.0" />
          </font>
