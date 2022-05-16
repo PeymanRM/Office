@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DepartmentEdit">
    <children>
       <Label alignment="CENTER" layoutX="686.0" layoutY="34.0" prefHeight="104.0" prefWidth="661.0" text="Department Edit" textFill="#fff9f9">
@@ -14,17 +13,17 @@
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="365.0" layoutY="107.0" text="Dept Id" textFill="WHITE">
+      <Label layoutX="346.0" layoutY="107.0" text="Dept Id" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_EDid" layoutX="357.0" layoutY="171.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_EDid" layoutX="330.0" layoutY="171.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="349.0" layoutY="248.0" text="Dept Name" textFill="WHITE">
+      <Label layoutX="346.0" layoutY="248.0" text="Dept Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
@@ -54,7 +53,7 @@
             <Font size="30.0" />
          </font>
       </TextField>
-      <Label layoutX="352.0" layoutY="539.0" text="Date" textFill="WHITE">
+      <Label layoutX="346.0" layoutY="539.0" text="Date" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
@@ -64,7 +63,7 @@
             <Font size="35.0" />
          </font>
       </TextField>
-      <Label layoutX="974.0" layoutY="550.0" text="Time" textFill="WHITE">
+      <Label layoutX="974.0" layoutY="539.0" text="Time" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>

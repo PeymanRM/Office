@@ -13,22 +13,22 @@
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="377.0" layoutY="99.0" text="Id" textFill="WHITE">
+      <Label layoutX="344.0" layoutY="99.0" text="Id" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Eid" layoutX="347.0" layoutY="161.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_id" layoutX="320.0" layoutY="161.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="339.0" layoutY="238.0" text="Full Name" textFill="WHITE">
+      <Label layoutX="334.0" layoutY="238.0" text="Full Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Ename" layoutX="320.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_name" layoutX="320.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -38,7 +38,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Efather" layoutX="837.0" layoutY="303.0" prefHeight="62.0" prefWidth="515.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_father" layoutX="837.0" layoutY="303.0" prefHeight="62.0" prefWidth="515.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -48,27 +48,27 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Eage" layoutX="1430.0" layoutY="303.0" prefHeight="62.0" prefWidth="149.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_age" layoutX="1430.0" layoutY="303.0" prefHeight="62.0" prefWidth="149.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="336.0" layoutY="381.0" text="Address" textFill="WHITE">
+      <Label layoutX="334.0" layoutY="381.0" text="Address" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Eaddress" layoutX="320.0" layoutY="447.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_address" layoutX="320.0" layoutY="447.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="333.0" layoutY="544.0" text="Degree" textFill="WHITE">
+      <Label layoutX="334.0" layoutY="544.0" text="Degree" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Edegree" layoutX="334.0" layoutY="606.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_degree" layoutX="320.0" layoutY="606.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="30.0" />
          </font>
@@ -78,7 +78,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Elandline" layoutX="872.0" layoutY="606.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_landline" layoutX="872.0" layoutY="606.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="35.0" />
          </font>
@@ -88,17 +88,17 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Ephone" layoutX="1252.0" layoutY="606.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_phone" layoutX="1252.0" layoutY="606.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="334.0" layoutY="689.0" text="Dept Id" textFill="WHITE">
+      <Label layoutX="335.0" layoutY="689.0" text="Dept Id" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Edept" layoutX="334.0" layoutY="752.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_dept" layoutX="320.0" layoutY="752.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -108,7 +108,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Eposition" layoutX="334.0" layoutY="890.0" prefHeight="62.0" prefWidth="449.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_position" layoutX="320.0" layoutY="890.0" prefHeight="62.0" prefWidth="449.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -118,7 +118,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Esalary" layoutX="872.0" layoutY="890.0" prefHeight="62.0" prefWidth="369.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_salary" layoutX="872.0" layoutY="890.0" prefHeight="62.0" prefWidth="369.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>

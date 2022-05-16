@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DepartmentView2">
    <children>
       <Label alignment="CENTER" layoutX="686.0" layoutY="34.0" prefHeight="14.0" prefWidth="666.0" text="Department View" textFill="#fff9f9">
@@ -13,77 +12,77 @@
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="109.0" layoutY="168.0" text="Dept Id" textFill="WHITE">
+      <Label layoutX="109.0" layoutY="168.0" text="Dept Id :" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="455.0" layoutY="169.0" text="Dept Name" textFill="WHITE">
+      <Label layoutX="109.0" layoutY="437.0" text="Dept Name :" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="1031.0" layoutY="178.0" text="Empeloyees Number" textFill="WHITE">
+      <Label layoutX="960.0" layoutY="168.0" text="Empeloyees Number :" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="109.0" layoutY="306.0" text="Dept Duties" textFill="WHITE">
+      <Label layoutX="109.0" layoutY="310.0" text="Dept Duties :" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="109.0" layoutY="421.0" text="Date" textFill="WHITE">
+      <Label layoutX="686.0" layoutY="437.0" text=" Date :" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="1031.0" layoutY="421.0" text="Time" textFill="WHITE">
+      <Label layoutX="1138.0" layoutY="437.0" text="Time :" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_VDid" layoutX="272.0" layoutY="170.0" prefHeight="61.0" prefWidth="144.0" text="1">
+      <Label fx:id="Lbl_id" layoutX="278.0" layoutY="163.0" prefHeight="61.0" prefWidth="144.0" text="123">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_VDname" layoutX="707.0" layoutY="169.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_name" layoutX="352.0" layoutY="428.0" prefHeight="67.0" prefWidth="289.0" text="sssss">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_VDnumber" layoutX="1469.0" layoutY="167.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_number" layoutX="1399.0" layoutY="159.0" prefHeight="67.0" prefWidth="289.0" text="1234">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_VDduties" layoutX="365.0" layoutY="297.0" prefHeight="67.0" prefWidth="1565.0" text="1">
+      <Label fx:id="Lbl_duties" layoutX="352.0" layoutY="301.0" prefHeight="67.0" prefWidth="1565.0" text="1">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_VDdate" layoutX="333.0" layoutY="411.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_date" layoutX="849.0" layoutY="428.0" prefHeight="67.0" prefWidth="289.0" text="1234">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_VDtime" layoutX="1170.0" layoutY="412.0" prefHeight="67.0" prefWidth="289.0" text="1">
+      <Label fx:id="Lbl_time" layoutX="1301.0" layoutY="428.0" prefHeight="67.0" prefWidth="289.0" text="123">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Button fx:id="btn_VDdelete" layoutX="813.0" layoutY="899.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
+      <Button fx:id="btn_delete" layoutX="813.0" layoutY="899.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="btn_VDBack" layoutX="152.0" layoutY="899.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button fx:id="btn_Back" layoutX="152.0" layoutY="899.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="btn_VDedit" layoutX="1490.0" layoutY="899.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Create">
+      <Button fx:id="btn_edit" layoutX="1490.0" layoutY="899.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Create">
          <font>
             <Font size="35.0" />
          </font>
