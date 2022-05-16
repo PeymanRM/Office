@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DocumentEdit">
    <children>
       <Label alignment="CENTER" layoutX="696.0" layoutY="44.0" prefHeight="104.0" prefWidth="661.0" text="Document Edit" textFill="#fff9f9">
@@ -14,32 +13,32 @@
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="375.0" layoutY="117.0" text="Doc Id" textFill="WHITE">
+      <Label layoutX="340.0" layoutY="117.0" text="Doc Id" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_EDCid" layoutX="367.0" layoutY="181.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_id" layoutX="324.0" layoutY="181.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="359.0" layoutY="258.0" text="Doc Name" textFill="WHITE">
+      <Label layoutX="340.0" layoutY="258.0" text="Doc Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_EDCname" layoutX="340.0" layoutY="323.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_name" layoutX="324.0" layoutY="323.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="356.0" layoutY="401.0" text="Doc Subject" textFill="WHITE">
+      <Label layoutX="340.0" layoutY="401.0" text="Doc Subject" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_CDduties" layoutX="340.0" layoutY="467.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_duties" layoutX="324.0" layoutY="467.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -49,27 +48,27 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_EDCsender" layoutX="341.0" layoutY="615.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_sender" layoutX="324.0" layoutY="615.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="30.0" />
          </font>
       </TextField>
-      <Label layoutX="363.0" layoutY="707.0" text="Date" textFill="WHITE">
+      <Label layoutX="340.0" layoutY="705.0" text="Date" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_EDCdate" layoutX="341.0" layoutY="769.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_date" layoutX="324.0" layoutY="768.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="35.0" />
          </font>
       </TextField>
-      <Label layoutX="985.0" layoutY="718.0" text="Time" textFill="WHITE">
+      <Label layoutX="985.0" layoutY="705.0" text="Time" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_EDCtime" layoutX="971.0" layoutY="769.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_time" layoutX="971.0" layoutY="768.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -89,7 +88,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_EDCreciver" layoutX="972.0" layoutY="615.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_reciver" layoutX="972.0" layoutY="615.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="30.0" />
          </font>

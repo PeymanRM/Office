@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DepartmentCreate">
    <children>
       <Label alignment="CENTER" layoutX="676.0" layoutY="24.0" prefHeight="104.0" prefWidth="661.0" text="Department Creat" textFill="#fff9f9">
@@ -14,72 +13,72 @@
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="355.0" layoutY="97.0" text="Dept Id" textFill="WHITE">
+      <Label layoutX="328.0" layoutY="104.0" text="Dept Id" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_CDid" layoutX="347.0" layoutY="161.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_id" layoutX="320.0" layoutY="161.0" prefHeight="57.0" prefWidth="151.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="339.0" layoutY="238.0" text="Dept Name" textFill="WHITE">
+      <Label layoutX="328.0" layoutY="238.0" text="Dept Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_CDname" layoutX="320.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_name" layoutX="320.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="336.0" layoutY="381.0" text="Dept Duties" textFill="WHITE">
+      <Label layoutX="328.0" layoutY="381.0" text="Dept Duties" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_CDduties" layoutX="320.0" layoutY="447.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_duties" layoutX="320.0" layoutY="447.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="938.0" layoutY="238.0" text="Empeloyees Number" textFill="WHITE">
+      <Label layoutX="946.0" layoutY="238.0" text="Empeloyees Number" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_CDnumber" layoutX="939.0" layoutY="300.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_number" layoutX="939.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="30.0" />
          </font>
       </TextField>
-      <Label layoutX="342.0" layoutY="529.0" text="Date" textFill="WHITE">
+      <Label layoutX="328.0" layoutY="529.0" text="Date" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_ClDdate" layoutX="320.0" layoutY="591.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_date" layoutX="320.0" layoutY="591.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="35.0" />
          </font>
       </TextField>
-      <Label layoutX="964.0" layoutY="540.0" text="Time" textFill="WHITE">
+      <Label layoutX="946.0" layoutY="529.0" text="Time" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_CDtime" layoutX="950.0" layoutY="591.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="txt_time" layoutX="939.0" layoutY="593.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_CDcreate" layoutX="1461.0" layoutY="854.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Create">
+      <Button fx:id="btn_create" layoutX="1461.0" layoutY="854.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Create">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="btn_CDback" layoutX="1287.0" layoutY="854.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button fx:id="btn_back" layoutX="1287.0" layoutY="854.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
             <Font size="35.0" />
          </font>
