@@ -16,6 +16,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("Office");
         stage.setResizable(false);
+        //TODO add icon
         stage.show();
     }
 
