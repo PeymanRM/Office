@@ -7,12 +7,12 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DocumentView">
    <children>
-      <TextField fx:id="txt_Search" layoutX="755.0" layoutY="516.0" prefHeight="89.0" prefWidth="377.0" promptText="Search" stylesheets="@css/styles.css">
+      <TextField fx:id="txt_Search" layoutX="71.0" layoutY="200.0" prefHeight="77.0" prefWidth="467.0" promptText="Search" stylesheets="@css/styles.css">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_DCSearch" layoutX="1224.0" layoutY="521.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="148.0" stylesheets="@css/styles.css" text="Search">
+      <Button fx:id="btn_DCSearch" layoutX="638.0" layoutY="200.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="148.0" stylesheets="@css/styles.css" text="Search">
          <font>
             <Font size="35.0" />
          </font>

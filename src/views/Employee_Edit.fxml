@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="txt_Eaddress" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.EmpeloyeeEdit">
    <children>
-      <Label alignment="CENTER" layoutX="676.0" layoutY="24.0" prefHeight="104.0" prefWidth="661.0" text="Empeloyee Edit" textFill="#fff9f9">
+      <Label alignment="CENTER" layoutX="676.0" layoutY="24.0" prefHeight="104.0" prefWidth="661.0" text="Edit Employee" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
