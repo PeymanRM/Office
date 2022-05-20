@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DocumentCreat">
    <children>
-      <Label alignment="CENTER" layoutX="686.0" layoutY="34.0" prefHeight="104.0" prefWidth="661.0" text="Document Creat" textFill="#fff9f9">
+      <Label alignment="CENTER" layoutX="686.0" layoutY="34.0" prefHeight="104.0" prefWidth="661.0" text="Add Document" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
