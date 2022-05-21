@@ -1,24 +1,10 @@
 package models.entities;
 
 public class UserEnti {
-    private String Username;
-    private String Password;
-
-    public String getUsername() {
-        return Username;
-    }
-
-    public UserEnti setUsername(String username) {
-        Username = username;
-        return this;
-    }
-
-    public String getPassword() {
-        return Password;
-    }
-
-    public UserEnti setPassword(String password) {
-        Password = password;
-        return this;
-    }
+    private String username;
+    private String password;
+    public String getUsername() {return username;}
+    public UserEnti setUsername(String username) {this.username = username;return this;}
+    public String getPassword() {return password;}
+    public UserEnti setPassword(String password) {this.password = password;return this;}
 }
