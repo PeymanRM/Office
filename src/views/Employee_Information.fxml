@@ -67,72 +67,72 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_id" alignment="BASELINE_LEFT" depthTest="DISABLE" layoutX="164.0" layoutY="155.0" prefHeight="61.0" prefWidth="144.0" text="132">
+      <Label fx:id="idLabel" alignment="BASELINE_LEFT" depthTest="DISABLE" layoutX="164.0" layoutY="155.0" prefHeight="61.0" prefWidth="144.0" text="132">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_name" layoutX="646.0" layoutY="152.0" prefHeight="67.0" prefWidth="289.0" text="Ali">
+      <Label fx:id="nameLabel" layoutX="646.0" layoutY="152.0" prefHeight="67.0" prefWidth="289.0" text="Ali">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_father" layoutX="1297.0" layoutY="152.0" prefHeight="67.0" prefWidth="289.0" text="Ali">
+      <Label fx:id="fatherNameLabel" layoutX="1297.0" layoutY="152.0" prefHeight="67.0" prefWidth="289.0" text="Ali">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_Eage" layoutX="1739.0" layoutY="152.0" prefHeight="61.0" prefWidth="144.0" text="12">
+      <Label fx:id="ageLabel" layoutX="1739.0" layoutY="152.0" prefHeight="61.0" prefWidth="144.0" text="12">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_address" layoutX="269.0" layoutY="299.0" prefHeight="67.0" prefWidth="1565.0" text="kwmvsckmcdskndcnldnlsdvljnsdvnljdv">
+      <Label fx:id="addressLabel" layoutX="269.0" layoutY="299.0" prefHeight="67.0" prefWidth="1565.0" text="kwmvsckmcdskndcnldnlsdvljnsdvnljdv">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_degree" layoutX="265.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="efpojwefpjw">
+      <Label fx:id="degreeLabel" layoutX="265.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="efpojwefpjw">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_landline" layoutX="886.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="2813289">
+      <Label fx:id="landlineLabel" layoutX="886.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="2813289">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_phone" layoutX="1453.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="09292109">
+      <Label fx:id="phoneNumberLabel" layoutX="1453.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="09292109">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_dept" layoutX="265.0" layoutY="645.0" prefHeight="61.0" prefWidth="144.0" text="12312">
+      <Label fx:id="departmentNameLabel" layoutX="265.0" layoutY="645.0" prefHeight="61.0" prefWidth="144.0" text="12312">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_position" layoutX="877.0" layoutY="640.0" prefHeight="67.0" prefWidth="289.0" text="efweke">
+      <Label fx:id="positionLabel" layoutX="877.0" layoutY="640.0" prefHeight="67.0" prefWidth="289.0" text="efweke">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_salary" layoutX="1453.0" layoutY="640.0" prefHeight="67.0" prefWidth="289.0" text="2938019238">
+      <Label fx:id="salaryLabel" layoutX="1453.0" layoutY="640.0" prefHeight="67.0" prefWidth="289.0" text="2938019238">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Button fx:id="btn_delete" layoutX="627.0" layoutY="876.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
+      <Button layoutX="627.0" layoutY="876.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="btn_Back" layoutX="843.0" layoutY="957.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="843.0" layoutY="957.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="btn_edit" layoutX="1073.0" layoutY="876.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
+      <Button layoutX="1073.0" layoutY="876.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
             <Font size="35.0" />
          </font>

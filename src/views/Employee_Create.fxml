@@ -18,7 +18,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_id" layoutX="310.0" layoutY="151.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageId" layoutX="310.0" layoutY="151.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -28,7 +28,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_name" layoutX="310.0" layoutY="293.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageName" layoutX="310.0" layoutY="293.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -38,7 +38,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_father" layoutX="827.0" layoutY="293.0" prefHeight="62.0" prefWidth="515.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageFatherName" layoutX="827.0" layoutY="293.0" prefHeight="62.0" prefWidth="515.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -48,7 +48,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_age" layoutX="1420.0" layoutY="293.0" prefHeight="62.0" prefWidth="149.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageAge" layoutX="1420.0" layoutY="293.0" prefHeight="62.0" prefWidth="149.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_address" layoutX="310.0" layoutY="437.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageAddress" layoutX="310.0" layoutY="437.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -68,7 +68,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_degree" layoutX="310.0" layoutY="596.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageDegree" layoutX="310.0" layoutY="596.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="30.0" />
          </font>
@@ -78,7 +78,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_landline" layoutX="862.0" layoutY="596.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageLandline" layoutX="862.0" layoutY="596.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="35.0" />
          </font>
@@ -88,7 +88,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_phon" layoutX="1242.0" layoutY="596.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPagePhoneNumber" layoutX="1242.0" layoutY="596.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -98,7 +98,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_dept" layoutX="310.0" layoutY="742.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageDepartmentId" layoutX="310.0" layoutY="742.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -108,7 +108,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_position" layoutX="310.0" layoutY="880.0" prefHeight="62.0" prefWidth="449.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPagePosition" layoutX="310.0" layoutY="880.0" prefHeight="62.0" prefWidth="449.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -118,17 +118,17 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_salary" layoutX="862.0" layoutY="880.0" prefHeight="62.0" prefWidth="369.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addPageSalary" layoutX="862.0" layoutY="880.0" prefHeight="62.0" prefWidth="369.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_Ccreate" layoutX="1456.0" layoutY="942.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Create">
+      <Button layoutX="1456.0" layoutY="942.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Create">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="btn_Cback" layoutX="1282.0" layoutY="942.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="1282.0" layoutY="942.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
             <Font size="35.0" />
          </font>
