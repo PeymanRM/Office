@@ -28,7 +28,7 @@ public class EmployeeRepo
         preparedStatement.setInt(11,employee.getSalary());
         preparedStatement.executeUpdate();
     }
-    public EmployeeEnti getInfo() throws SQLException {
+    public EmployeeEnti getInfo(String id) throws SQLException {
 //        EmployeeEnti employee=new EmployeeEnti();
 //        preparedStatement=connection.prepareStatement("select * from Employee where id=?");
 //        preparedStatement.setString(1,employee.getId());
@@ -48,6 +48,9 @@ public class EmployeeRepo
 //            employee.setSalary(resultSet.getInt("salary"));
 //        }
 //        return employee;
+
+        preparedStatement=connection.prepareStatement("select * from Employee where id=?");
+        preparedStatement.setString(1, id);
 
         ResultSet resultSet = preparedStatement.executeQuery();
         resultSet.next();
