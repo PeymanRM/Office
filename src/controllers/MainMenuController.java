@@ -19,35 +19,39 @@ public class MainMenuController {
 
 
     public void loadAddEmployeePage(ActionEvent event){
-        //TODO
+        renderPage(event, "Employee_Create.fxml");
     }
 
     public void loadAddDepartmentPage(ActionEvent event){
-        //TODO
+        renderPage(event, "Department_Create.fxml");
     }
 
     public void loadAddDocumentPage(ActionEvent event){
-        //TODO
+        renderPage(event, "Document_Create.fxml");
     }
 
     public void loadViewEmployeesPage(ActionEvent event){
-        //TODO
+        renderPage(event, "Employee_View.fxml");
     }
 
     public void loadViewDepartmentsPage(ActionEvent event){
-        //TODO
+        renderPage(event, "Department_View.fxml");
     }
 
     public void loadViewDocumentsPage(ActionEvent event){
-        //TODO
+        renderPage(event, "Document_View.fxml");
     }
 
-    private void renderPage(Event event, String fxmlFileName) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../views/" + fxmlFileName));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    private void renderPage(Event event, String fxmlFileName) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("../views/" + fxmlFileName));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e){
+            System.out.println("renderPage error: " + e.getMessage());
+        }
     }
 
     public void logout(ActionEvent event){
@@ -59,7 +63,7 @@ public class MainMenuController {
             AuthController.getInstance().logout();
             stage.show();
         } catch (Exception e){
-            System.out.println(e.getMessage());
+            System.out.println("logout error: " + e.getMessage());
         }
     }
 }
