@@ -29,25 +29,33 @@ public class EmployeeRepo
         preparedStatement.executeUpdate();
     }
     public EmployeeEnti getInfo() throws SQLException {
-        EmployeeEnti employee=new EmployeeEnti();
-        preparedStatement=connection.prepareStatement("select * from Employee where id=?");
-        preparedStatement.setString(1,employee.getId());
-        ResultSet resultSet=preparedStatement.executeQuery();
-        while (resultSet.next())
-        {
-            employee.setId(resultSet.getString("id"));
-            employee.setName(resultSet.getString("name"));
-            employee.setAge(resultSet.getInt("age"));
-            employee.setFatherName(resultSet.getString("fatherName"));
-            employee.setAddress(resultSet.getString("address"));
-            employee.setDegree(resultSet.getString("degree"));
-            employee.setPhone(resultSet.getString("phone"));
-            employee.setLandLine(resultSet.getString("landLine"));
-            employee.setDeptId(resultSet.getInt("deptId"));
-            employee.setPosition(resultSet.getString("position"));
-            employee.setSalary(resultSet.getInt("salary"));
-        }
-        return employee;
+//        EmployeeEnti employee=new EmployeeEnti();
+//        preparedStatement=connection.prepareStatement("select * from Employee where id=?");
+//        preparedStatement.setString(1,employee.getId());
+//        ResultSet resultSet=preparedStatement.executeQuery();
+//        while (resultSet.next())
+//        {
+//            employee.setId(resultSet.getString("id"));
+//            employee.setName(resultSet.getString("name"));
+//            employee.setAge(resultSet.getInt("age"));
+//            employee.setFatherName(resultSet.getString("fatherName"));
+//            employee.setAddress(resultSet.getString("address"));
+//            employee.setDegree(resultSet.getString("degree"));
+//            employee.setPhone(resultSet.getString("phone"));
+//            employee.setLandLine(resultSet.getString("landLine"));
+//            employee.setDeptId(resultSet.getInt("deptId"));
+//            employee.setPosition(resultSet.getString("position"));
+//            employee.setSalary(resultSet.getInt("salary"));
+//        }
+//        return employee;
+
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        return new EmployeeEnti().setId(resultSet.getString("id")).setName(resultSet.getString("name"))
+            .setAge(resultSet.getInt("age")).setFatherName(resultSet.getString("fatherName"))
+            .setAddress(resultSet.getString("address")).setPhone(resultSet.getString("phone"))
+            .setLandLine(resultSet.getString("landLine")).setDeptId(resultSet.getInt("deptId"))
+            .setPosition(resultSet.getString("position")).setSalary(resultSet.getInt("salary"));
     }
    public List<EmployeeEnti> getEmployeeList(String searchQuery,int pageCount) throws SQLException {
         EmployeeEnti employee=new EmployeeEnti();
