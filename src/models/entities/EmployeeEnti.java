@@ -1,10 +1,10 @@
 package models.entities;
 
 public class EmployeeEnti {
-    private int id;private String name;private String fatherName;private int age;private String address;private String phone;private String landLine;
+    private String id;private String name;private String fatherName;private int age;private String address;private String phone;private String landLine;
     private String degree;private int deptId;private String position;private int salary;
-    public int getId() {return id;}
-    public EmployeeEnti setId(int id) {this.id = id;return this;}
+    public String getId() {return id;}
+    public EmployeeEnti setId(String id) {this.id = id;return this;}
     public String getName() {return name;}
     public EmployeeEnti setName(String name) {this.name = name;return this;}
     public String getFatherName() {return fatherName;}
