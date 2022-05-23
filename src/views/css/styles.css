@@ -25,7 +25,8 @@ nav b {
     -fx-background-color: #1f2833;
     -fx-text-fill: #45a29e;
     -fx-font-family: sans-serif;
-    -fx-alignment: center;
+    -fx-alignment: center-left;
+    
 }
 
 .button {

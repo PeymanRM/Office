@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DocumentEdit">
+   <children>
+      <Label alignment="CENTER" layoutX="696.0" layoutY="44.0" prefHeight="104.0" prefWidth="661.0" text="Edit Document" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="71.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="117.0" text="Doc Id" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_id" layoutX="324.0" layoutY="181.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </TextField>
+      <Label layoutX="340.0" layoutY="258.0" text="Doc Name" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_name" layoutX="324.0" layoutY="323.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </TextField>
+      <Label layoutX="340.0" layoutY="401.0" text="Doc Subject" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_duties" layoutX="324.0" layoutY="467.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </TextField>
+      <Label layoutX="340.0" layoutY="553.0" text="Name of Sender" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_sender" layoutX="324.0" layoutY="615.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </TextField>
+      <Label layoutX="340.0" layoutY="705.0" text="Date" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_date" layoutX="324.0" layoutY="768.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </TextField>
+      <Label layoutX="985.0" layoutY="705.0" text="Time" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_time" layoutX="971.0" layoutY="768.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn_EDCcreate" layoutX="1482.0" layoutY="955.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_EDCback" layoutX="1308.0" layoutY="955.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Button>
+      <Label layoutX="971.0" layoutY="553.0" text="Name of Reciver" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_reciver" layoutX="972.0" layoutY="615.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
