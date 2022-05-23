@@ -26,13 +26,8 @@ public class LoginController {
             //! AdminServ and its methods might be different
             if (AdminServ.getInstance().verifyAdmin(usernameTextField.getText().toLowerCase().trim(), passwordTextField.getText())) {
                 //switching scene
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Main_View.fxml"));
-                root = loader.load();
-
-                    // passing the id of admin to MainMenuController
-                MainMenuController mainMenuController = loader.getController();
-                mainMenuController.setLoggedInAdmin(usernameTextField.getText().toLowerCase().trim());
-
+                AuthController.getInstance().login(usernameTextField.getText().toLowerCase().trim());
+                root = FXMLLoader.load(getClass().getResource("../views/Main_View.fxml"));
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
