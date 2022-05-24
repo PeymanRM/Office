@@ -13,16 +13,6 @@
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="344.0" layoutY="99.0" text="Id" textFill="WHITE">
-         <font>
-            <Font size="42.0" />
-         </font>
-      </Label>
-      <TextField fx:id="idTextField" layoutX="320.0" layoutY="161.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </TextField>
       <Label layoutX="334.0" layoutY="238.0" text="Full Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
