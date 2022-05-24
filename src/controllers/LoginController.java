@@ -13,7 +13,6 @@ import java.io.IOException;
 
 public class LoginController {
 
-    //! Text field IDs might be different
     @FXML
     private TextField usernameTextField, passwordTextField;
 
@@ -23,7 +22,6 @@ public class LoginController {
 
     public void login(ActionEvent event){
         try {
-            //! AdminServ and its methods might be different
             if (AdminServ.getInstance().verifyAdmin(usernameTextField.getText().toLowerCase().trim(), passwordTextField.getText())) {
                 //switching scene
                 AuthController.getInstance().login(usernameTextField.getText().toLowerCase().trim());
