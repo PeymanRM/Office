@@ -3,22 +3,41 @@ package models.sevices;
 import models.entities.EmployeeEnti;
 import models.repositories.EmployeeRepo;
 
+import java.sql.SQLException;
 import java.util.List;
 
-public class EmployeeServ
-{
-    public void saveEmployee(EmployeeRepo employeeRepo)
-    {
-       employeeRepo.insertEmployee(EmployeeEnti employee);
+public class EmployeeServ implements EmployeeServInterface
+{ EmployeeRepo employeeRepo;
+
+    @Override
+    public void saveEmployee(EmployeeEnti employee) throws SQLException {
+     employeeRepo.insertEmployee(employee);
     }
-    EmployeeEnti getEmployeeInfo(String id)
-    {
-        EmployeeRepo employeeRepo;
-        return employeeRepo.getInfo();
+
+    @Override
+    public int getEmployeesCount(String searchQuery) throws SQLException {
+        return employeeRepo.pageCount(searchQuery);
     }
-    List<EmployeeEnti> getEmployeeList(String searchQuery,int pageCount)
-    {
-        EmployeeRepo employeeRepo;
-        return employeeRepo.getEmployeeList();
+
+    @Override
+    public List<EmployeeEnti> getEmployeesList(String searchQuery, int pageCount) throws SQLException {
+         return employeeRepo.getEmployeeList(searchQuery,pageCount);
+    }
+
+    @Override
+    public EmployeeEnti getEmployeeInfo(String id) throws SQLException {
+        return employeeRepo.getEmployeeInfo(id);
+    }
+
+    @Override
+    public void editEmployee(EmployeeEnti employee) throws SQLException {
+        employeeRepo.editEmployee(employee);
+
+    }
+
+    @Override
+    public void removeEmployee(String id) throws SQLException {
+        employeeRepo.deleteEmployee(id);
+
     }
 }
