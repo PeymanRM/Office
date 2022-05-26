@@ -7,11 +7,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="searchTextField" layoutX="71.0" layoutY="200.0" prefHeight="77.0" prefWidth="467.0" promptText="Search" stylesheets="@css/styles.css">
+      <TextField fx:id="searchTextField" layoutX="109.0" layoutY="14.0" prefHeight="59.0" prefWidth="707.0" promptText="Search" stylesheets="@css/styles.css">
          <font>
             <Font size="29.0" />
          </font></TextField>
-      <Button layoutX="638.0" layoutY="200.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="148.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" text="Search">
+      <Button layoutX="855.0" layoutY="9.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="179.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" text="Search">
          <font>
             <Font size="35.0" />
          </font></Button>

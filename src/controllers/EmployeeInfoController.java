@@ -2,7 +2,6 @@ package controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class EmployeeInfoController implements Initializable {
+public class EmployeeInfoController {
 
     @FXML
     private Label idLabel, nameLabel, fatherNameLabel, ageLabel, addressLabel, degreeLabel,
@@ -72,8 +71,8 @@ public class EmployeeInfoController implements Initializable {
         }else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
             root = loader.load();
-            DepartmentInfoController departmentInfoControlle = loader.getController();
-            departmentInfoControlle.intialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);
+            DepartmentInfoController departmentInfoController = loader.getController();
+            departmentInfoController.intialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);
         }
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
