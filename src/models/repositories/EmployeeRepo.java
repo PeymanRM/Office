@@ -14,7 +14,7 @@ public class EmployeeRepo
         connection.setAutoCommit(false);
     }
     public void insertEmployee(EmployeeEnti employee) throws SQLException {
-        preparedStatement=connection.prepareStatement("insert into Employee(id,fullName,age,fatherName,address,degree,Landline,Phone,Deptid,position,salary) values (?,?,?,?,?,?,?,?,?,?,?)");
+        preparedStatement=connection.prepareStatement("insert into Employee(id,fullName,age,fatherName,address,`degree`,Landline,Phone,Deptid,`position`,salary) values (?,?,?,?,?,?,?,?,?,?,?)");
         preparedStatement.setString(1,employee.getId());
         preparedStatement.setString(2,employee.getName());
         preparedStatement.setInt(3,employee.getAge());
@@ -45,7 +45,7 @@ public class EmployeeRepo
         List<EmployeeEnti> getEmployeeList=new ArrayList<>();
         if (searchQuery==null) {
             EmployeeEnti employee=new EmployeeEnti();
-            preparedStatement = connection.prepareStatement("select id,name,position from Employee");
+            preparedStatement = connection.prepareStatement("select id,name,`position` from Employee");
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
             employee.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
@@ -55,18 +55,18 @@ public class EmployeeRepo
 
         else
         {
-            preparedStatement=connection.prepareStatement("select id,name,position from Employee where name=?");
+            preparedStatement=connection.prepareStatement("select id,name,`position` from Employee where name=?");
             preparedStatement.setString(1,searchQuery);
             EmployeeEnti employee=new EmployeeEnti();
             ResultSet resultSet=preparedStatement.executeQuery();
             resultSet.next();
             employee.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
-           getEmployeeList.add(employee);
+            getEmployeeList.add(employee);
         }
         return getEmployeeList;
     }
     public void editEmployee(EmployeeEnti employee) throws SQLException {
-        preparedStatement=connection.prepareStatement("update Employee set fullName=?,age=?,fatherName=?,address=?,'degree'=?,Landline=?,Phone=?,position=?,salary=? where id=?");
+        preparedStatement=connection.prepareStatement("update Employee set fullName=?,age=?,fatherName=?,address=?,`degree`=?,Landline=?,Phone=?,`position`=?,salary=? where id=?");
         preparedStatement.setString(1,employee.getName());
         preparedStatement.setInt(2,employee.getAge());
         preparedStatement.setString(3,employee.getFatherName());
@@ -89,9 +89,6 @@ public class EmployeeRepo
         preparedStatement.setString(1,searchQuery);
         ResultSet resultSet=preparedStatement.executeQuery();
         return resultSet.getRow();
-
-    }
-    {
 
     }
     public void close() throws SQLException {
