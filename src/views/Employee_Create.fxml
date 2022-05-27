@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeCreateController">
    <children>
       <Label alignment="CENTER" layoutX="666.0" layoutY="14.0" prefHeight="104.0" prefWidth="661.0" text="Add Employee" textFill="#fff9f9">
          <font>
@@ -88,7 +88,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="depatmentIdTextField" layoutX="310.0" layoutY="742.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="departmentIdTextField" layoutX="310.0" layoutY="742.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -113,12 +113,12 @@
             <Font size="29.0" />
          </font>
       </TextField>
-      <Button layoutX="1456.0" layoutY="942.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Create">
+      <Button layoutX="1456.0" layoutY="942.0" mnemonicParsing="false" onAction="#add" prefHeight="81.0" prefWidth="166.0" text="Add">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button layoutX="1282.0" layoutY="942.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="1282.0" layoutY="942.0" mnemonicParsing="false" onAction="#cancel" prefHeight="81.0" prefWidth="166.0" text="Cancel">
          <font>
             <Font size="35.0" />
          </font>

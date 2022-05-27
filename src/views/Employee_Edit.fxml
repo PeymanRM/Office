@@ -113,12 +113,12 @@
             <Font size="29.0" />
          </font>
       </TextField>
-      <Button layoutX="1466.0" layoutY="952.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
+      <Button layoutX="1466.0" layoutY="952.0" mnemonicParsing="false" onAction="#edit" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button layoutX="1292.0" layoutY="952.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="1292.0" layoutY="952.0" mnemonicParsing="false" onAction="#cancel" prefHeight="81.0" prefWidth="166.0" text="Cancel">
          <font>
             <Font size="35.0" />
          </font>
