@@ -6,6 +6,26 @@ import java.util.regex.Pattern;
 
 public class EmployeeValidator extends EmployeeEnti {
 
+    private String sAge, sSalary;
+
+    public String getSAge() {
+        return sAge;
+    }
+
+    public EmployeeValidator setSAge(String sAge) {
+        this.sAge = sAge;
+        return this;
+    }
+
+    public String getSSalary() {
+        return sSalary;
+    }
+
+    public EmployeeValidator setSSalary(String sSalary) {
+        this.sSalary = sSalary;
+        return this;
+    }
+
     public void validateInputs() throws Exception {
         //Name
         if (getName().length() < 3) throw new EmployeeInputException("Entered name is too short!");
@@ -16,8 +36,9 @@ public class EmployeeValidator extends EmployeeEnti {
         if (!Pattern.matches("^[a-zA-Z ,.'-]+$", getFatherName())) throw new EmployeeInputException("Invalid father's name!");
 
         //Age
-        if (getAge() < 0) throw new EmployeeInputException("Invalid age!");
-        if (getAge() < 18) throw new EmployeeInputException("You're age should be above 18!");
+        if (!Pattern.matches("^[0-9]+$", getSAge())) throw new EmployeeInputException("Age must be number!");
+        if (Integer.parseInt(getSAge()) < 0) throw new EmployeeInputException("Invalid age!");
+        if (Integer.parseInt(getSAge()) < 18) throw new EmployeeInputException("You're age should be above 18!");
 
         //Address
         if (!Pattern.matches("^[a-zA-Z0-9 ,.'-]+$", getAddress())) throw new EmployeeInputException("Invalid address!");
@@ -37,6 +58,12 @@ public class EmployeeValidator extends EmployeeEnti {
         if (!Pattern.matches("^[a-zA-Z ,.'-]+$", getPosition())) throw new EmployeeInputException("Invalid position!");
 
         //Salary
-        if (getSalary() < 0) throw new EmployeeInputException("Salary should not be negative");
+        if (!Pattern.matches("^[0-9]+$", getSSalary())) throw new EmployeeInputException("Salary must be number!");
+        if (Integer.parseInt(getSSalary()) < 0) throw new EmployeeInputException("Salary should not be negative");
+    }
+
+    public void setVerifiedIntVariables() throws Exception{
+        setAge(Integer.parseInt(getSAge()));
+        setSalary(Integer.parseInt(getSSalary()));
     }
 }
