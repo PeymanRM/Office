@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.EmpeloyeeEdit">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeEditController">
    <children>
       <Label alignment="CENTER" layoutX="676.0" layoutY="24.0" prefHeight="104.0" prefWidth="661.0" text="Edit Employee" textFill="#fff9f9">
          <font>
@@ -88,7 +88,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="depatmentIdTextField" layoutX="320.0" layoutY="752.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="departmentIdTextField" layoutX="320.0" layoutY="752.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
