@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,8 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
-
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -60,6 +59,10 @@ public class EmployeeInfoController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void delete(ActionEvent event) throws IOException {
+        //TODO
     }
 
     public void back(ActionEvent event) throws IOException {

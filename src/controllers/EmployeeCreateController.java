@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,11 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import models.entities.EmployeeEnti;
 import validators.EmployeeInputException;
 import validators.EmployeeValidator;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -25,9 +24,7 @@ public class EmployeeCreateController {
     private Scene scene;
     private Parent root;
 
-    private String employeeId;
-
-    public void add(ActionEvent event) {
+    public void add(ActionEvent event) throws IOException {
         try{
             //validation
             EmployeeValidator employee = new EmployeeValidator();
@@ -53,6 +50,8 @@ public class EmployeeCreateController {
             stage.show();
         } catch (EmployeeInputException e){
             System.out.println("input error: " + e.getMessage());
+        } catch (SQLException e){
+            System.out.println("sql error: " + e.getMessage());
         } catch (Exception e) {
             System.out.println("error: " + e.getMessage());
         }
