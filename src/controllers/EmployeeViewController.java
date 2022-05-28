@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -63,7 +62,6 @@ public class EmployeeViewController {
 //            pageChoiceBox.getItems().addAll(pages);
 //            pageChoiceBox.getSelectionModel().selectFirst();
 //        }
-//
 //        pageChoiceBox.setOnAction(this::changePage);
 //        fillEmployeesGridPane(employees);
 
