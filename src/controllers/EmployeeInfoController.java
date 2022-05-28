@@ -22,9 +22,10 @@ public class EmployeeInfoController {
     private Scene scene;
     private Parent root;
 
-    private String employeeId, previousPageDeptId, previousPageSearchQuery, previousPagePageNumber;
+    private String employeeId, previousPageDeptId, previousPageSearchQuery;
+    private int previousPagePageNumber;
 
-    public void initialize(String employeeId, String previousPageDeptId, String previousPageSearchQuery, String previousPagePageNumber) {
+    public void initialize(String employeeId, String previousPageDeptId, String previousPageSearchQuery, int previousPagePageNumber) {
         this.employeeId = employeeId;
         this.previousPageDeptId = previousPageDeptId;
         this.previousPageSearchQuery = previousPageSearchQuery;
@@ -70,7 +71,7 @@ public class EmployeeInfoController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
             root = loader.load();
             EmployeeViewController employeeViewController = loader.getController();
-            employeeViewController.intialize(previousPageSearchQuery, previousPagePageNumber);
+            employeeViewController.initialize(previousPageSearchQuery, previousPagePageNumber);
         }else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
             root = loader.load();
