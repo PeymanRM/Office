@@ -3,26 +3,33 @@ package controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
 
-import java.net.URL;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public class EmployeeViewController {
 
     @FXML
     private GridPane employeesGridPane;
+
+    @FXML
+    private TextField searchTextField;
+
+    @FXML
+    private ChoiceBox<String> pageChoiceBox;
 
     private Stage stage;
     private Scene scene;
@@ -31,23 +38,56 @@ public class EmployeeViewController {
     int pageNumber, pageCount;
     String searchQuery;
 
-    public void initialize(String searchQuery, int pageNumber){
-        List<EmployeeEnti> employees = new ArrayList<>();
-        for (int i = 0 ; i<18;i++){
-            EmployeeEnti employee = new EmployeeEnti();
-            employee.setId(String.valueOf(i)).setName("Peyman").setPosition("Employee");
-            employees.add(employee);
-        }
-        fillEmployeesGridPane(employees);
-//        try {
-//            this.searchQuery = searchQuery;
-//            this.pageNumber = pageNumber;
-//            int employeesCount = EmployeeServ.getInstance().getEmployeesCount(searchQuery);
-//            pageCount = employeesCount % 20 == 0 ? employeesCount / 20 : employeesCount / 20 + 1;
-//            fillEmployeesGridPane(EmployeeServ.getInstance().getEmployeesList(searchQuery, pageNumber));
-//        } catch (SQLException e) {
-//            System.out.println("view initialize error: " + e.getMessage());
+    public void initialize(String searchQuery, int pageNumber, boolean changedPage){
+
+        //TEST
+
+//        List<EmployeeEnti> employees = new ArrayList<>();
+//        System.out.println(pageNumber);
+//        for (int i = 0 ; i<18;i++){
+//            EmployeeEnti employee = new EmployeeEnti();
+//            employee.setId(String.valueOf(i)).setName("Peyman").setPosition("Employee");
+//            if (searchQuery != null && searchQuery.equals("HI"))
+//                employee.setName("HI");
+//
+//            if(changedPage)
+//                employee.setPosition(String.valueOf(pageNumber));
+//            employees.add(employee);
 //        }
+//        String[] pages = new String[5];
+//        for (int i = 0; i < 5; i++) {
+//            pages[i] = "Page " + (i + 1);
+//        }
+//        if(!changedPage) {
+//            pageChoiceBox.getItems().clear();
+//            pageChoiceBox.getItems().addAll(pages);
+//            pageChoiceBox.getSelectionModel().selectFirst();
+//        }
+//
+//        pageChoiceBox.setOnAction(this::changePage);
+//        fillEmployeesGridPane(employees);
+
+        try {
+            this.pageNumber = pageNumber;
+
+            if(!changedPage) {
+                this.searchQuery = searchQuery;
+                int employeesCount = EmployeeServ.getInstance().getEmployeesCount(searchQuery);
+                pageCount = employeesCount % 20 == 0 ? employeesCount / 20 : employeesCount / 20 + 1;
+                String[] pages = new String[pageCount];
+                for (int i = 0; i < pageCount; i++) {
+                    pages[i] = "Page " + (i + 1);
+                }
+                pageChoiceBox.getItems().clear();
+                pageChoiceBox.getItems().addAll(pages);
+                pageChoiceBox.getSelectionModel().selectFirst();
+            }
+            pageChoiceBox.setOnAction(this::changePage);
+
+            fillEmployeesGridPane(EmployeeServ.getInstance().getEmployeesList(searchQuery, pageNumber));
+        } catch (SQLException e) {
+            System.out.println("view initialize error: " + e.getMessage());
+        }
     }
 
     private void fillEmployeesGridPane(List<EmployeeEnti> employees){
@@ -78,4 +118,20 @@ public class EmployeeViewController {
         }
     }
 
+    public void search(ActionEvent event){
+        searchQuery = searchTextField.getText().trim();
+        initialize(searchQuery, 1, false);
+    }
+
+    public void changePage(ActionEvent event){
+        initialize(searchQuery, pageChoiceBox.getSelectionModel().getSelectedIndex() + 1, true);
+    }
+
+    public void back(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("../views/Main_View.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
