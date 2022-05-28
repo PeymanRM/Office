@@ -40,4 +40,10 @@ public class EmployeeServ implements EmployeeServInterface
         employeeRepo.deleteEmployee(id);
 
     }
+    public void commit() throws SQLException {
+        employeeRepo.commit();
+    }
+    public void close() throws SQLException {
+        employeeRepo.close();
+    }
 }
