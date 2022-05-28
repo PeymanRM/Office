@@ -10,4 +10,10 @@ public interface AdminServInterface {
      * @return true, if passwords match and false if they don't
      */
     boolean verifyPassword(String adminId, String enteredPassword);
+
+    /**
+     * Checks the database and adds an admin if
+     * there is no admin in the table.
+     */
+    void addFirstAdmin();
 }
