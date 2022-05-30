@@ -50,9 +50,11 @@ public class EmployeeRepo
             EmployeeEnti employee=new EmployeeEnti();
             preparedStatement = connection.prepareStatement("select id,name,`position` from Employee OFFSET (pageCount-1)*20 LIMIT 20");
             ResultSet resultSet = preparedStatement.executeQuery();
-            resultSet.next();
-            employee.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
-            getEmployeeList.add(employee);
+           while (resultSet.next()) {
+
+               employee.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
+               getEmployeeList.add(employee);
+           }
 
         }
 
@@ -62,9 +64,10 @@ public class EmployeeRepo
             preparedStatement.setString(1,searchQuery);
             EmployeeEnti employee=new EmployeeEnti();
             ResultSet resultSet=preparedStatement.executeQuery();
-            resultSet.next();
-            employee.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
-           getEmployeeList.add(employee);
+            while (resultSet.next()) {
+                employee.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
+                getEmployeeList.add(employee);
+            }
         }
         return getEmployeeList;
     }
