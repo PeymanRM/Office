@@ -8,10 +8,11 @@ public class AdminRepo  {
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/office", "JavaLearner", "LearningIsFun,HomeworkIsn't");
         connection.setAutoCommit(false);
     }
-    public String verifyAdmin(String adminId, String enteredPassword) throws SQLException {
+    public String getPassword(String username) throws SQLException {
 
-        preparedStatement = connection.prepareStatement("select username from admins");
+        preparedStatement = connection.prepareStatement("select username from admins where username = " + username);
         ResultSet resultSet=preparedStatement.executeQuery();
+        resultSet.next();
         return resultSet.getString("password");
 
     }

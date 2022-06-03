@@ -14,7 +14,7 @@ public class AdminServ implements AdminServInterface {
     @Override
     public boolean verifyAdmin(String adminId, String enteredPassword) throws SQLException {
         AdminRepo adminRepo = new AdminRepo();
-        return enteredPassword.equals(adminRepo.verifyAdmin(adminId,enteredPassword));
+        return enteredPassword.equals(adminRepo.getPassword(adminId));
     }
 
     @Override
