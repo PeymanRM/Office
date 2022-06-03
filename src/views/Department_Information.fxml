@@ -91,7 +91,7 @@
             <Font size="35.0" />
          </font>
       </Button>
-      <GridPane fx:id="membersGridPane" layoutX="109.0" layoutY="420.0" prefHeight="418.0" prefWidth="1702.0" AnchorPane.leftAnchor="109.0" AnchorPane.rightAnchor="108.59999999999991">
+      <GridPane fx:id="membersGridPane" hgap="10.0" layoutX="109.0" layoutY="420.0" prefHeight="418.0" prefWidth="1702.0" vgap="10.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
