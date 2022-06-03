@@ -7,7 +7,6 @@ public class AdminServ implements AdminServInterface {
     }
 
     private static AdminServ adminServ = new AdminServ();
-
     public static AdminServ getInstance() {
         return adminServ;
     }
@@ -15,14 +14,14 @@ public class AdminServ implements AdminServInterface {
     @Override
     public boolean verifyAdmin(String adminId, String enteredPassword) throws SQLException {
         AdminRepo adminRepo = new AdminRepo();
-        return adminRepo.verifyAdmin(adminId, enteredPassword);
+        return enteredPassword.equals(adminRepo.verifyAdmin(adminId,enteredPassword));
     }
 
     @Override
     public void addFirstAdmin() throws SQLException {
         AdminRepo adminRepo = new AdminRepo();
         adminRepo.addFirstAdmin();
-        adminRepo.Commit();
+        adminRepo.commit();
 
     }
 }
