@@ -39,7 +39,7 @@ public class DepartmentRepo  {
         ResultSet resultSet=preparedStatement.executeQuery();
         while (resultSet.next()) {
         DepartmentEnti department=new DepartmentEnti();
-            department.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setDuties(resultSet.getString("duties"));
+            department.setId(resultSet.getString("id")).setName(resultSet.getString("name"));
             getDepartmentsList.add(department);
         }
         return getDepartmentsList;
@@ -71,11 +71,9 @@ public class DepartmentRepo  {
     public String getDepartmentName(String id) throws SQLException {
         preparedStatement=connection.prepareStatement("select name from departments where id=?");
         preparedStatement.setString(1,id);
-        DepartmentEnti department=new DepartmentEnti();
         ResultSet resultSet=preparedStatement.executeQuery();
         resultSet.next();
-        department.setName(resultSet.getString("name"));
-        return department.getName();
+        return resultSet.getString("name");
 
     }
     public void close() throws SQLException {
