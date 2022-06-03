@@ -44,7 +44,7 @@ public class EmployeeInfoController {
             degreeLabel.setText(employee.getDegree());
             landlineLabel.setText(employee.getLandLine());
             phoneNumberLabel.setText(employee.getPhone());
-            departmentNameLabel.setText(DepartmentServ.getInstance().getDepartmentName(employee.getDeptId());
+            departmentNameLabel.setText(DepartmentServ.getInstance().getDepartmentName(employee.getDeptId()));
             positionLabel.setText(employee.getPosition());
             salaryLabel.setText(String.valueOf(employee.getSalary()));
         } catch (SQLException e){
@@ -78,9 +78,8 @@ public class EmployeeInfoController {
         }else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
             root = loader.load();
-            //!
-//            DepartmentInfoController departmentInfoController = loader.getController();
-//            departmentInfoController.intialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);
+            DepartmentInfoController departmentInfoController = loader.getController();
+            departmentInfoController.initialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);
         }
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
