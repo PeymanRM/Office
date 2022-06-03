@@ -33,7 +33,7 @@ public class MainMenuController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
         root = loader.load();
         EmployeeViewController employeeViewController = loader.getController();
-        employeeViewController.initialize(null, 1, false);
+        employeeViewController.initialize("", 1, false);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

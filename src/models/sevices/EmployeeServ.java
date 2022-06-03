@@ -28,9 +28,9 @@ public class EmployeeServ implements EmployeeServInterface
     }
 
     @Override
-    public List<EmployeeEnti> getEmployeesList(String searchQuery, int pageCount) throws SQLException {
+    public List<EmployeeEnti> getEmployeesList(String searchQuery, int pageNumber) throws SQLException {
         EmployeeRepo employeeRepo = new EmployeeRepo();
-         return employeeRepo.getEmployeeList(searchQuery,pageCount);
+         return employeeRepo.getEmployeeList(searchQuery, pageNumber);
     }
 
     @Override

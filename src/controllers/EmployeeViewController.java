@@ -17,7 +17,6 @@ import models.sevices.EmployeeServ;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeViewController {
@@ -44,6 +43,7 @@ public class EmployeeViewController {
 
             if(!changedPage) {
                 this.searchQuery = searchQuery;
+                searchTextField.setText(searchQuery);
                 int employeesCount = EmployeeServ.getInstance().getEmployeesCount(searchQuery);
                 pageCount = employeesCount % 20 == 0 ? employeesCount / 20 : employeesCount / 20 + 1;
                 String[] pages = new String[pageCount];
@@ -64,6 +64,7 @@ public class EmployeeViewController {
 
     private void fillEmployeesGridPane(List<EmployeeEnti> employees){
         int counter = 0;
+        employeesGridPane.getChildren().clear();
         for (EmployeeEnti employee : employees) {
             Label statusLabel = new Label();
             statusLabel.setText("ID: " + employee.getId() + "\nName: " + employee.getName() + "\nPosition: " + employee.getPosition());
@@ -96,7 +97,8 @@ public class EmployeeViewController {
     }
 
     public void changePage(ActionEvent event){
-        initialize(searchQuery, pageChoiceBox.getSelectionModel().getSelectedIndex() + 1, true);
+        if(pageChoiceBox.getSelectionModel().getSelectedIndex() != -1 && pageNumber != pageChoiceBox.getSelectionModel().getSelectedIndex() + 1)
+            initialize(searchQuery, pageChoiceBox.getSelectionModel().getSelectedIndex() + 1, true);
     }
 
     public void back(ActionEvent event) throws IOException {

@@ -37,8 +37,7 @@ public class EmployeeValidator extends EmployeeEnti {
 
         //Age
         if (!Pattern.matches("^[0-9]+$", getSAge())) throw new EmployeeInputException("Age must be number!");
-        if (Integer.parseInt(getSAge()) < 0) throw new EmployeeInputException("Invalid age!");
-        if (Integer.parseInt(getSAge()) < 18) throw new EmployeeInputException("You're age should be above 18!");
+        if (Integer.parseInt(getSAge()) < 18) throw new EmployeeInputException("Age should be above 18!");
 
         //Address
         if (getAddress().length() < 3) throw new EmployeeInputException("Address is required!");
@@ -62,7 +61,6 @@ public class EmployeeValidator extends EmployeeEnti {
 
         //Salary
         if (!Pattern.matches("^[0-9]+$", getSSalary())) throw new EmployeeInputException("Salary must be number!");
-        if (Integer.parseInt(getSSalary()) < 0) throw new EmployeeInputException("Salary should not be negative");
     }
 
     public void setVerifiedIntVariables() {

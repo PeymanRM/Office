@@ -32,12 +32,12 @@ public interface EmployeeServInterface {
      * filled with only necessary information, including: id, name and position.
      * The result is based on the page count and search query;
      * @param searchQuery what to be searched for
-     * @param pageCount the page number that user(admin) wants
+     * @param pageNumber the page number that user(admin) wants
      * @return a list of EmployeeEnti objects filled with id, name and position.
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    List<EmployeeEnti> getEmployeesList (String searchQuery, int pageCount) throws SQLException;
+    List<EmployeeEnti> getEmployeesList (String searchQuery, int pageNumber) throws SQLException;
 
     /**
      * Gets the id of an employee and returns all its information
