@@ -1,4 +1,4 @@
-package models.services;
+package models.sevices;
 
 import models.repositories.AdminRepo;
 import java.sql.SQLException;
