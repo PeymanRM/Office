@@ -14,9 +14,9 @@ public class DepartmentRepo  {
     }
     public void saveDepartment(DepartmentEnti department) throws SQLException {
         preparedStatement=connection.prepareStatement("SELECT count(*) from departments");
-        ResultSet resultSet1= preparedStatement.executeQuery();
-        resultSet1.next();
-        department.setId(String.valueOf(resultSet1.getInt(1)+1));
+        ResultSet resultSet= preparedStatement.executeQuery();
+        resultSet.next();
+        department.setId(String.valueOf(resultSet.getInt(1)+1));
         preparedStatement=connection.prepareStatement("insert into departments(id,name,duties,date,time) values (?,?,?,?,?)");
         preparedStatement.setString(1,department.getId());
         preparedStatement.setString(2,department.getName());
