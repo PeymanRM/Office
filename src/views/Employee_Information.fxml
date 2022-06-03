@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeInfoController">
    <children>
       <Label alignment="CENTER" layoutX="627.0" layoutY="15.0" prefHeight="81.0" prefWidth="804.0" text="Empeloyee Information" textFill="#fff9f9">
          <font>
@@ -122,17 +122,17 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Button layoutX="627.0" layoutY="876.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
+      <Button layoutX="627.0" layoutY="876.0" mnemonicParsing="false" onAction="#delete" prefHeight="81.0" prefWidth="166.0" text="Delete">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button layoutX="843.0" layoutY="957.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="843.0" layoutY="957.0" mnemonicParsing="false" onAction="#back" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button layoutX="1073.0" layoutY="876.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
+      <Button layoutX="1073.0" layoutY="876.0" mnemonicParsing="false" onAction="#loadEditPage" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
             <Font size="35.0" />
          </font>

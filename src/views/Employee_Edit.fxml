@@ -6,29 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.EmpeloyeeEdit">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeEditController">
    <children>
       <Label alignment="CENTER" layoutX="676.0" layoutY="24.0" prefHeight="104.0" prefWidth="661.0" text="Edit Employee" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="344.0" layoutY="99.0" text="Id" textFill="WHITE">
-         <font>
-            <Font size="42.0" />
-         </font>
-      </Label>
-      <TextField fx:id="editPageId" layoutX="320.0" layoutY="161.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #F7F6FD;">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </TextField>
       <Label layoutX="334.0" layoutY="238.0" text="Full Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPageName" layoutX="320.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="nameTextField" layoutX="320.0" layoutY="303.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -38,7 +28,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPageFatherName" layoutX="837.0" layoutY="303.0" prefHeight="62.0" prefWidth="515.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="fatherNameTextField" layoutX="837.0" layoutY="303.0" prefHeight="62.0" prefWidth="515.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -48,7 +38,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPageAge" layoutX="1430.0" layoutY="303.0" prefHeight="62.0" prefWidth="149.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="ageTextField" layoutX="1430.0" layoutY="303.0" prefHeight="62.0" prefWidth="149.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -58,7 +48,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPageAddress" layoutX="320.0" layoutY="447.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="addressTextField" layoutX="320.0" layoutY="447.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -68,7 +58,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPageDegree" layoutX="320.0" layoutY="606.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="degreeTextField" layoutX="320.0" layoutY="606.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="30.0" />
          </font>
@@ -78,7 +68,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPageLandline" layoutX="872.0" layoutY="606.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="landlineTextField" layoutX="872.0" layoutY="606.0" prefHeight="62.0" prefWidth="322.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="35.0" />
          </font>
@@ -88,7 +78,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPagePhoneNumber" layoutX="1252.0" layoutY="606.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="phoneNumberTextField" layoutX="1252.0" layoutY="606.0" prefHeight="62.0" prefWidth="337.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -98,7 +88,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPageDepartmentId" layoutX="320.0" layoutY="752.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="departmentIdTextField" layoutX="320.0" layoutY="752.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -108,7 +98,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPagePosition" layoutX="320.0" layoutY="890.0" prefHeight="62.0" prefWidth="449.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="positionTextField" layoutX="320.0" layoutY="890.0" prefHeight="62.0" prefWidth="449.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
@@ -118,17 +108,17 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="editPageSalary" layoutX="872.0" layoutY="890.0" prefHeight="62.0" prefWidth="369.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="salaryTextField" layoutX="872.0" layoutY="890.0" prefHeight="62.0" prefWidth="369.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Button layoutX="1466.0" layoutY="952.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
+      <Button layoutX="1466.0" layoutY="952.0" mnemonicParsing="false" onAction="#edit" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button layoutX="1292.0" layoutY="952.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="1292.0" layoutY="952.0" mnemonicParsing="false" onAction="#cancel" prefHeight="81.0" prefWidth="166.0" text="Cancel">
          <font>
             <Font size="35.0" />
          </font>
