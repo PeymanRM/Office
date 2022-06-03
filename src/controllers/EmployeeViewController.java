@@ -13,7 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
-import models.sevices.EmployeeServ;
+import models.services.EmployeeServ;
 
 import java.io.IOException;
 import java.sql.SQLException;

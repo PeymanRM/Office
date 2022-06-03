@@ -1,4 +1,4 @@
-package models.sevices;
+package models.services;
 
 import models.entities.DepartmentEnti;
 import models.repositories.DepartmentRepo;
@@ -10,6 +10,7 @@ public class DepartmentServ implements DepartmentServInterface {
     private DepartmentServ() {}
     private static DepartmentServ departmentServ= new DepartmentServ();
     public static DepartmentServ getInstance(){return departmentServ;}
+
     @Override
     public void saveDepartment(DepartmentEnti department) throws SQLException {
         DepartmentRepo departmentRepo=new DepartmentRepo();

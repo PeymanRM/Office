@@ -1,7 +1,7 @@
 package models.repositories;
 import java.sql.*;
 import models.entities.AdminEnti;
-import models.sevices.AdminServInterface;
+import models.services.AdminServInterface;
 public class AdminRepo implements AdminServInterface {
     boolean swtch;
     private Connection connection;

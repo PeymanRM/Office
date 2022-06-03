@@ -1,4 +1,4 @@
-package models.sevices;
+package models.services;
 
 import java.sql.SQLException;
 

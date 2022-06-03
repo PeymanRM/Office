@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
-import models.sevices.EmployeeServ;
+import models.services.EmployeeServ;
 import validators.EmployeeInputException;
 import validators.EmployeeValidator;
 

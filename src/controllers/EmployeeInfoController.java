@@ -9,7 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
-import models.sevices.EmployeeServ;
+import models.services.DepartmentServ;
+import models.services.EmployeeServ;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -43,8 +44,7 @@ public class EmployeeInfoController {
             degreeLabel.setText(employee.getDegree());
             landlineLabel.setText(employee.getLandLine());
             phoneNumberLabel.setText(employee.getPhone());
-            //!
-//            departmentNameLabel.setText(DepartmentServ.getInstance().getDepartmentName(employee.getDeptId());
+            departmentNameLabel.setText(DepartmentServ.getInstance().getDepartmentName(employee.getDeptId());
             positionLabel.setText(employee.getPosition());
             salaryLabel.setText(String.valueOf(employee.getSalary()));
         } catch (SQLException e){
