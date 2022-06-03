@@ -8,6 +8,11 @@ import java.util.List;
 
 public class EmployeeServ implements EmployeeServInterface
 {
+    private EmployeeServ() {}
+    private static EmployeeServ employeeServ = new EmployeeServ();
+    public static EmployeeServ getInstance(){
+        return employeeServ;
+    }
 
     @Override
     public void saveEmployee(EmployeeEnti employee) throws SQLException {

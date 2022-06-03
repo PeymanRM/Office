@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
+import models.sevices.EmployeeServ;
 import validators.EmployeeInputException;
 import validators.EmployeeValidator;
 
@@ -41,10 +42,10 @@ public class EmployeeEditController {
             departmentIdTextField.setText(employee.getDeptId());
             positionTextField.setText(employee.getPosition());
             salaryTextField.setText(String.valueOf(employee.getSalary()));
-        } catch(Exception e){
-            System.out.println("initialize error: " + e.getMessage());
         } catch (SQLException e){
             System.out.println("initialize SQL error: " + e.getMessage());
+        } catch(Exception e){
+            System.out.println("initialize error: " + e.getMessage());
         }
     }
 

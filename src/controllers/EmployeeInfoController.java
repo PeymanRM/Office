@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
+import models.sevices.EmployeeServ;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -41,13 +43,14 @@ public class EmployeeInfoController {
             degreeLabel.setText(employee.getDegree());
             landlineLabel.setText(employee.getLandLine());
             phoneNumberLabel.setText(employee.getPhone());
-            departmentNameLabel.setText(DepartmentServ.getInstance().getDepartmentName(employee.getDeptId());
+            //!
+//            departmentNameLabel.setText(DepartmentServ.getInstance().getDepartmentName(employee.getDeptId());
             positionLabel.setText(employee.getPosition());
             salaryLabel.setText(String.valueOf(employee.getSalary()));
-        } catch(Exception e){
-            System.out.println("initialize error: " + e.getMessage());
         } catch (SQLException e){
             System.out.println("initialize SQL error: " + e.getMessage());
+        } catch(Exception e){
+            System.out.println("initialize error: " + e.getMessage());
         }
     }
 
@@ -75,8 +78,9 @@ public class EmployeeInfoController {
         }else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
             root = loader.load();
-            DepartmentInfoController departmentInfoController = loader.getController();
-            departmentInfoController.intialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);
+            //!
+//            DepartmentInfoController departmentInfoController = loader.getController();
+//            departmentInfoController.intialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);
         }
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

@@ -1,5 +1,7 @@
 package models.sevices;
 
+import java.sql.SQLException;
+
 public interface AdminServInterface {
 
     /**
@@ -9,11 +11,11 @@ public interface AdminServInterface {
      * @param enteredPassword the entered password in the login menu
      * @return true, if passwords match and false if they don't
      */
-    boolean verifyPassword(String adminId, String enteredPassword);
+    boolean verifyAdmin(String adminId, String enteredPassword) throws SQLException;
 
     /**
      * Checks the database and adds an admin if
      * there is no admin in the table.
      */
-    void addFirstAdmin();
+    void addFirstAdmin() throws SQLException;
 }

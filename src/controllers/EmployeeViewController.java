@@ -13,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
+import models.sevices.EmployeeServ;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -38,33 +39,6 @@ public class EmployeeViewController {
     String searchQuery;
 
     public void initialize(String searchQuery, int pageNumber, boolean changedPage){
-
-        //TEST
-
-//        List<EmployeeEnti> employees = new ArrayList<>();
-//        System.out.println(pageNumber);
-//        for (int i = 0 ; i<18;i++){
-//            EmployeeEnti employee = new EmployeeEnti();
-//            employee.setId(String.valueOf(i)).setName("Peyman").setPosition("Employee");
-//            if (searchQuery != null && searchQuery.equals("HI"))
-//                employee.setName("HI");
-//
-//            if(changedPage)
-//                employee.setPosition(String.valueOf(pageNumber));
-//            employees.add(employee);
-//        }
-//        String[] pages = new String[5];
-//        for (int i = 0; i < 5; i++) {
-//            pages[i] = "Page " + (i + 1);
-//        }
-//        if(!changedPage) {
-//            pageChoiceBox.getItems().clear();
-//            pageChoiceBox.getItems().addAll(pages);
-//            pageChoiceBox.getSelectionModel().selectFirst();
-//        }
-//        pageChoiceBox.setOnAction(this::changePage);
-//        fillEmployeesGridPane(employees);
-
         try {
             this.pageNumber = pageNumber;
 
