@@ -17,12 +17,15 @@ public class AdminRepo  {
 
     }
     public void addFirstAdmin() throws SQLException {
-        preparedStatement = connection.prepareStatement("insert into admins(username,password) values (?,?)");
-        preparedStatement.setString(1, "peyman");
-        preparedStatement.setString(2, "peyman123");
-        preparedStatement.executeUpdate();
-
-
+        preparedStatement=connection.prepareStatement("SELECT count(*) from admins");
+        ResultSet resultSet= preparedStatement.executeQuery();
+        resultSet.next();
+        if(resultSet.getInt(1) == 0) {
+            preparedStatement = connection.prepareStatement("insert into admins(username,password) values (?,?)");
+            preparedStatement.setString(1, "admin");
+            preparedStatement.setString(2, "admin");
+            preparedStatement.executeUpdate();
+        }
     }
 
     public void commit() throws SQLException {
