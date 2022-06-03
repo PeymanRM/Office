@@ -41,9 +41,11 @@ public class EmployeeValidator extends EmployeeEnti {
         if (Integer.parseInt(getSAge()) < 18) throw new EmployeeInputException("You're age should be above 18!");
 
         //Address
+        if (getAddress().length() < 3) throw new EmployeeInputException("Address is required!");
         if (!Pattern.matches("^[a-zA-Z0-9 ,.'-]+$", getAddress())) throw new EmployeeInputException("Invalid address!");
 
         //Degree
+        if (getDegree().length() < 3) throw new EmployeeInputException("Degree is required!");
         if (!Pattern.matches("^[a-zA-Z ,.'-]+$", getDegree())) throw new EmployeeInputException("Invalid degree!");
 
         //Phone Number
@@ -55,6 +57,7 @@ public class EmployeeValidator extends EmployeeEnti {
         if (!Pattern.matches("^[0-9]+$", getLandLine())) throw new EmployeeInputException("Landline must only contain digits!");
 
         //Position
+        if (getPosition().equals("")) throw new EmployeeInputException("Position is required!");
         if (!Pattern.matches("^[a-zA-Z ,.'-]+$", getPosition())) throw new EmployeeInputException("Invalid position!");
 
         //Salary
@@ -62,7 +65,7 @@ public class EmployeeValidator extends EmployeeEnti {
         if (Integer.parseInt(getSSalary()) < 0) throw new EmployeeInputException("Salary should not be negative");
     }
 
-    public void setVerifiedIntVariables() throws Exception{
+    public void setVerifiedIntVariables() {
         setAge(Integer.parseInt(getSAge()));
         setSalary(Integer.parseInt(getSSalary()));
     }
