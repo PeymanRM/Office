@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class DepartmentServ implements DepartmentServInterface {
+    private DepartmentServ() {}
     private static DepartmentServ departmentServ= new DepartmentServ();
     public static DepartmentServ getInstance(){return departmentServ;}
     @Override
