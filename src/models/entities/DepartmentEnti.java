@@ -2,15 +2,14 @@ package models.entities;
 
 public class DepartmentEnti
 {
-    private String deptId,name,duties,employeeNumber;
-    private int time,date;
+    private String id,name,duties,time,date;
 
-    public String getDeptId() {
-        return deptId;
+    public String getId() {
+        return id;
     }
 
-    public DepartmentEnti setDeptId(String deptId) {
-        this.deptId = deptId;
+    public DepartmentEnti setId(String id) {
+        this.id = id;
         return this;
     }
 
@@ -32,29 +31,20 @@ public class DepartmentEnti
         return this;
     }
 
-    public String getEmployeeNumber() {
-        return employeeNumber;
-    }
-
-    public DepartmentEnti setEmployeeNumber(String employeeNumber) {
-        this.employeeNumber = employeeNumber;
-        return this;
-    }
-
-    public int getTime() {
+    public String getTime() {
         return time;
     }
 
-    public DepartmentEnti setTime(int time) {
+    public DepartmentEnti setTime(String time) {
         this.time = time;
         return this;
     }
 
-    public int getDate() {
+    public String getDate() {
         return date;
     }
 
-    public DepartmentEnti setDate(int date) {
+    public DepartmentEnti setDate(String date) {
         this.date = date;
         return this;
     }
