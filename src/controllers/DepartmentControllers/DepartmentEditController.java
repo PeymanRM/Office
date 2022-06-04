@@ -57,7 +57,7 @@ public class DepartmentEditController {
             FXMLLoader loader = new FXMLLoader (getClass().getResource("../../views/Main_View.fxml"));
             root = loader.load();
             MainMenuController mainMenuController = loader.getController();
-            //TODO set status of edit in main menu
+            mainMenuController.setStatus("Successfully Edited Department");
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
