@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="199.0" prefWidth="597.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.Popup1">
+<AnchorPane prefHeight="234.0" prefWidth="729.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.Popup1">
    <children>
       <Label fx:id="Lbl_Erorr" layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="582.0" text="Erorr:waestestestrsyrrdytutdydytdy">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="btn_ok" layoutX="196.0" layoutY="124.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="218.0" text="Ok">
+      <Button fx:id="btn_ok" layoutX="256.0" layoutY="161.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="218.0" text="Ok">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
+      <FontAwesomeIconView fill="#b21010" glyphName="CIRCLE" layoutX="632.0" layoutY="66.0" size="50" tabSize="12" wrappingWidth="45.0">
+         <font>
+            <Font name="525icons" size="55.0" />
+         </font>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView layoutX="647.0" layoutY="159.0" wrappingWidth="45.0" />
+      <FontAwesomeIconView fill="#f8f6f6" layoutX="645.0" layoutY="60.0" size="30" text="X" />
    </children>
 </AnchorPane>
