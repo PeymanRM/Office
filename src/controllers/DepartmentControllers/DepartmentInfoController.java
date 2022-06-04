@@ -1,5 +1,7 @@
-package controllers;
+package controllers.DepartmentControllers;
 
+import controllers.EmployeeControllers.EmployeeInfoController;
+import controllers.ErrorHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -60,8 +62,10 @@ public class DepartmentInfoController {
             if(employees.size() != 0)
                 initiateMembersSection(1,false);
         } catch (SQLException e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize SQL error: " + e.getMessage());
         } catch(Exception e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize error: " + e.getMessage());
         }
     }
@@ -106,6 +110,7 @@ public class DepartmentInfoController {
                     stage.setScene(scene);
                     stage.show();
                 } catch (Exception e) {
+                    ErrorHandler.getInstance().showError("Something went wrong!");
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });

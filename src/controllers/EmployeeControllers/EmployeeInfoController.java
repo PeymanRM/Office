@@ -1,5 +1,7 @@
-package controllers;
+package controllers.EmployeeControllers;
 
+import controllers.DepartmentControllers.DepartmentInfoController;
+import controllers.ErrorHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,8 +50,10 @@ public class EmployeeInfoController {
             positionLabel.setText(employee.getPosition());
             salaryLabel.setText(String.valueOf(employee.getSalary()));
         } catch (SQLException e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize SQL error: " + e.getMessage());
         } catch(Exception e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize error: " + e.getMessage());
         }
     }

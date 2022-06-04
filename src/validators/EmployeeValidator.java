@@ -52,7 +52,7 @@ public class EmployeeValidator extends EmployeeEnti {
         if (!Pattern.matches("^[0-9]+$", getPhone())) throw new EmployeeInputException("Phone number must only contain digits!");
 
         //Telephone
-        if (getLandLine().length() != 11) throw new EmployeeInputException("Landline must be 11 digits! (don't forget typing city code at the beginning)");
+        if (getLandLine().length() != 11) throw new EmployeeInputException("Landline must be 11 digits!\n(don't forget typing city code at the beginning)");
         if (!Pattern.matches("^[0-9]+$", getLandLine())) throw new EmployeeInputException("Landline must only contain digits!");
 
         //Position

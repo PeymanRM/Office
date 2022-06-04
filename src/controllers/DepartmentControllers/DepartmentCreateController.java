@@ -1,5 +1,7 @@
-package controllers;
+package controllers.DepartmentControllers;
 
+import controllers.ErrorHandler;
+import controllers.MainMenuController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,18 +10,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import models.services.EmployeeServ;
-import validators.EmployeeInputException;
-import validators.EmployeeValidator;
+import models.services.DepartmentServ;
+import validators.DepartmentInputException;
+import validators.DepartmentValidator;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
-public class EmployeeCreateController {
+public class DepartmentCreateController {
 
     @FXML
-    private TextField nameTextField, fatherNameTextField, ageTextField, addressTextField, degreeTextField,
-            landlineTextField, phoneNumberTextField, departmentIdTextField, positionTextField, salaryTextField;
+    private TextField nameTextField, dutiesTextField;
 
     private Stage stage;
     private Scene scene;
@@ -28,17 +31,17 @@ public class EmployeeCreateController {
     public void add(ActionEvent event) throws IOException {
         try{
             //validation
-            EmployeeValidator employee = new EmployeeValidator();
-            employee.setName(nameTextField.getText().trim()).setFatherName(fatherNameTextField.getText().trim())
-                    .setAddress(addressTextField.getText().trim()).setDegree(degreeTextField.getText().trim())
-                    .setLandLine(landlineTextField.getText().trim()).setPhone(phoneNumberTextField.getText().trim())
-                    .setDeptId(departmentIdTextField.getText().trim()).setPosition(positionTextField.getText().trim());
-            employee.setSAge(ageTextField.getText().trim()).setSSalary(salaryTextField.getText().trim());
-            employee.validateInputs();
-            employee.setVerifiedIntVariables();
+            DepartmentValidator department = new DepartmentValidator();
+            department.setName(nameTextField.getText().trim()).setDuties(dutiesTextField.getText().trim());
+            department.validateInputs();
+
+            //getting date and time
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            LocalDateTime now = LocalDateTime.now();
+            department.setDate(dtf.format(now).split(" ")[0]).setTime(dtf.format(now).split(" ")[1]);
 
             //save
-            EmployeeServ.getInstance().saveEmployee(employee);
+            DepartmentServ.getInstance().saveDepartment(department);
 
             //switch scene
             FXMLLoader loader = new FXMLLoader (getClass().getResource("../views/Main_View.fxml"));
@@ -49,11 +52,13 @@ public class EmployeeCreateController {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } catch (EmployeeInputException e){
-            System.out.println("input error: " + e.getMessage());
+        } catch (DepartmentInputException e){
+            ErrorHandler.getInstance().showError(e.getMessage());
         } catch (SQLException e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("sql error: " + e.getMessage());
         } catch (Exception e) {
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("error: " + e.getMessage());
         }
     }

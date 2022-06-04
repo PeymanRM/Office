@@ -1,3 +1,4 @@
+import controllers.ErrorHandler;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,6 +26,7 @@ public class Main extends Application {
         stage.setResizable(false);
         stage.setMaximized(true);
         //TODO add icon
+        ErrorHandler.getInstance().setStage(stage);
         stage.show();
     }
 

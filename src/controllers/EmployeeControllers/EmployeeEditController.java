@@ -1,5 +1,7 @@
-package controllers;
+package controllers.EmployeeControllers;
 
+import controllers.ErrorHandler;
+import controllers.MainMenuController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -75,10 +77,12 @@ public class EmployeeEditController {
             stage.setScene(scene);
             stage.show();
         } catch (EmployeeInputException e){
-            System.out.println("input error: " + e.getMessage());
+            ErrorHandler.getInstance().showError(e.getMessage());
         } catch (SQLException e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("sql error: " + e.getMessage());
         } catch (Exception e) {
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("error: " + e.getMessage());
         }
     }

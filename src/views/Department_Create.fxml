@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DepartmentCreateController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DepartmentControllers.DepartmentCreateController">
    <children>
       <Label alignment="CENTER" layoutX="682.0" layoutY="26.0" prefHeight="104.0" prefWidth="554.0" text="Add Department" textFill="#fff9f9">
          <font>

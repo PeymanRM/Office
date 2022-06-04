@@ -1,5 +1,7 @@
 package controllers;
 
+import controllers.DepartmentControllers.DepartmentViewController;
+import controllers.EmployeeControllers.EmployeeViewController;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;

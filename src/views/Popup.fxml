@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="234.0" prefWidth="729.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ErrorPopUpController">
    <children>
-      <Label fx:id="errorLabel" layoutX="-1.0" layoutY="26.0" prefHeight="70.0" prefWidth="729.0" style="-fx-alignment: center;">
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="-1.0" layoutY="26.0" prefHeight="117.0" prefWidth="729.0" style="-fx-alignment: center; -fx-text-alignment: center;">
          <font>
             <Font size="36.0" />
          </font>

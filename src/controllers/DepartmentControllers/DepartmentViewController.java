@@ -1,5 +1,6 @@
-package controllers;
+package controllers.DepartmentControllers;
 
+import controllers.ErrorHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -59,6 +60,7 @@ public class DepartmentViewController {
 
             fillDepartmentsGridPane(DepartmentServ.getInstance().getDepartmentsList(searchQuery, pageNumber));
         } catch (SQLException e) {
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("view initialize error: " + e.getMessage());
         }
     }
@@ -84,6 +86,7 @@ public class DepartmentViewController {
                     stage.setScene(scene);
                     stage.show();
                 } catch (Exception e) {
+                    ErrorHandler.getInstance().showError("Something went wrong!");
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });
