@@ -1,10 +1,10 @@
+import controllers.ErrorHandler;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import models.sevices.AdminServ;
+import models.services.AdminServ;
 
 import java.sql.SQLException;
 
@@ -24,7 +24,9 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("Office");
         stage.setResizable(false);
+        stage.setMaximized(true);
         //TODO add icon
+        ErrorHandler.getInstance().setStage(stage);
         stage.show();
     }
 

@@ -1,5 +1,7 @@
-package controllers;
+package controllers.EmployeeControllers;
 
+import controllers.DepartmentControllers.DepartmentInfoController;
+import controllers.ErrorHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +11,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
-import models.sevices.EmployeeServ;
+import models.entities.EntityType;
+import models.services.DepartmentServ;
+import models.services.EmployeeServ;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -43,19 +47,20 @@ public class EmployeeInfoController {
             degreeLabel.setText(employee.getDegree());
             landlineLabel.setText(employee.getLandLine());
             phoneNumberLabel.setText(employee.getPhone());
-            //!
-//            departmentNameLabel.setText(DepartmentServ.getInstance().getDepartmentName(employee.getDeptId());
+            departmentNameLabel.setText(employee.getDeptId() == null ? "-----" : DepartmentServ.getInstance().getDepartmentName(employee.getDeptId()));
             positionLabel.setText(employee.getPosition());
             salaryLabel.setText(String.valueOf(employee.getSalary()));
         } catch (SQLException e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize SQL error: " + e.getMessage());
         } catch(Exception e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize error: " + e.getMessage());
         }
     }
 
     public void loadEditPage(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_Edit.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_Edit.fxml"));
         root = loader.load();
         EmployeeEditController employeeEditController = loader.getController();
         employeeEditController.setEmployeeId(employeeId);
@@ -66,21 +71,20 @@ public class EmployeeInfoController {
     }
 
     public void delete(ActionEvent event) throws IOException {
-        //TODO
+        ErrorHandler.getInstance().showDeletePopUp(EntityType.EMPLOYEE, employeeId);
     }
 
     public void back(ActionEvent event) throws IOException {
         if(previousPageDeptId == null){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_View.fxml"));
             root = loader.load();
             EmployeeViewController employeeViewController = loader.getController();
             employeeViewController.initialize(previousPageSearchQuery, previousPagePageNumber, false);
         }else {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Department_Information.fxml"));
             root = loader.load();
-            //!
-//            DepartmentInfoController departmentInfoController = loader.getController();
-//            departmentInfoController.intialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);
+            DepartmentInfoController departmentInfoController = loader.getController();
+            departmentInfoController.initialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);
         }
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

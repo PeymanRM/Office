@@ -1,5 +1,6 @@
-package controllers;
+package controllers.EmployeeControllers;
 
+import controllers.ErrorHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +14,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
-import models.sevices.EmployeeServ;
+import models.services.EmployeeServ;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -29,6 +30,9 @@ public class EmployeeViewController {
 
     @FXML
     private ChoiceBox<String> pageChoiceBox;
+
+    @FXML
+    private Label noResultLabel;
 
     private Stage stage;
     private Scene scene;
@@ -52,19 +56,27 @@ public class EmployeeViewController {
                 }
                 pageChoiceBox.getItems().clear();
                 pageChoiceBox.getItems().addAll(pages);
-                pageChoiceBox.getSelectionModel().selectFirst();
+                pageChoiceBox.getSelectionModel().select(pageNumber-1);
             }
             pageChoiceBox.setOnAction(this::changePage);
 
             fillEmployeesGridPane(EmployeeServ.getInstance().getEmployeesList(searchQuery, pageNumber));
         } catch (SQLException e) {
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("view initialize error: " + e.getMessage());
         }
     }
 
     private void fillEmployeesGridPane(List<EmployeeEnti> employees){
-        int counter = 0;
         employeesGridPane.getChildren().clear();
+
+        if (employees.size() == 0){
+            noResultLabel.setVisible(true);
+            return;
+        }
+        noResultLabel.setVisible(false);
+
+        int counter = 0;
         for (EmployeeEnti employee : employees) {
             Label statusLabel = new Label();
             statusLabel.setText("ID: " + employee.getId() + "\nName: " + employee.getName() + "\nPosition: " + employee.getPosition());
@@ -74,7 +86,7 @@ public class EmployeeViewController {
 
             statusLabel.setOnMouseClicked(event -> {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_Information.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_Information.fxml"));
                     root = loader.load();
                     EmployeeInfoController employeeInfoController = loader.getController();
                     employeeInfoController.initialize(employee.getId(), null, searchQuery, pageNumber);
@@ -83,6 +95,7 @@ public class EmployeeViewController {
                     stage.setScene(scene);
                     stage.show();
                 } catch (Exception e) {
+                    ErrorHandler.getInstance().showError("Something went wrong!");
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });
@@ -102,7 +115,7 @@ public class EmployeeViewController {
     }
 
     public void back(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../views/Main_View.fxml"));
+        root = FXMLLoader.load(getClass().getResource("../../views/Main_View.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

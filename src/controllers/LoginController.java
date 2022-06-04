@@ -7,8 +7,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-import models.sevices.AdminServ;
+import models.services.AdminServ;
 
 import java.io.IOException;
 
@@ -21,7 +22,7 @@ public class LoginController {
     private Scene scene;
     private Parent root;
 
-    public void login(ActionEvent event){
+    public void login(ActionEvent event) throws IOException{
         try {
             if (AdminServ.getInstance().verifyAdmin(usernameTextField.getText().toLowerCase().trim(), passwordTextField.getText())) {
                 //switching scene
@@ -32,10 +33,14 @@ public class LoginController {
                 stage.setScene(scene);
                 stage.show();
             }else{
-                System.out.println("Wrong pass or username");
+                ErrorHandler.getInstance().showError("Wrong username or password!");
             }
         } catch(Exception e){
-            System.out.println(e.getMessage());
+            if(e.getMessage().equals("Illegal operation on empty result set.")) ErrorHandler.getInstance().showError("Wrong username or password!");
+            else{
+                ErrorHandler.getInstance().showError("Something went wrong!");
+                System.out.println(e.getMessage());
+            }
         }
     }
 }

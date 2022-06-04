@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeInfoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeControllers.EmployeeInfoController">
    <children>
       <Label alignment="CENTER" layoutX="627.0" layoutY="15.0" prefHeight="81.0" prefWidth="804.0" text="Empeloyee Information" textFill="#fff9f9">
          <font>
@@ -52,7 +52,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="99.0" layoutY="649.0" text="Dept Id:" textFill="WHITE">
+      <Label layoutX="99.0" layoutY="649.0" text="Department:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
@@ -107,9 +107,9 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="departmentNameLabel" layoutX="265.0" layoutY="645.0" prefHeight="61.0" prefWidth="144.0" text="12312">
+      <Label fx:id="departmentNameLabel" layoutX="336.0" layoutY="645.0" prefHeight="61.0" prefWidth="347.0" text="12312">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Label fx:id="positionLabel" layoutX="877.0" layoutY="640.0" prefHeight="67.0" prefWidth="289.0" text="efweke">

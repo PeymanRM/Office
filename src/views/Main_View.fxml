@@ -7,45 +7,50 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainMenuController">
    <children>
-      <Button layoutX="39.0" layoutY="599.0" mnemonicParsing="false" onAction="#loadAddEmployeePage" prefHeight="94.0" prefWidth="281.0" text="Add employees">
+      <Button layoutX="302.0" layoutY="530.0" mnemonicParsing="false" onAction="#loadAddEmployeePage" prefHeight="94.0" prefWidth="290.0" text="Add Employee">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="765.0" layoutY="48.0" prefHeight="153.0" prefWidth="449.0" text="Main Menu" textFill="#fff4f4">
+      <Label alignment="CENTER" layoutX="764.0" layoutY="52.0" prefHeight="153.0" prefWidth="393.0" text="Main Menu" textFill="#fff4f4">
          <font>
             <Font size="79.0" />
          </font>
       </Label>
-      <Button layoutX="332.0" layoutY="601.0" mnemonicParsing="false" onAction="#loadViewEmployeesPage" prefHeight="94.0" prefWidth="290.0" text="View employees">
+      <Button layoutX="302.0" layoutY="647.0" mnemonicParsing="false" onAction="#loadViewEmployeesPage" prefHeight="94.0" prefWidth="290.0" text="See Employees">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Button>
-      <Button layoutX="688.0" layoutY="601.0" mnemonicParsing="false" onAction="#loadAddDepartmentPage" prefHeight="94.0" prefWidth="281.0" text="Add departments">
+      <Button layoutX="821.0" layoutY="530.0" mnemonicParsing="false" onAction="#loadAddDepartmentPage" prefHeight="94.0" prefWidth="292.0" text="Add Department">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Button>
-      <Button layoutX="977.0" layoutY="601.0" mnemonicParsing="false" onAction="#loadViewDepartmentsPage" prefHeight="94.0" prefWidth="292.0" text="View departments">
+      <Button layoutX="821.0" layoutY="646.0" mnemonicParsing="false" onAction="#loadViewDepartmentsPage" prefHeight="94.0" prefWidth="292.0" text="See Departments">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Button>
-      <Button layoutX="1322.0" layoutY="600.0" mnemonicParsing="false" onAction="#loadAddDocumentPage" prefHeight="94.0" prefWidth="281.0" text="Add documents">
+      <Button layoutX="1321.0" layoutY="530.0" mnemonicParsing="false" onAction="#loadAddDocumentPage" prefHeight="94.0" prefWidth="290.0" text="Add Document">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Button>
-      <Button layoutX="1615.0" layoutY="600.0" mnemonicParsing="false" onAction="#loadViewDocumentsPage" prefHeight="94.0" prefWidth="292.0" text="View documents">
+      <Button layoutX="1321.0" layoutY="646.0" mnemonicParsing="false" onAction="#loadViewDocumentsPage" prefHeight="94.0" prefWidth="292.0" text="See Documents">
          <font>
             <Font name="System Bold" size="34.0" />
          </font>
       </Button>
-      <Button layoutX="827.0" layoutY="873.0" mnemonicParsing="false" onAction="#logout" prefHeight="94.0" prefWidth="290.0" text="Logout">
+      <Button layoutX="900.0" layoutY="914.0" mnemonicParsing="false" onAction="#logout" prefHeight="63.0" prefWidth="134.0" text="Logout">
          <font>
-            <Font name="System Bold" size="31.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Button>
+      <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" layoutX="685.0" layoutY="268.0" prefHeight="67.0" prefWidth="552.0" style="-fx-alignment: center; -fx-text-fill: #b6f404;" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
