@@ -23,11 +23,5 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <FontAwesomeIconView fill="#b21010" glyphName="CIRCLE" layoutX="511.0" layoutY="66.0" size="50" tabSize="12" wrappingWidth="45.0">
-         <font>
-            <Font name="525icons" size="55.0" />
-         </font>
-      </FontAwesomeIconView>
-      <FontAwesomeIconView fill="#f8f6f6" layoutX="524.0" layoutY="60.0" size="30" text="?" />
    </children>
 </AnchorPane>
