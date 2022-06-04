@@ -39,7 +39,7 @@ public class DepartmentCreateController {
             department.setDate(dtf.format(now).split(" ")[0]).setTime(dtf.format(now).split(" ")[1]);
 
             //save
-            DepartmentServ.getInstance().editDepartment(department);
+            DepartmentServ.getInstance().saveDepartment(department);
 
             //switch scene
             FXMLLoader loader = new FXMLLoader (getClass().getResource("../views/Main_View.fxml"));

@@ -10,7 +10,7 @@ public class AdminRepo  {
     }
     public String getPassword(String username) throws SQLException {
 
-        preparedStatement = connection.prepareStatement("select username from admins where username = " + username);
+        preparedStatement = connection.prepareStatement("select password from admins where username=\"" + username + "\"");
         ResultSet resultSet=preparedStatement.executeQuery();
         resultSet.next();
         return resultSet.getString("password");

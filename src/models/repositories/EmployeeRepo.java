@@ -100,10 +100,10 @@ public class EmployeeRepo
 
     public List<EmployeeEnti> selectDepartmentMembers(String deptId) throws SQLException{
         List<EmployeeEnti> departmentMembers = new ArrayList<>();
-        EmployeeEnti employee = new EmployeeEnti();
         preparedStatement=connection.prepareStatement("select id,name,`position` from employees where deptId = " + deptId);
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
+            EmployeeEnti employee = new EmployeeEnti();
             employee.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
             departmentMembers.add(employee);
         }

@@ -76,7 +76,7 @@ public class EmployeeInfoController {
             EmployeeViewController employeeViewController = loader.getController();
             employeeViewController.initialize(previousPageSearchQuery, previousPagePageNumber, false);
         }else {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_View.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Department_Information.fxml"));
             root = loader.load();
             DepartmentInfoController departmentInfoController = loader.getController();
             departmentInfoController.initialize(previousPageDeptId, previousPageSearchQuery, previousPagePageNumber);

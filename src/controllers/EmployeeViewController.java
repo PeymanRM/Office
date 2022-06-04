@@ -52,7 +52,7 @@ public class EmployeeViewController {
                 }
                 pageChoiceBox.getItems().clear();
                 pageChoiceBox.getItems().addAll(pages);
-                pageChoiceBox.getSelectionModel().selectFirst();
+                pageChoiceBox.getSelectionModel().select(pageNumber-1);
             }
             pageChoiceBox.setOnAction(this::changePage);
 

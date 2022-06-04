@@ -33,7 +33,7 @@
             <Font size="29.0" />
          </font>
       </TextField>
-      <Button layoutX="1461.0" layoutY="840.0" mnemonicParsing="false" onAction="#addDepartment" prefHeight="81.0" prefWidth="166.0" text="Add">
+      <Button layoutX="1461.0" layoutY="840.0" mnemonicParsing="false" onAction="#add" prefHeight="81.0" prefWidth="166.0" text="Add">
          <font>
             <Font size="35.0" />
          </font>

@@ -38,7 +38,7 @@ public class DepartmentRepo  {
         preparedStatement=connection.prepareStatement("select id,name,duties from departments where name LIKE '%"+searchQuery+"%' LIMIT 20 OFFSET " + (pageNumber-1)*20);
         ResultSet resultSet=preparedStatement.executeQuery();
         while (resultSet.next()) {
-        DepartmentEnti department=new DepartmentEnti();
+            DepartmentEnti department=new DepartmentEnti();
             department.setId(resultSet.getString("id")).setName(resultSet.getString("name"));
             getDepartmentsList.add(department);
         }
@@ -50,7 +50,7 @@ public class DepartmentRepo  {
         preparedStatement.setString(1, id);
         ResultSet resultSet = preparedStatement.executeQuery();
         resultSet.next();
-        return new DepartmentEnti().setId(resultSet.getString("id")).setDuties(resultSet.getString("duties")).setDate(resultSet.getString("date")).setTime(resultSet.getString("time"));
+        return new DepartmentEnti().setId(resultSet.getString("id")).setName(resultSet.getString("name")).setDuties(resultSet.getString("duties")).setDate(resultSet.getString("date")).setTime(resultSet.getString("time"));
     }
     public void editDepartment(DepartmentEnti department) throws SQLException {
         preparedStatement=connection.prepareStatement("update departments set name=?,duties=?,date=?,time=? where id=?");

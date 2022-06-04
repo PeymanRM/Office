@@ -16,77 +16,77 @@
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="109.0" layoutY="168.0" text="Dept Id:" textFill="WHITE">
+      <Label layoutX="109.0" layoutY="168.0" text="Department Id:" textFill="WHITE">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="560.0" layoutY="168.0" text="Dept Name:" textFill="WHITE">
+      <Label layoutX="527.0" layoutY="170.0" text="Department Name:" textFill="WHITE">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
       <Label layoutX="925.0" layoutY="332.0" text="Members Count:" textFill="WHITE">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="109.0" layoutY="254.0" text="Dept Duties:" textFill="WHITE">
+      <Label layoutX="109.0" layoutY="254.0" text="Department Duties:" textFill="WHITE">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="1075.0" layoutY="167.0" text=" Date:" textFill="WHITE">
+      <Label layoutX="1156.0" layoutY="167.0" text=" Date:" textFill="WHITE">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="1489.0" layoutY="167.0" text="Time:" textFill="WHITE">
+      <Label layoutX="1570.0" layoutY="167.0" text="Time:" textFill="WHITE">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="idLabel" layoutX="262.0" layoutY="162.0" prefHeight="61.0" prefWidth="144.0" text="123">
+      <Label fx:id="idLabel" layoutX="365.0" layoutY="170.0" prefHeight="43.0" prefWidth="144.0" text="123">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="792.0" layoutY="167.0" prefHeight="50.0" prefWidth="290.0" text="sssss">
+      <Label fx:id="nameLabel" layoutX="853.0" layoutY="170.0" prefHeight="43.0" prefWidth="290.0" text="sssss">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="membersCountLabel" layoutX="1241.0" layoutY="323.0" prefHeight="67.0" prefWidth="289.0" text="1234">
+      <Label fx:id="membersCountLabel" layoutX="1207.0" layoutY="321.0" prefHeight="67.0" prefWidth="289.0" text="1234">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="dutiesLabel" layoutX="353.0" layoutY="246.0" prefHeight="67.0" prefWidth="1565.0" text="1">
+      <Label fx:id="dutiesLabel" layoutX="446.0" layoutY="242.0" prefHeight="67.0" prefWidth="1394.0" text="1">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="dateLabel" layoutX="1196.0" layoutY="158.0" prefHeight="67.0" prefWidth="221.0" text="1234/12/12">
+      <Label fx:id="dateLabel" layoutX="1258.0" layoutY="158.0" prefHeight="67.0" prefWidth="221.0" text="1234/12/12">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="timeLabel" layoutX="1594.0" layoutY="158.0" prefHeight="67.0" prefWidth="229.0" text="123">
+      <Label fx:id="timeLabel" layoutX="1667.0" layoutY="156.0" prefHeight="67.0" prefWidth="229.0" text="123">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
-      <Button fx:id="delete" layoutX="642.0" layoutY="883.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
+      <Button layoutX="642.0" layoutY="883.0" mnemonicParsing="false" onAction="#delete" prefHeight="81.0" prefWidth="166.0" text="Delete">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="back" layoutX="882.0" layoutY="976.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="882.0" layoutY="976.0" mnemonicParsing="false" onAction="#back" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="loadEditPage" layoutX="1136.0" layoutY="883.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
+      <Button layoutX="1136.0" layoutY="883.0" mnemonicParsing="false" onAction="#loadEditPage" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
             <Font size="35.0" />
          </font>
@@ -109,7 +109,7 @@
       <ChoiceBox fx:id="pageChoiceBox" layoutX="907.0" layoutY="900.0" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #45a29e; -fx-background-radius: 20px;" />
       <Label layoutX="109.0" layoutY="333.0" text="Members:" textFill="WHITE">
          <font>
-            <Font size="42.0" />
+            <Font size="38.0" />
          </font>
       </Label>
    </children>

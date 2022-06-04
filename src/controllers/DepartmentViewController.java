@@ -53,7 +53,7 @@ public class DepartmentViewController {
                 }
                 pageChoiceBox.getItems().clear();
                 pageChoiceBox.getItems().addAll(pages);
-                pageChoiceBox.getSelectionModel().selectFirst();
+                pageChoiceBox.getSelectionModel().select(pageNumber-1);
             }
             pageChoiceBox.setOnAction(this::changePage);
 
@@ -68,7 +68,7 @@ public class DepartmentViewController {
         departmentsGridPane.getChildren().clear();
         for (DepartmentEnti department : departments) {
             Label statusLabel = new Label();
-            statusLabel.setText("ID: " + department.getId() + "\nName: " + department.getName() + "\nPosition: ");
+            statusLabel.setText("ID: " + department.getId() + "\nName: " + department.getName());
             statusLabel.setTextFill(Color.web("#66fcf1"));
             statusLabel.setPrefSize(368, 211);
             statusLabel.setStyle("-fx-background-color: #19212b; -fx-background-radius: 24px; -fx-font-size: 30px; -fx-padding: 0 0 5 0; -fx-text-alignment: center; -fx-alignment: center; -fx-cursor: hand;");

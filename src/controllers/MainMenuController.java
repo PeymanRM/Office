@@ -40,8 +40,15 @@ public class MainMenuController {
         stage.show();
     }
 
-    public void loadViewDepartmentsPage(ActionEvent event){
-        renderAddPage(event, "Department_View.fxml");
+    public void loadViewDepartmentsPage(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Department_View.fxml"));
+        root = loader.load();
+        DepartmentViewController departmentViewController = loader.getController();
+        departmentViewController.initialize("", 1, false);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void loadViewDocumentsPage(ActionEvent event){

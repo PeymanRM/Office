@@ -57,7 +57,8 @@ public class DepartmentInfoController {
 
             employees = EmployeeServ.getInstance().getDepartmentMembers(departmentId);
             membersCountLabel.setText(String.valueOf(employees.size()));
-            initiateMembersSection(1,false);
+            if(employees.size() != 0)
+                initiateMembersSection(1,false);
         } catch (SQLException e){
             System.out.println("initialize SQL error: " + e.getMessage());
         } catch(Exception e){
@@ -67,7 +68,7 @@ public class DepartmentInfoController {
 
     private void initiateMembersSection(int pageNumber, boolean changedPage){
         this.pageNumber = pageNumber;
-        List<EmployeeEnti> pageEmployees = employees.subList((pageNumber-1)*14 , pageNumber*14<employees.size() ? (pageNumber+1)*14 : employees.size()-1);
+        List<EmployeeEnti> pageEmployees = employees.subList((pageNumber-1)*14 , Math.min(pageNumber * 14, employees.size()));
         if(!changedPage) {
             int employeesCount = employees.size();
             pageCount = employeesCount % 14 == 0 ? employeesCount / 14 : employeesCount / 14 + 1;
@@ -92,7 +93,7 @@ public class DepartmentInfoController {
             statusLabel.setText("ID: " + employee.getId() + "\nName: " + employee.getName() + "\nPosition: " + employee.getPosition());
             statusLabel.setTextFill(Color.web("#66fcf1"));
             statusLabel.setPrefSize(235, 205);
-            statusLabel.setStyle("-fx-background-color: #19212b; -fx-background-radius: 24px; -fx-font-size: 30px; -fx-padding: 0 0 5 0; -fx-text-alignment: center; -fx-alignment: center; -fx-cursor: hand;");
+            statusLabel.setStyle("-fx-background-color: #19212b; -fx-background-radius: 24px; -fx-font-size: 25px; -fx-padding: 0 0 5 0; -fx-text-alignment: center; -fx-alignment: center; -fx-cursor: hand;");
 
             statusLabel.setOnMouseClicked(event -> {
                 try {
