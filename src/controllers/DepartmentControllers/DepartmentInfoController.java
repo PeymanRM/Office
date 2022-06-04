@@ -15,6 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import models.entities.DepartmentEnti;
 import models.entities.EmployeeEnti;
+import models.entities.EntityType;
 import models.services.DepartmentServ;
 import models.services.EmployeeServ;
 
@@ -101,7 +102,7 @@ public class DepartmentInfoController {
 
             statusLabel.setOnMouseClicked(event -> {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_Information.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_Information.fxml"));
                     root = loader.load();
                     EmployeeInfoController employeeInfoController = loader.getController();
                     employeeInfoController.initialize(employee.getId(), departmentId, previousPageSearchQuery, previousPagePageNumber);
@@ -120,7 +121,7 @@ public class DepartmentInfoController {
     }
 
     public void loadEditPage(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Department_Edit.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Department_Edit.fxml"));
         root = loader.load();
         DepartmentEditController departmentEditController = loader.getController();
         departmentEditController.setDepartment(departmentId);
@@ -131,11 +132,11 @@ public class DepartmentInfoController {
     }
 
     public void delete(ActionEvent event) throws IOException {
-        //TODO
+        ErrorHandler.getInstance().showDeletePopUp(EntityType.DEPARTMENT, departmentId);
     }
 
     public void back(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Department_View.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Department_View.fxml"));
         root = loader.load();
         DepartmentViewController departmentViewController = loader.getController();
         departmentViewController.initialize(previousPageSearchQuery, previousPagePageNumber, false);

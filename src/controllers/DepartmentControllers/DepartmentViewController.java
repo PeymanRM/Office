@@ -77,7 +77,7 @@ public class DepartmentViewController {
 
             statusLabel.setOnMouseClicked(event -> {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Department_Information.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Department_Information.fxml"));
                     root = loader.load();
                     DepartmentInfoController departmentInfoController = loader.getController();
                     departmentInfoController.initialize(department.getId(), searchQuery, pageNumber);
@@ -106,7 +106,7 @@ public class DepartmentViewController {
     }
 
     public void back(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../views/Main_View.fxml"));
+        root = FXMLLoader.load(getClass().getResource("../../views/Main_View.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

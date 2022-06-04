@@ -43,7 +43,7 @@ public class EmployeeCreateController {
             EmployeeServ.getInstance().saveEmployee(employee);
 
             //switch scene
-            FXMLLoader loader = new FXMLLoader (getClass().getResource("../views/Main_View.fxml"));
+            FXMLLoader loader = new FXMLLoader (getClass().getResource("../../views/Main_View.fxml"));
             root = loader.load();
             MainMenuController mainMenuController = loader.getController();
             //TODO set status of edit in main menu
@@ -63,7 +63,7 @@ public class EmployeeCreateController {
     }
 
     public void cancel(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../views/Main_View.fxml"));
+        root = FXMLLoader.load(getClass().getResource("../../views/Main_View.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

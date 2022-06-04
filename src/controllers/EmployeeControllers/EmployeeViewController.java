@@ -76,7 +76,7 @@ public class EmployeeViewController {
 
             statusLabel.setOnMouseClicked(event -> {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Employee_Information.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_Information.fxml"));
                     root = loader.load();
                     EmployeeInfoController employeeInfoController = loader.getController();
                     employeeInfoController.initialize(employee.getId(), null, searchQuery, pageNumber);
@@ -105,7 +105,7 @@ public class EmployeeViewController {
     }
 
     public void back(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../views/Main_View.fxml"));
+        root = FXMLLoader.load(getClass().getResource("../../views/Main_View.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

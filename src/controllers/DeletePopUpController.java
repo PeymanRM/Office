@@ -41,6 +41,8 @@ public class DeletePopUpController {
             MainMenuController mainMenuController = loader.getController();
             //TODO set status of edit in main menu
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.close();
+            stage = ErrorHandler.getInstance().getStage();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
