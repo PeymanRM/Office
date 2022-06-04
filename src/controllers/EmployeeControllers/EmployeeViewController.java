@@ -31,6 +31,9 @@ public class EmployeeViewController {
     @FXML
     private ChoiceBox<String> pageChoiceBox;
 
+    @FXML
+    private Label noResultLabel;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -65,8 +68,15 @@ public class EmployeeViewController {
     }
 
     private void fillEmployeesGridPane(List<EmployeeEnti> employees){
-        int counter = 0;
         employeesGridPane.getChildren().clear();
+
+        if (employees.size() == 0){
+            noResultLabel.setVisible(true);
+            return;
+        }
+        noResultLabel.setVisible(false);
+
+        int counter = 0;
         for (EmployeeEnti employee : employees) {
             Label statusLabel = new Label();
             statusLabel.setText("ID: " + employee.getId() + "\nName: " + employee.getName() + "\nPosition: " + employee.getPosition());

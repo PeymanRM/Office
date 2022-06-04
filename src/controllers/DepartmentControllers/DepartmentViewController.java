@@ -31,6 +31,9 @@ public class DepartmentViewController {
     @FXML
     private ChoiceBox<String> pageChoiceBox;
 
+    @FXML
+    private Label noResultLabel;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -66,8 +69,15 @@ public class DepartmentViewController {
     }
 
     private void fillDepartmentsGridPane(List<DepartmentEnti> departments){
-        int counter = 0;
         departmentsGridPane.getChildren().clear();
+
+        if (departments.size() == 0){
+            noResultLabel.setVisible(true);
+            return;
+        }
+        noResultLabel.setVisible(false);
+
+        int counter = 0;
         for (DepartmentEnti department : departments) {
             Label statusLabel = new Label();
             statusLabel.setText("ID: " + department.getId() + "\nName: " + department.getName());

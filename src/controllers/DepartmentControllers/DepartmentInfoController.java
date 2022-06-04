@@ -32,7 +32,7 @@ public class DepartmentInfoController {
     private ChoiceBox<String> pageChoiceBox;
 
     @FXML
-    private Label idLabel, nameLabel, dutiesLabel, timeLabel, dateLabel, membersCountLabel;
+    private Label idLabel, nameLabel, dutiesLabel, timeLabel, dateLabel, membersCountLabel, noResultLabel;
 
     private Stage stage;
     private Scene scene;
@@ -62,6 +62,7 @@ public class DepartmentInfoController {
             membersCountLabel.setText(String.valueOf(employees.size()));
             if(employees.size() != 0)
                 initiateMembersSection(1,false);
+            else noResultLabel.setVisible(true);
         } catch (SQLException e){
             ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize SQL error: " + e.getMessage());
@@ -91,8 +92,10 @@ public class DepartmentInfoController {
     }
 
     private void fillEmployeesGridPane(List<EmployeeEnti> employees){
-        int counter = 0;
         membersGridPane.getChildren().clear();
+        noResultLabel.setVisible(false);
+
+        int counter = 0;
         for (EmployeeEnti employee : employees) {
             Label statusLabel = new Label();
             statusLabel.setText("ID: " + employee.getId() + "\nName: " + employee.getName() + "\nPosition: " + employee.getPosition());
