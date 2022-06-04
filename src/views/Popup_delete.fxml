@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="199.0" prefWidth="597.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.Popup1">
+<AnchorPane prefHeight="199.0" prefWidth="597.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DeletePopUpController">
    <children>
-      <Label fx:id="Lbl_Erorr" layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="468.0" text="Are you sure?">
+      <Label fx:id="Lbl_Erorr" layoutX="181.0" layoutY="29.0" prefHeight="70.0" prefWidth="236.0" style="-fx-alignment: center;" text="Are you sure?">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="btn_yes" layoutX="439.0" layoutY="131.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="144.0" text="Yes">
+      <Button layoutX="345.0" layoutY="121.0" mnemonicParsing="false" onAction="#yes" prefHeight="35.0" prefWidth="144.0" text="Yes">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <Button fx:id="btn_no" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="144.0" text="No">
+      <Button layoutX="109.0" layoutY="121.0" mnemonicParsing="false" onAction="#no" prefHeight="35.0" prefWidth="144.0" text="No">
          <font>
             <Font size="25.0" />
          </font>

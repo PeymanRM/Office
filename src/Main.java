@@ -23,6 +23,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("Office");
         stage.setResizable(false);
+        stage.setMaximized(true);
         //TODO add icon
         stage.show();
     }
