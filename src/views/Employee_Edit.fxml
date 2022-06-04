@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -83,16 +84,11 @@
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="335.0" layoutY="689.0" text="Dept Id" textFill="WHITE">
+      <Label layoutX="335.0" layoutY="689.0" text="Department:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="departmentIdTextField" layoutX="320.0" layoutY="752.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #F7F6FD;">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </TextField>
       <Label layoutX="334.0" layoutY="828.0" text="Position" textFill="WHITE">
          <font>
             <Font size="42.0" />
@@ -123,5 +119,6 @@
             <Font size="35.0" />
          </font>
       </Button>
+      <ChoiceBox fx:id="deptChoiceBox" layoutX="339.0" layoutY="751.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #45a29e; -fx-background-radius: 20px;" />
    </children>
 </AnchorPane>

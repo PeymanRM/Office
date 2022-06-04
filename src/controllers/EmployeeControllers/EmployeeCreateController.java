@@ -3,29 +3,43 @@ package controllers.EmployeeControllers;
 import controllers.ErrorHandler;
 import controllers.MainMenuController;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import models.entities.DepartmentEnti;
+import models.services.DepartmentServ;
 import models.services.EmployeeServ;
 import validators.EmployeeInputException;
 import validators.EmployeeValidator;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class EmployeeCreateController {
+public class EmployeeCreateController implements Initializable {
 
     @FXML
     private TextField nameTextField, fatherNameTextField, ageTextField, addressTextField, degreeTextField,
-            landlineTextField, phoneNumberTextField, departmentIdTextField, positionTextField, salaryTextField;
+            landlineTextField, phoneNumberTextField, positionTextField, salaryTextField;
+
+    @FXML
+    private ChoiceBox<String> deptChoiceBox;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+    private List<DepartmentEnti> departments;
+    private String selectedDeptId = null;
 
     public void add(ActionEvent event) throws IOException {
         try{
@@ -34,7 +48,7 @@ public class EmployeeCreateController {
             employee.setName(nameTextField.getText().trim()).setFatherName(fatherNameTextField.getText().trim())
                     .setAddress(addressTextField.getText().trim()).setDegree(degreeTextField.getText().trim())
                     .setLandLine(landlineTextField.getText().trim()).setPhone(phoneNumberTextField.getText().trim())
-                    .setDeptId(departmentIdTextField.getText().trim()).setPosition(positionTextField.getText().trim());
+                    .setDeptId(selectedDeptId).setPosition(positionTextField.getText().trim());
             employee.setSAge(ageTextField.getText().trim()).setSSalary(salaryTextField.getText().trim());
             employee.validateInputs();
             employee.setVerifiedIntVariables();
@@ -68,5 +82,26 @@ public class EmployeeCreateController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            departments = DepartmentServ.getInstance().getAllDepartments();
+            deptChoiceBox.getItems().add("-----");
+            for (DepartmentEnti department : departments) {
+                deptChoiceBox.getItems().add(department.getName());
+            }
+            deptChoiceBox.getSelectionModel().selectFirst();
+            deptChoiceBox.setOnAction(this::changeDept);
+        }catch (SQLException e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private void changeDept(Event event) {
+        if(deptChoiceBox.getSelectionModel().getSelectedIndex() == 0) selectedDeptId = null;
+        else selectedDeptId = departments.get(deptChoiceBox.getSelectionModel().getSelectedIndex()-1).getId();
     }
 }

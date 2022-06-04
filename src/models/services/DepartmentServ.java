@@ -55,4 +55,10 @@ public class DepartmentServ implements DepartmentServInterface {
         DepartmentRepo departmentRepo=new DepartmentRepo();
          return departmentRepo.getDepartmentName(id);
     }
+
+    @Override
+    public List<DepartmentEnti> getAllDepartments() throws SQLException {
+        DepartmentRepo departmentRepo=new DepartmentRepo();
+        return departmentRepo.getAllDepartments();
+    }
 }

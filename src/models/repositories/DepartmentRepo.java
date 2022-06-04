@@ -35,7 +35,7 @@ public class DepartmentRepo  {
     }
     public List<DepartmentEnti> getDepartmentsList(String searchQuery, int pageNumber) throws SQLException {
         List<DepartmentEnti> getDepartmentsList=new ArrayList<>();
-        preparedStatement=connection.prepareStatement("select id,name,duties from departments where name LIKE '%"+searchQuery+"%' LIMIT 20 OFFSET " + (pageNumber-1)*20);
+        preparedStatement=connection.prepareStatement("select id,name from departments where name LIKE '%"+searchQuery+"%' LIMIT 20 OFFSET " + (pageNumber-1)*20);
         ResultSet resultSet=preparedStatement.executeQuery();
         while (resultSet.next()) {
             DepartmentEnti department=new DepartmentEnti();
@@ -82,5 +82,17 @@ public class DepartmentRepo  {
     }
     public void commit() throws SQLException {
         connection.commit();
+    }
+
+    public List<DepartmentEnti> getAllDepartments() throws SQLException {
+        List<DepartmentEnti> getDepartmentsList=new ArrayList<>();
+        preparedStatement=connection.prepareStatement("select id,name from departments");
+        ResultSet resultSet=preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            DepartmentEnti department=new DepartmentEnti();
+            department.setId(resultSet.getString("id")).setName(resultSet.getString("name"));
+            getDepartmentsList.add(department);
+        }
+        return getDepartmentsList;
     }
 }

@@ -33,7 +33,7 @@ public interface DepartmentServInterface {
      * The result is based on the page count and search query;
      * @param searchQuery what to be searched for
      * @param pageNumber the page number that user(admin) wants
-     * @return a list of DepartmentEnti objects filled with id, name and position.
+     * @return a list of DepartmentEnti objects filled with id, name.
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
@@ -74,4 +74,13 @@ public interface DepartmentServInterface {
      * @throws SQLException
      */
     String getDepartmentName(String id) throws SQLException;
+
+    /**
+     * Gives the list of departments as DepartmentEnti objects
+     * filled with only necessary information, including: id and name.
+     * @return a list of DepartmentEnti objects filled with id, name.
+     * @throws SQLException if a database access error occurs
+     * or this method is called on a closed connection
+     */
+    List<DepartmentEnti> getAllDepartments() throws SQLException;
 }
