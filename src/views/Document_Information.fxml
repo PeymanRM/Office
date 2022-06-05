@@ -72,17 +72,17 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Button fx:id="delete" layoutX="648.0" layoutY="879.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Delete">
+      <Button layoutX="648.0" layoutY="879.0" mnemonicParsing="false" onAction="#delete" prefHeight="81.0" prefWidth="166.0" text="Delete">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="back" layoutX="864.0" layoutY="966.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="864.0" layoutY="966.0" mnemonicParsing="false" onAction="#back" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="loadEditPage" layoutX="1106.0" layoutY="879.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="166.0" text="Edit">
+      <Button layoutX="1106.0" layoutY="879.0" mnemonicParsing="false" onAction="#loadEditPage" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
             <Font size="35.0" />
          </font>
@@ -92,7 +92,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="Lbl_reciver" layoutX="1490.0" layoutY="438.0" prefHeight="67.0" prefWidth="289.0" text="sdsdd">
+      <Label fx:id="recieverLabel" layoutX="1490.0" layoutY="438.0" prefHeight="67.0" prefWidth="289.0" text="sdsdd">
          <font>
             <Font size="42.0" />
          </font>

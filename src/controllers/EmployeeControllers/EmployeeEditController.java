@@ -66,8 +66,10 @@ public class EmployeeEditController {
             positionTextField.setText(employee.getPosition());
             salaryTextField.setText(String.valueOf(employee.getSalary()));
         } catch (SQLException e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize SQL error: " + e.getMessage());
         } catch(Exception e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize error: " + e.getMessage());
         }
     }

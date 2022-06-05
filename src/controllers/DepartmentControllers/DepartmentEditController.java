@@ -36,8 +36,10 @@ public class DepartmentEditController {
             nameTextField.setText(department.getName());
             dutiesTextField.setText(department.getDuties());
         } catch (SQLException e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize SQL error: " + e.getMessage());
         } catch(Exception e){
+            ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize error: " + e.getMessage());
         }
     }
