@@ -18,7 +18,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="nameTextField" layoutX="718.0" layoutY="349.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="nameTextField" layoutX="718.0" layoutY="349.0" prefHeight="62.0" prefWidth="484.0">
          <font>
             <Font size="29.0" />
          </font>
@@ -28,7 +28,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="dutiesTextField" layoutX="479.0" layoutY="605.0" prefHeight="69.0" prefWidth="960.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="dutiesTextField" layoutX="479.0" layoutY="605.0" prefHeight="69.0" prefWidth="960.0">
          <font>
             <Font size="29.0" />
          </font>

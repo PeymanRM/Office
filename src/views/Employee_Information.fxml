@@ -147,7 +147,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="dateTimeLabel" layoutX="1371.0" layoutY="690.0" prefHeight="61.0" prefWidth="347.0" text="xx:xx:xx xxxx/xx/xx">
+      <Label fx:id="dateTimeLabel" layoutX="1371.0" layoutY="690.0" prefHeight="61.0" prefWidth="347.0" text="xxxx/xx/xx xx:xx:xx">
          <font>
             <Font size="36.0" />
          </font>

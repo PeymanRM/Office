@@ -18,7 +18,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="nameTextField" layoutX="322.0" layoutY="390.0" prefHeight="62.0" prefWidth="484.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="nameTextField" layoutX="322.0" layoutY="390.0" prefHeight="62.0" prefWidth="484.0">
          <font>
             <Font size="29.0" />
          </font>
@@ -28,7 +28,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="subjectTextField" layoutX="322.0" layoutY="538.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="subjectTextField" layoutX="322.0" layoutY="538.0" prefHeight="62.0" prefWidth="1275.0">
          <font>
             <Font size="29.0" />
          </font>
@@ -38,7 +38,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="senderTextField" layoutX="322.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="senderTextField" layoutX="322.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0">
          <font>
             <Font size="30.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="receiverTextField" layoutX="950.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="receiverTextField" layoutX="950.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0">
          <font>
             <Font size="30.0" />
          </font>
