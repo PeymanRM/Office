@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DocumentControllers.DocumentEditController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DocumentControllers.DocumentCreateController">
    <children>
-      <Label alignment="CENTER" layoutX="694.0" layoutY="34.0" prefHeight="104.0" prefWidth="511.0" text="Edit Document" textFill="#fff9f9">
+      <Label alignment="CENTER" layoutX="704.0" layoutY="34.0" prefHeight="104.0" prefWidth="511.0" text="Add Document" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
@@ -43,12 +43,12 @@
             <Font size="30.0" />
          </font>
       </TextField>
-      <Button layoutX="1472.0" layoutY="911.0" mnemonicParsing="false" onAction="#edit" prefHeight="81.0" prefWidth="166.0" text="Edit">
+      <Button layoutX="1472.0" layoutY="911.0" mnemonicParsing="false" onAction="#add" prefHeight="81.0" prefWidth="166.0" text="Add">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button layoutX="1298.0" layoutY="911.0" mnemonicParsing="false" onAction="#cancel" prefHeight="81.0" prefWidth="166.0" text="Cancel">
+      <Button fx:id="btn_back" layoutX="1298.0" layoutY="911.0" mnemonicParsing="false" onAction="#cancel" prefHeight="81.0" prefWidth="166.0" text="Cancel">
          <font>
             <Font size="35.0" />
          </font>
