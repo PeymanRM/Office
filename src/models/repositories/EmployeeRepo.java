@@ -111,9 +111,8 @@ public class EmployeeRepo
     }
      public void evacuateDepartment(String deptId) throws SQLException
     {
-        preparedStatement=connection.prepareStatement("insert into employees(deptId) value (?) where deptId=?");
-        preparedStatement.setString(1,null);
-        preparedStatement.setString(2,deptId);
+        preparedStatement=connection.prepareStatement("update employees set deptId=null where deptId=?");
+        preparedStatement.setString(1,deptId);
 
     }
 
