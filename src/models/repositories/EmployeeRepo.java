@@ -17,7 +17,7 @@ public class EmployeeRepo
         preparedStatement=connection.prepareStatement("SELECT count(*) from employees");
         ResultSet resultSet=preparedStatement.executeQuery();
         resultSet.next();
-        employee.setId(String.valueOf(resultSet.getInt(1)+1));
+        employee.setId(String.valueOf(resultSet.getInt(1)+1001));
         preparedStatement=connection.prepareStatement("insert into employees(id,name,age,fatherName,address,`degree`,landline,phone,deptId,`position`,salary) values (?,?,?,?,?,?,?,?,?,?,?)");
         preparedStatement.setString(1,employee.getId());
         preparedStatement.setString(2,employee.getName());
