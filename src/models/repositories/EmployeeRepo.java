@@ -111,9 +111,10 @@ public class EmployeeRepo
     }
      public void evacuateDepartment(String deptId) throws SQLException
     {
-        preparedStatement=connection.prepareStatement("update employees set deptId=null where deptId=?");
+        System.out.println(deptId);
+        preparedStatement=connection.prepareStatement("update employees set deptId=NULL where deptId=?");
         preparedStatement.setString(1,deptId);
-
+        preparedStatement.executeUpdate();
     }
 
     public void close() throws SQLException {

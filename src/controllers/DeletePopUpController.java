@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import models.entities.EntityType;
 import models.services.DepartmentServ;
-import models.services.DepartmentServInterface;
+import models.services.DocumentServ;
 import models.services.EmployeeServ;
 
 import java.io.IOException;
@@ -30,16 +30,28 @@ public class DeletePopUpController {
 
     public void yes(ActionEvent event) throws IOException {
         try {
+            System.out.println("popup: " + entityId + " " + entityType);
             switch (entityType) {
                 case EMPLOYEE -> EmployeeServ.getInstance().removeEmployee(entityId);
-                case DEPARTMENT -> DepartmentServ.getInstance().removeDepartment(entityId);
-                //!
-//                case DOCUMENT -> DocumentServ.getInstance().removeDepartment(entityId);
+                case DEPARTMENT -> {
+                    EmployeeServ.getInstance().evacuateDepartment(entityId);
+                    DepartmentServ.getInstance().removeDepartment(entityId);
+                }
+                case DOCUMENT -> DocumentServ.getInstance().removeDocument(entityId);
             }
             FXMLLoader loader = new FXMLLoader (getClass().getResource("../views/Main_View.fxml"));
             root = loader.load();
             MainMenuController mainMenuController = loader.getController();
-            //TODO set status of edit in main menu
+
+            String message = "Successfully Deleted ";
+            //deleted what?
+            switch (entityType) {
+                case EMPLOYEE -> message += "Employee";
+                case DEPARTMENT -> message += "Department";
+                case DOCUMENT -> message += "Document";
+            }
+            mainMenuController.setStatus(message);
+
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.close();
             stage = ErrorHandler.getInstance().getStage();

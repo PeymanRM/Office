@@ -61,6 +61,7 @@ public class EmployeeServ implements EmployeeServInterface
     @Override
     public void evacuateDepartment(String deptId) throws SQLException
     {
+        System.out.println("serv: " + deptId);
         EmployeeRepo employeeRepo=new EmployeeRepo();
         employeeRepo.evacuateDepartment(deptId);
         employeeRepo.commit();
