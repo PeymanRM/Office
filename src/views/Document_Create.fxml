@@ -53,12 +53,12 @@
             <Font size="35.0" />
          </font>
       </Button>
-      <Label layoutX="970.0" layoutY="630.0" text="Name of Reciever" textFill="WHITE">
+      <Label layoutX="970.0" layoutY="630.0" text="Name of Receiver" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="recieverTextField" layoutX="950.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
+      <TextField fx:id="receiverTextField" layoutX="950.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0" style="-fx-background-color: #F7F6FD;">
          <font>
             <Font size="30.0" />
          </font>

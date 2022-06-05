@@ -87,12 +87,12 @@
             <Font size="35.0" />
          </font>
       </Button>
-      <Label fx:id="recieverLabel" layoutX="1135.0" layoutY="445.0" text="Name of Reciever:" textFill="WHITE">
+      <Label fx:id="recieverLabel" layoutX="1135.0" layoutY="445.0" text="Name of Receiver:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="recieverLabel" layoutX="1490.0" layoutY="438.0" prefHeight="67.0" prefWidth="289.0" text="sdsdd">
+      <Label fx:id="receiverLabel" layoutX="1490.0" layoutY="438.0" prefHeight="67.0" prefWidth="289.0" text="sdsdd">
          <font>
             <Font size="42.0" />
          </font>
