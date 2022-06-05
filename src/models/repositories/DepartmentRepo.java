@@ -16,7 +16,7 @@ public class DepartmentRepo  {
         preparedStatement=connection.prepareStatement("SELECT count(*) from departments");
         ResultSet resultSet= preparedStatement.executeQuery();
         resultSet.next();
-        department.setId(String.valueOf(resultSet.getInt(1)+1));
+        department.setId(String.valueOf(resultSet.getInt(1)+1001));
         preparedStatement=connection.prepareStatement("insert into departments(id,name,duties,date,time) values (?,?,?,?,?)");
         preparedStatement.setString(1,department.getId());
         preparedStatement.setString(2,department.getName());
