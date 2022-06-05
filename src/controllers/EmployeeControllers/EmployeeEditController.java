@@ -1,5 +1,6 @@
 package controllers.EmployeeControllers;
 
+import controllers.AuthController;
 import controllers.ErrorHandler;
 import controllers.MainMenuController;
 import javafx.event.ActionEvent;
@@ -20,6 +21,8 @@ import validators.EmployeeValidator;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class EmployeeEditController {
@@ -90,6 +93,11 @@ public class EmployeeEditController {
             employee.setSAge(ageTextField.getText().trim()).setSSalary(salaryTextField.getText().trim());
             employee.validateInputs();
             employee.setVerifiedIntVariables();
+
+            //getting date and time and modifiedBy
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            LocalDateTime now = LocalDateTime.now();
+            employee.setDate(dtf.format(now).split(" ")[0]).setTime(dtf.format(now).split(" ")[1]).setModifiedBy(AuthController.getInstance().getLoggedInAdmin());
 
             //save
             employee.setId(employeeId);

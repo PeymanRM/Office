@@ -37,32 +37,32 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="125.0" layoutY="479.0" text="Degree:" textFill="WHITE">
+      <Label layoutX="125.0" layoutY="457.0" text="Degree:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="724.0" layoutY="479.0" text="Landline:" textFill="WHITE">
+      <Label layoutX="724.0" layoutY="457.0" text="Landline:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="1333.0" layoutY="479.0" text="Phone:" textFill="WHITE">
+      <Label layoutX="1333.0" layoutY="457.0" text="Phone:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="125.0" layoutY="671.0" text="Department:" textFill="WHITE">
+      <Label layoutX="125.0" layoutY="577.0" text="Department:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="724.0" layoutY="671.0" text="Position:" textFill="WHITE">
+      <Label layoutX="724.0" layoutY="577.0" text="Position:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="1333.0" layoutY="671.0" text="Salary:" textFill="WHITE">
+      <Label layoutX="1333.0" layoutY="577.0" text="Salary:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
@@ -92,32 +92,32 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="degreeLabel" layoutX="291.0" layoutY="470.0" prefHeight="67.0" prefWidth="289.0" text="efpojwefpjw">
+      <Label fx:id="degreeLabel" layoutX="291.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="efpojwefpjw">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="landlineLabel" layoutX="907.0" layoutY="470.0" prefHeight="67.0" prefWidth="289.0" text="2813289">
+      <Label fx:id="landlineLabel" layoutX="907.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="2813289">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="phoneNumberLabel" layoutX="1479.0" layoutY="470.0" prefHeight="67.0" prefWidth="289.0" text="09292109">
+      <Label fx:id="phoneNumberLabel" layoutX="1479.0" layoutY="448.0" prefHeight="67.0" prefWidth="289.0" text="09292109">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="departmentNameLabel" layoutX="362.0" layoutY="665.0" prefHeight="61.0" prefWidth="347.0" text="-----">
+      <Label fx:id="departmentNameLabel" layoutX="362.0" layoutY="571.0" prefHeight="61.0" prefWidth="347.0" text="-----">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="positionLabel" layoutX="903.0" layoutY="662.0" prefHeight="67.0" prefWidth="289.0" text="efweke">
+      <Label fx:id="positionLabel" layoutX="903.0" layoutY="568.0" prefHeight="67.0" prefWidth="289.0" text="efweke">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="salaryLabel" layoutX="1475.0" layoutY="664.0" prefHeight="67.0" prefWidth="289.0" text="2938019238">
+      <Label fx:id="salaryLabel" layoutX="1475.0" layoutY="570.0" prefHeight="67.0" prefWidth="289.0" text="2938019238">
          <font>
             <Font size="42.0" />
          </font>
@@ -137,5 +137,25 @@
             <Font size="35.0" />
          </font>
       </Button>
+      <Label layoutX="835.0" layoutY="700.0" text="Last Modification Date and Time:" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="699.0" text="Last Modified By:" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateTimeLabel" layoutX="1371.0" layoutY="690.0" prefHeight="61.0" prefWidth="347.0" text="xx:xx:xx xxxx/xx/xx">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="modifiedByLabel" layoutX="410.0" layoutY="696.0" prefHeight="48.0" prefWidth="231.0" text="2938019238">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

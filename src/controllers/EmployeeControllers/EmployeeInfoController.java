@@ -22,7 +22,7 @@ public class EmployeeInfoController {
 
     @FXML
     private Label idLabel, nameLabel, fatherNameLabel, ageLabel, addressLabel, degreeLabel,
-            landlineLabel, phoneNumberLabel, departmentNameLabel, positionLabel, salaryLabel;
+            landlineLabel, phoneNumberLabel, departmentNameLabel, positionLabel, salaryLabel, modifiedByLabel, dateTimeLabel;
 
     private Stage stage;
     private Scene scene;
@@ -50,6 +50,8 @@ public class EmployeeInfoController {
             departmentNameLabel.setText(employee.getDeptId() == -1 ? "-----" : DepartmentServ.getInstance().getDepartmentName(employee.getDeptId()));
             positionLabel.setText(employee.getPosition());
             salaryLabel.setText(String.valueOf(employee.getSalary()));
+            modifiedByLabel.setText(employee.getModifiedBy());
+            dateTimeLabel.setText(employee.getDate() + " " + employee.getTime());
         } catch (SQLException e){
             ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize SQL error: " + e.getMessage());

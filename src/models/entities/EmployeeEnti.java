@@ -1,7 +1,7 @@
 package models.entities;
 
 public class EmployeeEnti {
-    private String name, fatherName, address, phone,landLine, degree, position;
+    private String name, fatherName, address, phone,landLine, degree, position, date, time, modifiedBy;
     private int salary,age, id, deptId;
 
     public int getId() {
@@ -100,6 +100,33 @@ public class EmployeeEnti {
 
     public EmployeeEnti setAge(int age) {
         this.age = age;
+        return this;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public EmployeeEnti setDate(String date) {
+        this.date = date;
+        return this;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public EmployeeEnti setTime(String time) {
+        this.time = time;
+        return this;
+    }
+
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public EmployeeEnti setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
         return this;
     }
 }

@@ -18,7 +18,7 @@ public class EmployeeRepo
 //        ResultSet resultSet=preparedStatement.executeQuery();
 //        resultSet.next();
 //        employee.setId(String.valueOf(resultSet.getInt(1)+1001));
-        preparedStatement=connection.prepareStatement("insert into employees(name,age,fatherName,address,`degree`,landline,phone,deptId,`position`,salary) values (?,?,?,?,?,?,?,?,?,?)");
+        preparedStatement=connection.prepareStatement("insert into employees(name,age,fatherName,address,`degree`,landline,phone,deptId,`position`,salary, date, time, modifiedBy) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
 //        preparedStatement.setString(1,employee.getId());
         preparedStatement.setString(1,employee.getName());
         preparedStatement.setInt(2,employee.getAge());
@@ -31,6 +31,9 @@ public class EmployeeRepo
         preparedStatement.setInt(8,employee.getDeptId());
         preparedStatement.setString(9,employee.getPosition());
         preparedStatement.setInt(10,employee.getSalary());
+        preparedStatement.setString(11,employee.getDate());
+        preparedStatement.setString(12,employee.getTime());
+        preparedStatement.setString(13,employee.getModifiedBy());
         preparedStatement.executeUpdate();
     }
     public EmployeeEnti getEmployeeInfo(int id) throws SQLException {
@@ -44,7 +47,8 @@ public class EmployeeRepo
             .setAge(resultSet.getInt("age")).setFatherName(resultSet.getString("fatherName"))
             .setAddress(resultSet.getString("address")).setDegree(resultSet.getString("degree")).setPhone(resultSet.getString("phone"))
             .setLandLine(resultSet.getString("landLine")).setDeptId(resultSet.getInt("deptId"))
-            .setPosition(resultSet.getString("position")).setSalary(resultSet.getInt("salary"));
+            .setPosition(resultSet.getString("position")).setSalary(resultSet.getInt("salary"))
+                .setDate(resultSet.getString("date")).setTime(resultSet.getString("time")).setModifiedBy(resultSet.getString("modifiedBy"));
     }
    public List<EmployeeEnti> getEmployeeList(String searchQuery,int pageNumber) throws SQLException {
         List<EmployeeEnti> getEmployeeList=new ArrayList<>();
@@ -69,7 +73,7 @@ public class EmployeeRepo
         return getEmployeeList;
     }
     public void editEmployee(EmployeeEnti employee) throws SQLException {
-        preparedStatement=connection.prepareStatement("update employees set name=?,age=?,fatherName=?,address=?,`degree`=?,landline=?,phone=?,`position`=?,salary=?, deptId=?  where id=?");
+        preparedStatement=connection.prepareStatement("update employees set name=?,age=?,fatherName=?,address=?,`degree`=?,landline=?,phone=?,`position`=?,salary=?, deptId=?, date=?, time=?, modifiedBy=?  where id=?");
         preparedStatement.setString(1,employee.getName());
         preparedStatement.setInt(2,employee.getAge());
         preparedStatement.setString(3,employee.getFatherName());
@@ -80,7 +84,10 @@ public class EmployeeRepo
         preparedStatement.setString(8,employee.getPosition());
         preparedStatement.setInt(9,employee.getSalary());
         preparedStatement.setInt(10,employee.getDeptId());
-        preparedStatement.setInt(11,employee.getId());
+        preparedStatement.setString(11,employee.getDate());
+        preparedStatement.setString(12,employee.getTime());
+        preparedStatement.setString(13,employee.getModifiedBy());
+        preparedStatement.setInt(14,employee.getId());
         preparedStatement.executeUpdate();
     }
     public void deleteEmployee(int id) throws SQLException {
