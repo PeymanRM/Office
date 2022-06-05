@@ -76,4 +76,13 @@ public interface EmployeeServInterface {
      * or this method is called on a closed connection
      */
     List<EmployeeEnti> getDepartmentMembers (String deptId) throws SQLException;
+
+    /**
+     * Gets id of a department that is deleted and
+     * kicks the former employees out of the department
+     * @param deptId id of the employee you want to remove
+     * @throws SQLException if a database access error occurs
+     * or this method is called on a closed connection
+     */
+    void emptyDepartment(String deptId) throws SQLException;
 }
