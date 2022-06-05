@@ -1,14 +1,14 @@
 package models.entities;
 
 public class EmployeeEnti {
-    private String id, name, fatherName, address, deptId,phone,landLine, degree, position;
-    private int salary,age;
+    private String name, fatherName, address, phone,landLine, degree, position;
+    private int salary,age, id, deptId;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public EmployeeEnti setId(String id) {
+    public EmployeeEnti setId(int id) {
         this.id = id;
         return this;
     }
@@ -85,11 +85,11 @@ public class EmployeeEnti {
         return this;
     }
 
-    public String getDeptId() {
+    public int getDeptId() {
         return deptId;
     }
 
-    public EmployeeEnti setDeptId(String deptId) {
+    public EmployeeEnti setDeptId(int deptId) {
         this.deptId = deptId;
         return this;
     }

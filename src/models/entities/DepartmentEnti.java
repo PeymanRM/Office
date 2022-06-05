@@ -2,13 +2,14 @@ package models.entities;
 
 public class DepartmentEnti
 {
-    private String id,name,duties,time,date;
+    private String name,duties,time,date;
+    private int id;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public DepartmentEnti setId(String id) {
+    public DepartmentEnti setId(int id) {
         this.id = id;
         return this;
     }

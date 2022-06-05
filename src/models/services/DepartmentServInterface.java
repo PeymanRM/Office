@@ -47,7 +47,7 @@ public interface DepartmentServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    DepartmentEnti getDepartmentInfo (String id) throws SQLException;
+    DepartmentEnti getDepartmentInfo (int id) throws SQLException;
 
     /**
      * Gets a department's information in form of a DepartmentEnti object to be
@@ -65,7 +65,7 @@ public interface DepartmentServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    void removeDepartment(String id) throws SQLException;
+    void removeDepartment(int id) throws SQLException;
 
     /**
      * Gets the id of a department and gives its name
@@ -73,7 +73,7 @@ public interface DepartmentServInterface {
      * @return name of the department
      * @throws SQLException
      */
-    String getDepartmentName(String id) throws SQLException;
+    String getDepartmentName(int id) throws SQLException;
 
     /**
      * Gives the list of departments as DepartmentEnti objects

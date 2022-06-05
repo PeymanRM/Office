@@ -14,15 +14,11 @@ public class DepartmentRepo  {
     }
     public void saveDepartment(DepartmentEnti department) throws SQLException {
         preparedStatement=connection.prepareStatement("SELECT count(*) from departments");
-        ResultSet resultSet= preparedStatement.executeQuery();
-        resultSet.next();
-        department.setId(String.valueOf(resultSet.getInt(1)+1));
-        preparedStatement=connection.prepareStatement("insert into departments(id,name,duties,date,time) values (?,?,?,?,?)");
-        preparedStatement.setString(1,department.getId());
-        preparedStatement.setString(2,department.getName());
-        preparedStatement.setString(3,department.getDuties());
-        preparedStatement.setString(4,department.getDate());
-        preparedStatement.setString(5,department.getTime());
+        preparedStatement=connection.prepareStatement("insert into departments(name,duties,date,time) values (?,?,?,?)");
+        preparedStatement.setString(1,department.getName());
+        preparedStatement.setString(2,department.getDuties());
+        preparedStatement.setString(3,department.getDate());
+        preparedStatement.setString(4,department.getTime());
         preparedStatement.executeUpdate();
     }
 
@@ -39,18 +35,18 @@ public class DepartmentRepo  {
         ResultSet resultSet=preparedStatement.executeQuery();
         while (resultSet.next()) {
             DepartmentEnti department=new DepartmentEnti();
-            department.setId(resultSet.getString("id")).setName(resultSet.getString("name"));
+            department.setId(resultSet.getInt("id")).setName(resultSet.getString("name"));
             getDepartmentsList.add(department);
         }
         return getDepartmentsList;
     }
-    public DepartmentEnti getDepartmentInfo(String id) throws SQLException {
+    public DepartmentEnti getDepartmentInfo(int id) throws SQLException {
 
         preparedStatement=connection.prepareStatement("select * from departments where id=?");
-        preparedStatement.setString(1, id);
+        preparedStatement.setInt(1, id);
         ResultSet resultSet = preparedStatement.executeQuery();
         resultSet.next();
-        return new DepartmentEnti().setId(resultSet.getString("id")).setName(resultSet.getString("name")).setDuties(resultSet.getString("duties")).setDate(resultSet.getString("date")).setTime(resultSet.getString("time"));
+        return new DepartmentEnti().setId(resultSet.getInt("id")).setName(resultSet.getString("name")).setDuties(resultSet.getString("duties")).setDate(resultSet.getString("date")).setTime(resultSet.getString("time"));
     }
     public void editDepartment(DepartmentEnti department) throws SQLException {
         preparedStatement=connection.prepareStatement("update departments set name=?,duties=?,date=?,time=? where id=?");
@@ -58,19 +54,19 @@ public class DepartmentRepo  {
         preparedStatement.setString(2,department.getDuties());
         preparedStatement.setString(3,department.getDate());
         preparedStatement.setString(4,department.getTime());
-        preparedStatement.setString(5,department.getId());
+        preparedStatement.setInt(5,department.getId());
         preparedStatement.executeUpdate();
     }
 
-    public void removeDepartment(String id) throws SQLException {
+    public void removeDepartment(int id) throws SQLException {
         preparedStatement=connection.prepareStatement("delete from departments where id=?");
-        preparedStatement.setString(1,id);
+        preparedStatement.setInt(1,id);
         preparedStatement.executeUpdate();
     }
 
-    public String getDepartmentName(String id) throws SQLException {
+    public String getDepartmentName(int id) throws SQLException {
         preparedStatement=connection.prepareStatement("select name from departments where id=?");
-        preparedStatement.setString(1,id);
+        preparedStatement.setInt(1,id);
         ResultSet resultSet=preparedStatement.executeQuery();
         resultSet.next();
         return resultSet.getString("name");
@@ -90,7 +86,7 @@ public class DepartmentRepo  {
         ResultSet resultSet=preparedStatement.executeQuery();
         while (resultSet.next()) {
             DepartmentEnti department=new DepartmentEnti();
-            department.setId(resultSet.getString("id")).setName(resultSet.getString("name"));
+            department.setId(resultSet.getInt("id")).setName(resultSet.getString("name"));
             getDepartmentsList.add(department);
         }
         return getDepartmentsList;

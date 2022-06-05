@@ -1,8 +1,6 @@
 package controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
@@ -51,7 +49,7 @@ public class ErrorHandler {
         }
     }
 
-    public void showDeletePopUp(EntityType entityType, String entityId){
+    public void showDeletePopUp(EntityType entityType, int entityId){
         try {
             final Stage dialog = new Stage();
             dialog.initModality(Modality.APPLICATION_MODAL);

@@ -31,7 +31,7 @@ public class DepartmentServ implements DepartmentServInterface {
     }
 
     @Override
-    public DepartmentEnti getDepartmentInfo(String id) throws SQLException {
+    public DepartmentEnti getDepartmentInfo(int id) throws SQLException {
         DepartmentRepo departmentRepo=new DepartmentRepo();
         return departmentRepo.getDepartmentInfo(id);
     }
@@ -44,14 +44,14 @@ public class DepartmentServ implements DepartmentServInterface {
     }
 
     @Override
-    public void removeDepartment(String id) throws SQLException {
+    public void removeDepartment(int id) throws SQLException {
         DepartmentRepo departmentRepo=new DepartmentRepo();
         departmentRepo.removeDepartment(id);
         departmentRepo.commit();
     }
 
     @Override
-    public String getDepartmentName(String id) throws SQLException {
+    public String getDepartmentName(int id) throws SQLException {
         DepartmentRepo departmentRepo=new DepartmentRepo();
          return departmentRepo.getDepartmentName(id);
     }

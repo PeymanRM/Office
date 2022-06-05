@@ -1,4 +1,4 @@
-package controllers.EmployeeControllers;
+package controllers.DocumentControllers;
 
 import controllers.ErrorHandler;
 import javafx.event.ActionEvent;
@@ -13,17 +13,17 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import models.entities.EmployeeEnti;
-import models.services.EmployeeServ;
+import models.entities.DocumentEnti;
+import models.services.DocumentServ;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public class EmployeeViewController {
+public class DocumentViewController {
 
     @FXML
-    private GridPane employeesGridPane;
+    private GridPane documentsGridPane;
 
     @FXML
     private TextField searchTextField;
@@ -41,6 +41,7 @@ public class EmployeeViewController {
     int pageNumber, pageCount;
     String searchQuery;
 
+
     public void initialize(String searchQuery, int pageNumber, boolean changedPage){
         try {
             this.pageNumber = pageNumber;
@@ -48,8 +49,8 @@ public class EmployeeViewController {
             if(!changedPage) {
                 this.searchQuery = searchQuery;
                 searchTextField.setText(searchQuery);
-                int employeesCount = EmployeeServ.getInstance().getEmployeesCount(searchQuery);
-                pageCount = employeesCount % 20 == 0 ? employeesCount / 20 : employeesCount / 20 + 1;
+                int documentsCount = DocumentServ.getInstance().getDocumentsCount(searchQuery);
+                pageCount = documentsCount % 20 == 0 ? documentsCount / 20 : documentsCount / 20 + 1;
                 String[] pages = new String[pageCount];
                 for (int i = 0; i < pageCount; i++) {
                     pages[i] = "Page " + (i + 1);
@@ -60,36 +61,36 @@ public class EmployeeViewController {
             }
             pageChoiceBox.setOnAction(this::changePage);
 
-            fillEmployeesGridPane(EmployeeServ.getInstance().getEmployeesList(searchQuery, pageNumber));
+            fillDocumentsGridPane(DocumentServ.getInstance().getDocumentsList(searchQuery, pageNumber));
         } catch (SQLException e) {
             ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("view initialize error: " + e.getMessage());
         }
     }
 
-    private void fillEmployeesGridPane(List<EmployeeEnti> employees){
-        employeesGridPane.getChildren().clear();
+    private void fillDocumentsGridPane(List<DocumentEnti> documents){
+        documentsGridPane.getChildren().clear();
 
-        if (employees.size() == 0){
+        if (documents.size() == 0){
             noResultLabel.setVisible(true);
             return;
         }
         noResultLabel.setVisible(false);
 
         int counter = 0;
-        for (EmployeeEnti employee : employees) {
+        for (DocumentEnti document : documents) {
             Label statusLabel = new Label();
-            statusLabel.setText("ID: " + employee.getId() + "\nName: " + employee.getName() + "\nPosition: " + employee.getPosition());
+            statusLabel.setText("ID: " + document.getId() + "\nName: " + document.getName() + "\nSubject: " + document.getSubject());
             statusLabel.setTextFill(Color.web("#66fcf1"));
             statusLabel.setPrefSize(368, 211);
             statusLabel.setStyle("-fx-background-color: #19212b; -fx-background-radius: 24px; -fx-font-size: 30px; -fx-padding: 0 0 5 0; -fx-text-alignment: center; -fx-alignment: center; -fx-cursor: hand;");
 
             statusLabel.setOnMouseClicked(event -> {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_Information.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Document_Information.fxml"));
                     root = loader.load();
-                    EmployeeInfoController employeeInfoController = loader.getController();
-                    employeeInfoController.initialize(employee.getId(), -1, searchQuery, pageNumber);
+                    DocumentInfoController documentInfoController = loader.getController();
+                    documentInfoController.initialize(document.getId(), searchQuery, pageNumber);
                     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
                     stage.setScene(scene);
@@ -99,7 +100,7 @@ public class EmployeeViewController {
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });
-            employeesGridPane.add(statusLabel, counter%5 , (counter-counter%5)/5);
+            documentsGridPane.add(statusLabel, counter%5 , (counter-counter%5)/5);
             counter++;
         }
     }

@@ -34,7 +34,7 @@ public class EmployeeServ implements EmployeeServInterface
     }
 
     @Override
-    public EmployeeEnti getEmployeeInfo(String id) throws SQLException {
+    public EmployeeEnti getEmployeeInfo(int id) throws SQLException {
         EmployeeRepo employeeRepo = new EmployeeRepo();
         return employeeRepo.getEmployeeInfo(id);
     }
@@ -47,15 +47,23 @@ public class EmployeeServ implements EmployeeServInterface
     }
 
     @Override
-    public void removeEmployee(String id) throws SQLException {
+    public void removeEmployee(int id) throws SQLException {
         EmployeeRepo employeeRepo = new EmployeeRepo();
         employeeRepo.deleteEmployee(id);
         employeeRepo.commit();
     }
 
     @Override
-    public List<EmployeeEnti> getDepartmentMembers(String deptId) throws SQLException {
+    public List<EmployeeEnti> getDepartmentMembers(int deptId) throws SQLException {
         EmployeeRepo employeeRepo = new EmployeeRepo();
         return employeeRepo.selectDepartmentMembers(deptId);
+    }
+    @Override
+    public void evacuateDepartment(int deptId) throws SQLException
+    {
+        System.out.println("serv: " + deptId);
+        EmployeeRepo employeeRepo=new EmployeeRepo();
+        employeeRepo.evacuateDepartment(deptId);
+        employeeRepo.commit();
     }
 }

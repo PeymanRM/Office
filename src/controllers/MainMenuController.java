@@ -1,6 +1,7 @@
 package controllers;
 
 import controllers.DepartmentControllers.DepartmentViewController;
+import controllers.DocumentControllers.DocumentViewController;
 import controllers.EmployeeControllers.EmployeeViewController;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -61,8 +62,15 @@ public class MainMenuController {
         stage.show();
     }
 
-    public void loadViewDocumentsPage(ActionEvent event){
-        renderAddPage(event, "Document_View.fxml");
+    public void loadViewDocumentsPage(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/Document_View.fxml"));
+        root = loader.load();
+        DocumentViewController documentViewController = loader.getController();
+        documentViewController.initialize("", 1, false);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     private void renderAddPage(Event event, String fxmlFileName) {

@@ -1,4 +1,4 @@
-package controllers.DepartmentControllers;
+package controllers.DocumentControllers;
 
 import controllers.ErrorHandler;
 import controllers.MainMenuController;
@@ -10,31 +10,33 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import models.entities.DepartmentEnti;
-import models.services.DepartmentServ;
-import validators.DepartmentInputException;
-import validators.DepartmentValidator;
+import models.entities.DocumentEnti;
+import models.services.DocumentServ;
+import validators.DocumentInputException;
+import validators.DocumentValidator;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class DepartmentEditController {
+public class DocumentEditController {
 
     @FXML
-    private TextField nameTextField, dutiesTextField;
+    private TextField nameTextField, subjectTextField, senderTextField, receiverTextField;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
 
-    private DepartmentEnti preDepartment;
+    private DocumentEnti preDocument;
 
-    public void setDepartment(int departmentId) {
+    public void setDocument(int documentId) {
         try {
-            this.preDepartment = DepartmentServ.getInstance().getDepartmentInfo(departmentId);
-            DepartmentEnti department = DepartmentServ.getInstance().getDepartmentInfo(departmentId);
-            nameTextField.setText(department.getName());
-            dutiesTextField.setText(department.getDuties());
+            this.preDocument = DocumentServ.getInstance().getDocumentInfo(documentId);
+            DocumentEnti document = DocumentServ.getInstance().getDocumentInfo(documentId);
+            nameTextField.setText(document.getName());
+            subjectTextField.setText(document.getSubject());
+            senderTextField.setText(document.getNameOfSender());
+            receiverTextField.setText(document.getNameOfReceiver());
         } catch (SQLException e){
             ErrorHandler.getInstance().showError("Something went wrong!");
             System.out.println("initialize SQL error: " + e.getMessage());
@@ -47,24 +49,26 @@ public class DepartmentEditController {
     public void edit(ActionEvent event) throws IOException {
         try{
             //validation
-            DepartmentValidator department = new DepartmentValidator();
-            department.setName(nameTextField.getText().trim()).setDuties(dutiesTextField.getText().trim());
-            department.validateInputs();
+            DocumentValidator document = new DocumentValidator();
+            document.setName(nameTextField.getText().trim()).setSubject(subjectTextField.getText().trim())
+                            .setNameOfSender(senderTextField.getText().trim()).setNameOfReceiver(receiverTextField.getText().trim());
+            document.validateInputs();
 
             //save
-            preDepartment.setName(nameTextField.getText().trim()).setDuties(dutiesTextField.getText().trim());
-            DepartmentServ.getInstance().editDepartment(preDepartment);
+            preDocument.setName(nameTextField.getText().trim()).setSubject(subjectTextField.getText().trim())
+                    .setNameOfSender(senderTextField.getText().trim()).setNameOfReceiver(receiverTextField.getText().trim());
+            DocumentServ.getInstance().editDocument(preDocument);
 
             //switch scene
             FXMLLoader loader = new FXMLLoader (getClass().getResource("../../views/Main_View.fxml"));
             root = loader.load();
             MainMenuController mainMenuController = loader.getController();
-            mainMenuController.setStatus("Successfully Edited Department");
+            mainMenuController.setStatus("Successfully Edited Document");
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } catch (DepartmentInputException e){
+        } catch (DocumentInputException e){
             ErrorHandler.getInstance().showError(e.getMessage());
         } catch (SQLException e){
             ErrorHandler.getInstance().showError("Something went wrong!");
