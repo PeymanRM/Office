@@ -84,5 +84,5 @@ public interface EmployeeServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    void emptyDepartment(String deptId) throws SQLException;
+    void evacuateDepartment(String deptId) throws SQLException;
 }
