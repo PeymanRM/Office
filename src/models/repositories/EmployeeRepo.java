@@ -109,6 +109,13 @@ public class EmployeeRepo
         }
         return departmentMembers;
     }
+     public void evacuateDepartment(String deptId) throws SQLException
+    {
+        preparedStatement=connection.prepareStatement("insert into employees(deptId) value (?) where deptId=?");
+        preparedStatement.setString(1,null);
+        preparedStatement.setString(2,deptId);
+
+    }
 
     public void close() throws SQLException {
         connection.close();

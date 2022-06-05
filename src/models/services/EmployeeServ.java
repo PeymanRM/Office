@@ -58,4 +58,11 @@ public class EmployeeServ implements EmployeeServInterface
         EmployeeRepo employeeRepo = new EmployeeRepo();
         return employeeRepo.selectDepartmentMembers(deptId);
     }
+    @Override
+    public void evacuateDepartment(String deptId) throws SQLException
+    {
+        EmployeeRepo employeeRepo=new EmployeeRepo();
+        employeeRepo.evacuateDepartment(deptId);
+        employeeRepo.commit();
+    }
 }
