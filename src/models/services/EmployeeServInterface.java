@@ -47,7 +47,7 @@ public interface EmployeeServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    EmployeeEnti getEmployeeInfo (String id) throws SQLException;
+    EmployeeEnti getEmployeeInfo (int id) throws SQLException;
 
     /**
      * Gets an employee's information in form of an EmployeeEnti object to be
@@ -65,7 +65,7 @@ public interface EmployeeServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    void removeEmployee(String id) throws SQLException;
+    void removeEmployee(int id) throws SQLException;
 
     /**
      * Searches among the employees and gives a list of
@@ -75,7 +75,7 @@ public interface EmployeeServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    List<EmployeeEnti> getDepartmentMembers (String deptId) throws SQLException;
+    List<EmployeeEnti> getDepartmentMembers (int deptId) throws SQLException;
 
     /**
      * Gets id of a department that is deleted and
@@ -84,5 +84,5 @@ public interface EmployeeServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    void evacuateDepartment(String deptId) throws SQLException;
+    void evacuateDepartment(int deptId) throws SQLException;
 }

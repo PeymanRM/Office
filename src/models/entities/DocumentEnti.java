@@ -1,13 +1,14 @@
 package models.entities;
 
 public class DocumentEnti {
-    private String id,name,subject,nameOfReceiver,nameOfSender,time,date;
+    private String name,subject,nameOfReceiver,nameOfSender,time,date;
+    private int id;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public DocumentEnti setId(String id) {
+    public DocumentEnti setId(int id) {
         this.id = id;
         return this;
     }

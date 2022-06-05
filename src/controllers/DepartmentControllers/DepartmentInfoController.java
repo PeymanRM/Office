@@ -38,13 +38,13 @@ public class DepartmentInfoController {
     private Scene scene;
     private Parent root;
 
-    private String departmentId, previousPageSearchQuery;
-    private int previousPagePageNumber;
+    private String previousPageSearchQuery;
+    private int previousPagePageNumber, departmentId;
 
     int pageNumber, pageCount;
     List<EmployeeEnti> employees;
 
-    public void initialize(String departmentId, String previousPageSearchQuery, int previousPagePageNumber) {
+    public void initialize(int departmentId, String previousPageSearchQuery, int previousPagePageNumber) {
         this.departmentId = departmentId;
         this.previousPageSearchQuery = previousPageSearchQuery;
         this.previousPagePageNumber = previousPagePageNumber;
@@ -52,7 +52,7 @@ public class DepartmentInfoController {
         try {
             //setting labels
             DepartmentEnti department = DepartmentServ.getInstance().getDepartmentInfo(departmentId);
-            idLabel.setText(department.getId());
+            idLabel.setText(String.valueOf(department.getId()));
             nameLabel.setText(department.getName());
             dutiesLabel.setText(department.getDuties());
             timeLabel.setText(department.getTime());

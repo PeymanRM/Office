@@ -29,7 +29,7 @@ public class DocumentEditController {
 
     private DocumentEnti preDocument;
 
-    public void setDocument(String documentId) {
+    public void setDocument(int documentId) {
         try {
             this.preDocument = DocumentServ.getInstance().getDocumentInfo(documentId);
             DocumentEnti document = DocumentServ.getInstance().getDocumentInfo(documentId);

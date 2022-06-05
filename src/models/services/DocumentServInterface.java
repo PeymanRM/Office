@@ -47,7 +47,7 @@ public interface DocumentServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    DocumentEnti getDocumentInfo (String id) throws SQLException;
+    DocumentEnti getDocumentInfo (int id) throws SQLException;
 
     /**
      * Gets a document's information in form of a DocumentEnti object to be
@@ -65,5 +65,5 @@ public interface DocumentServInterface {
      * @throws SQLException if a database access error occurs
      * or this method is called on a closed connection
      */
-    void removeDocument(String id) throws SQLException;
+    void removeDocument(int id) throws SQLException;
 }

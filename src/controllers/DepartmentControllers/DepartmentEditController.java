@@ -29,7 +29,7 @@ public class DepartmentEditController {
 
     private DepartmentEnti preDepartment;
 
-    public void setDepartment(String departmentId) {
+    public void setDepartment(int departmentId) {
         try {
             this.preDepartment = DepartmentServ.getInstance().getDepartmentInfo(departmentId);
             DepartmentEnti department = DepartmentServ.getInstance().getDepartmentInfo(departmentId);

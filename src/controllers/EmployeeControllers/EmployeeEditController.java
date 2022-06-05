@@ -36,9 +36,9 @@ public class EmployeeEditController {
     private Parent root;
 
     private List<DepartmentEnti> departments;
-    private String employeeId, selectedDeptId = null;
+    private int employeeId, selectedDeptId = -1;
 
-    public void setEmployeeId(String employeeId) {
+    public void setEmployeeId(int employeeId) {
         try {
             this.employeeId = employeeId;
             EmployeeEnti employee = EmployeeServ.getInstance().getEmployeeInfo(employeeId);
@@ -48,12 +48,12 @@ public class EmployeeEditController {
             deptChoiceBox.getItems().add("-----");
             for (DepartmentEnti department : departments) {
                 deptChoiceBox.getItems().add(department.getName());
-                if(department.getId() != null && department.getId().equals(employee.getDeptId())){
+                if(department.getId() != -1 && department.getId() == employee.getDeptId()){
                     selectedDeptId = employee.getDeptId();
                     deptChoiceBox.getSelectionModel().select(department.getName());
                 }
             }
-            if (employee.getDeptId() == null) deptChoiceBox.getSelectionModel().selectFirst();
+            if (employee.getDeptId() == -1) deptChoiceBox.getSelectionModel().selectFirst();
             deptChoiceBox.setOnAction(this::changeDept);
 
             nameTextField.setText(employee.getName());
@@ -75,7 +75,7 @@ public class EmployeeEditController {
     }
 
     private void changeDept(ActionEvent event) {
-        if(deptChoiceBox.getSelectionModel().getSelectedIndex() == 0) selectedDeptId = null;
+        if(deptChoiceBox.getSelectionModel().getSelectedIndex() == 0) selectedDeptId = -1;
         else selectedDeptId = departments.get(deptChoiceBox.getSelectionModel().getSelectedIndex()-1).getId();
     }
 

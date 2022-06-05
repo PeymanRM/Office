@@ -25,10 +25,10 @@ public class DocumentInfoController {
     private Scene scene;
     private Parent root;
 
-    private String documentId, previousPageSearchQuery;
-    private int previousPagePageNumber;
+    private String previousPageSearchQuery;
+    private int previousPagePageNumber, documentId;
 
-    public void initialize(String documentId, String previousPageSearchQuery, int previousPagePageNumber) {
+    public void initialize(int documentId, String previousPageSearchQuery, int previousPagePageNumber) {
         this.documentId = documentId;
         this.previousPageSearchQuery = previousPageSearchQuery;
         this.previousPagePageNumber = previousPagePageNumber;
@@ -36,7 +36,7 @@ public class DocumentInfoController {
         try {
             //setting labels
             DocumentEnti document = DocumentServ.getInstance().getDocumentInfo(documentId);
-            idLabel.setText(document.getId());
+            idLabel.setText(String.valueOf(document.getId()));
             nameLabel.setText(document.getName());
             subjectLabel.setText(document.getSubject());
             senderLabel.setText(document.getNameOfSender());

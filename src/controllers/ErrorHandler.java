@@ -49,7 +49,7 @@ public class ErrorHandler {
         }
     }
 
-    public void showDeletePopUp(EntityType entityType, String entityId){
+    public void showDeletePopUp(EntityType entityType, int entityId){
         try {
             final Stage dialog = new Stage();
             dialog.initModality(Modality.APPLICATION_MODAL);

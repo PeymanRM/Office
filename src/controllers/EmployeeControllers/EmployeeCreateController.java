@@ -39,7 +39,7 @@ public class EmployeeCreateController implements Initializable {
     private Parent root;
 
     private List<DepartmentEnti> departments;
-    private String selectedDeptId = null;
+    private int selectedDeptId = -1;
 
     public void add(ActionEvent event) throws IOException {
         try{
@@ -101,7 +101,7 @@ public class EmployeeCreateController implements Initializable {
     }
 
     private void changeDept(Event event) {
-        if(deptChoiceBox.getSelectionModel().getSelectedIndex() == 0) selectedDeptId = null;
+        if(deptChoiceBox.getSelectionModel().getSelectedIndex() == 0) selectedDeptId = -1;
         else selectedDeptId = departments.get(deptChoiceBox.getSelectionModel().getSelectedIndex()-1).getId();
     }
 }

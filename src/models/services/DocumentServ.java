@@ -30,7 +30,7 @@ public class DocumentServ implements DocumentServInterface{
     }
 
     @Override
-    public DocumentEnti getDocumentInfo(String id) throws SQLException {
+    public DocumentEnti getDocumentInfo(int id) throws SQLException {
         DocumentRepo documentRepo=new DocumentRepo();
         return documentRepo.getDocumentInfo(id);
     }
@@ -44,7 +44,7 @@ public class DocumentServ implements DocumentServInterface{
     }
 
     @Override
-    public void removeDocument(String id) throws SQLException {
+    public void removeDocument(int id) throws SQLException {
         DocumentRepo documentRepo=new DocumentRepo();
         documentRepo.removeDocument(id);
         documentRepo.commit();

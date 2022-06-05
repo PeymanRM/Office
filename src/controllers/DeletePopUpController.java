@@ -21,9 +21,9 @@ public class DeletePopUpController {
     private Parent root;
 
     private EntityType entityType;
-    private String entityId;
+    private int entityId;
 
-    public void initialize(EntityType entityType, String entityId) {
+    public void initialize(EntityType entityType, int entityId) {
         this.entityType = entityType;
         this.entityId = entityId;
     }

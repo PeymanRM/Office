@@ -89,7 +89,7 @@ public class EmployeeViewController {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_Information.fxml"));
                     root = loader.load();
                     EmployeeInfoController employeeInfoController = loader.getController();
-                    employeeInfoController.initialize(employee.getId(), null, searchQuery, pageNumber);
+                    employeeInfoController.initialize(employee.getId(), -1, searchQuery, pageNumber);
                     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
                     stage.setScene(scene);

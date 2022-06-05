@@ -28,10 +28,10 @@ public class EmployeeInfoController {
     private Scene scene;
     private Parent root;
 
-    private String employeeId, previousPageDeptId, previousPageSearchQuery;
-    private int previousPagePageNumber;
+    private String  previousPageSearchQuery;
+    private int previousPagePageNumber, employeeId, previousPageDeptId;
 
-    public void initialize(String employeeId, String previousPageDeptId, String previousPageSearchQuery, int previousPagePageNumber) {
+    public void initialize(int employeeId, int previousPageDeptId, String previousPageSearchQuery, int previousPagePageNumber) {
         this.employeeId = employeeId;
         this.previousPageDeptId = previousPageDeptId;
         this.previousPageSearchQuery = previousPageSearchQuery;
@@ -39,7 +39,7 @@ public class EmployeeInfoController {
 
         try {
             EmployeeEnti employee = EmployeeServ.getInstance().getEmployeeInfo(employeeId);
-            idLabel.setText(employee.getId());
+            idLabel.setText(String.valueOf(employee.getId()));
             nameLabel.setText(employee.getName());
             fatherNameLabel.setText(employee.getFatherName());
             ageLabel.setText(String.valueOf(employee.getAge()));
@@ -47,7 +47,7 @@ public class EmployeeInfoController {
             degreeLabel.setText(employee.getDegree());
             landlineLabel.setText(employee.getLandLine());
             phoneNumberLabel.setText(employee.getPhone());
-            departmentNameLabel.setText(employee.getDeptId() == null ? "-----" : DepartmentServ.getInstance().getDepartmentName(employee.getDeptId()));
+            departmentNameLabel.setText(employee.getDeptId() == -1 ? "-----" : DepartmentServ.getInstance().getDepartmentName(employee.getDeptId()));
             positionLabel.setText(employee.getPosition());
             salaryLabel.setText(String.valueOf(employee.getSalary()));
         } catch (SQLException e){
@@ -75,7 +75,7 @@ public class EmployeeInfoController {
     }
 
     public void back(ActionEvent event) throws IOException {
-        if(previousPageDeptId == null){
+        if(previousPageDeptId == -1){
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_View.fxml"));
             root = loader.load();
             EmployeeViewController employeeViewController = loader.getController();
