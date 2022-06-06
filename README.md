@@ -7,6 +7,6 @@ Final project of SRBIAU's advanced programming course
 - Exception Handling
 - Design Patterns (Singleton, Builder)
 - Generic classes
-- Databse (SQL - Mysql)
+- Database (SQL - Mysql)
 - MVC
 - GUI (JavaFX)
