@@ -6,7 +6,7 @@ Final project of SRBIAU's advanced programming course
 - OOP (Encapsulation, Inheritance, Polymorphism,  Abstraction)
 - Exception Handling
 - Design Patterns (Singleton, Builder)
-- Generic classes
-- Database (SQL - Mysql)
+- Generic Classes
+- Database (SQL - MySQL)
 - MVC
 - GUI (JavaFX)
