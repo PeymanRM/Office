@@ -14,12 +14,8 @@ public class EmployeeRepo
         connection.setAutoCommit(false);
     }
     public void insertEmployee(EmployeeEnti employee) throws SQLException {
-//        preparedStatement=connection.prepareStatement("SELECT count(*) from employees");
-//        ResultSet resultSet=preparedStatement.executeQuery();
-//        resultSet.next();
-//        employee.setId(String.valueOf(resultSet.getInt(1)+1001));
         preparedStatement=connection.prepareStatement("insert into employees(name,age,fatherName,address,`degree`,landline,phone,deptId,`position`,salary, date, time, modifiedBy) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
-//        preparedStatement.setString(1,employee.getId());
+
         preparedStatement.setString(1,employee.getName());
         preparedStatement.setInt(2,employee.getAge());
         preparedStatement.setString(3,employee.getFatherName());
@@ -52,16 +48,7 @@ public class EmployeeRepo
     }
    public List<EmployeeEnti> getEmployeeList(String searchQuery,int pageNumber) throws SQLException {
         List<EmployeeEnti> getEmployeeList=new ArrayList<>();
-//        if (searchQuery==null) {
-//            preparedStatement = connection.prepareStatement("select id, name,`position` from employees LIMIT 20 OFFSET " + (pageNumber-1)*20);
-//            ResultSet resultSet = preparedStatement.executeQuery();
-//           while (resultSet.next()) {
-//               EmployeeEnti employee=new EmployeeEnti();
-//               employee.setId(resultSet.getString("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
-//               getEmployeeList.add(employee);
-//           }
-//
-//        } else {
+
             preparedStatement=connection.prepareStatement("select id,name,`position` from employees where name LIKE '%"+searchQuery+"%' LIMIT 20 OFFSET " + (pageNumber-1)*20);
             ResultSet resultSet=preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -69,7 +56,7 @@ public class EmployeeRepo
                 employee.setId(resultSet.getInt("id")).setName(resultSet.getString("name")).setPosition(resultSet.getString("position"));
                 getEmployeeList.add(employee);
             }
-//        }
+
         return getEmployeeList;
     }
     public void editEmployee(EmployeeEnti employee) throws SQLException {
@@ -96,11 +83,9 @@ public class EmployeeRepo
         preparedStatement.executeUpdate();
     }
     public int pageCount(String searchQuery) throws SQLException {
-//        if(searchQuery == null) {
-//            preparedStatement = connection.prepareStatement("SELECT count(*) from employees");
-//        } else {
+
             preparedStatement = connection.prepareStatement("select count(*) from employees where name LIKE '%" + searchQuery + "%'");
-//        }
+
         ResultSet resultSet = preparedStatement.executeQuery();
         resultSet.next();
         return resultSet.getInt(1);
