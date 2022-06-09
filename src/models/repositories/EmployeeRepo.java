@@ -13,7 +13,7 @@ public class EmployeeRepo
         connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/office","JavaLearner", "LearningIsFun,HomeworkIsn't");
         connection.setAutoCommit(false);
     }
-
+    public void insertEmployee(EmployeeEnti employee) throws SQLException {
         preparedStatement=connection.prepareStatement("insert into employees(name,age,fatherName,address,`degree`,landline,phone,deptId,`position`,salary, date, time, modifiedBy) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         preparedStatement.setString(1,employee.getName());
