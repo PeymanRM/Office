@@ -1,6 +1,4 @@
-nav b {
-    margin-left: 20px;
-}
+
 .root {
     -fx-padding: 0;
     /*-fx-background-color: #1f2333;*/
@@ -11,41 +9,57 @@ nav b {
     -fx-border-radius: 24px;
     -fx-background-radius: 24px;
     -fx-padding: 10px 5px;
-    -fx-border-color: #66fcf1;
+    -fx-border-color: #00a693;
     -fx-border-style: solid;
-    -fx-border-width: 2px;
+    -fx-border-width: 4px;
     /*outline: none;*/
     -fx-text-alignment: center;
     -fx-alignment: center;
     -fx-background-color: #1f2833;
-    -fx-text-fill: #c5c6c7;
+    -fx-text-fill: #008f95;
     -fx-font-family: sans-serif;
+}
+.choice-box{
+    -fx-background-color: #008f95;
+    -fx-background-radius: 20px;
+    -colo: #07f9ff;
 }
 .label {
     -fx-background-color: #1f2833;
-    -fx-text-fill: #45a29e;
+    -fx-text-fill: #008f95;
     -fx-font-family: sans-serif;
     -fx-alignment: center-left;
-    
+}
+.grid-pane-label{
+    -fx-background-color: #19212b;
+    -fx-background-radius: 24px;
+    -fx-font-size: 30px;
+    -fx-padding: 0 0 5 0;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-text-fill: #008f95;
 }
 
 .button {
-    -fx-border-color: #66fcf1;
+    -fx-border-color: #00a693;
     -fx-border-style: solid;
-    -fx-border-width: 2px;
+    -fx-border-width: 4px;
     -fx-border-radius: 24px;
     -fx-background-radius: 24px;
     /*-fx-margin: 10px;*/
     -fx-padding: 7px 10px;
     -fx-background-color: #1f2833;
-    -fx-text-fill: #66fcf1;
+    -fx-text-fill: #00a693;
     /*transition: 0.25s;*/
     -fx-cursor: hand;
+    /*-fx-font-weight: bold;*/
 }
 .button:hover {
-    -fx-background-color: #66fcf1;
+    -fx-background-color: #00a693;
     -fx-text-fill: #1f2833;
 }
 .b{
-    color: #66fcf1;
+    -fx-text-fill: #00a693;
+    -fx-font-weight: bold;
 }

@@ -30,7 +30,6 @@ public class DeletePopUpController {
 
     public void yes(ActionEvent event) throws IOException {
         try {
-            System.out.println("popup: " + entityId + " " + entityType);
             switch (entityType) {
                 case EMPLOYEE -> EmployeeServ.getInstance().removeEmployee(entityId);
                 case DEPARTMENT -> {

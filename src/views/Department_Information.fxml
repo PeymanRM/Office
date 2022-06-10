@@ -11,84 +11,84 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DepartmentControllers.DepartmentInfoController">
    <children>
-      <Label alignment="CENTER" layoutX="545.0" layoutY="42.0" prefHeight="81.0" prefWidth="821.0" text="Department Information" textFill="#fff9f9">
+      <Label alignment="CENTER" layoutX="555.0" layoutY="44.0" prefHeight="82.0" prefWidth="809.0" styleClass="b" text="Department Information" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="109.0" layoutY="168.0" text="Department Id:" textFill="WHITE">
+      <Label layoutX="109.0" layoutY="168.0" styleClass="b" text="Department Id:" textFill="WHITE">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="527.0" layoutY="170.0" text="Department Name:" textFill="WHITE">
+      <Label layoutX="553.0" layoutY="170.0" styleClass="b" text="Department Name:" textFill="WHITE">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="925.0" layoutY="332.0" text="Members Count:" textFill="WHITE">
+      <Label layoutX="925.0" layoutY="332.0" styleClass="b" text="Members Count:" textFill="WHITE">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="109.0" layoutY="254.0" text="Department Duties:" textFill="WHITE">
+      <Label layoutX="109.0" layoutY="254.0" styleClass="b" text="Department Duties:" textFill="WHITE">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="1156.0" layoutY="167.0" text=" Date:" textFill="WHITE">
+      <Label layoutX="1205.0" layoutY="167.0" styleClass="b" text=" Date:" textFill="WHITE">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label layoutX="1570.0" layoutY="167.0" text="Time:" textFill="WHITE">
+      <Label layoutX="1570.0" layoutY="167.0" styleClass="b" text="Time:" textFill="WHITE">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="idLabel" layoutX="365.0" layoutY="170.0" prefHeight="43.0" prefWidth="144.0" text="123">
+      <Label fx:id="idLabel" layoutX="377.0" layoutY="170.0" prefHeight="43.0" prefWidth="144.0" text="123">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="853.0" layoutY="170.0" prefHeight="43.0" prefWidth="290.0" text="sssss">
+      <Label fx:id="nameLabel" layoutX="895.0" layoutY="169.0" prefHeight="43.0" prefWidth="290.0" text="sssss">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="membersCountLabel" layoutX="1209.0" layoutY="321.0" prefHeight="67.0" prefWidth="289.0" text="1234">
+      <Label fx:id="membersCountLabel" layoutX="1230.0" layoutY="321.0" prefHeight="67.0" prefWidth="289.0" text="1234">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="dutiesLabel" layoutX="446.0" layoutY="242.0" prefHeight="67.0" prefWidth="1394.0" text="1">
+      <Label fx:id="dutiesLabel" layoutX="465.0" layoutY="242.0" prefHeight="67.0" prefWidth="1394.0" text="1">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="dateLabel" layoutX="1260.0" layoutY="158.0" prefHeight="67.0" prefWidth="221.0" text="1234/12/12">
+      <Label fx:id="dateLabel" layoutX="1310.0" layoutY="157.0" prefHeight="67.0" prefWidth="221.0" text="1234/12/12">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="timeLabel" layoutX="1667.0" layoutY="156.0" prefHeight="67.0" prefWidth="229.0" text="123">
+      <Label fx:id="timeLabel" layoutX="1671.0" layoutY="156.0" prefHeight="67.0" prefWidth="229.0" text="123">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
       <Button layoutX="642.0" layoutY="883.0" mnemonicParsing="false" onAction="#delete" prefHeight="81.0" prefWidth="166.0" text="Delete">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
       <Button layoutX="882.0" layoutY="976.0" mnemonicParsing="false" onAction="#back" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
       <Button layoutX="1136.0" layoutY="883.0" mnemonicParsing="false" onAction="#loadEditPage" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
       <GridPane fx:id="membersGridPane" hgap="10.0" layoutX="109.0" layoutY="420.0" prefHeight="418.0" prefWidth="1702.0" vgap="10.0">
@@ -106,13 +106,13 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-      <ChoiceBox fx:id="pageChoiceBox" layoutX="907.0" layoutY="900.0" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #45a29e; -fx-background-radius: 20px;" />
-      <Label layoutX="109.0" layoutY="333.0" text="Members:" textFill="WHITE">
+      <ChoiceBox fx:id="pageChoiceBox" layoutX="907.0" layoutY="900.0" prefHeight="32.0" prefWidth="115.0" />
+      <Label layoutX="109.0" layoutY="333.0" styleClass="b" text="Members:" textFill="WHITE">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <Label fx:id="noResultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="330.0" prefHeight="51.0" prefWidth="144.0" style="-fx-font-weight: bold;" text="No Result!" visible="false">
+      <Label fx:id="noResultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="295.0" layoutY="330.0" prefHeight="51.0" prefWidth="144.0" styleClass="b" text="No Result!" visible="false">
          <font>
             <Font size="27.0" />
          </font>

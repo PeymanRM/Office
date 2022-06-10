@@ -8,59 +8,59 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DocumentControllers.DocumentCreateController">
    <children>
-      <Label alignment="CENTER" layoutX="704.0" layoutY="34.0" prefHeight="104.0" prefWidth="511.0" text="Add Document" textFill="#fff9f9">
+      <Label alignment="CENTER" layoutX="705.0" layoutY="35.0" prefHeight="104.0" prefWidth="511.0" styleClass="b" text="Add Document" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="339.0" layoutY="325.0" text="Doc Name" textFill="WHITE">
+      <Label layoutX="339.0" layoutY="325.0" styleClass="b" text="Doc Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="nameTextField" layoutX="322.0" layoutY="390.0" prefHeight="62.0" prefWidth="484.0">
+      <TextField fx:id="nameTextField" layoutX="322.0" layoutY="390.0" prefHeight="62.0" prefWidth="484.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="339.0" layoutY="472.0" text="Doc Subject" textFill="WHITE">
+      <Label layoutX="339.0" layoutY="472.0" styleClass="b" text="Doc Subject" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="subjectTextField" layoutX="322.0" layoutY="538.0" prefHeight="62.0" prefWidth="1275.0">
+      <TextField fx:id="subjectTextField" layoutX="322.0" layoutY="538.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="339.0" layoutY="630.0" text="Name of Sender" textFill="WHITE">
+      <Label layoutX="339.0" layoutY="630.0" styleClass="b" text="Name of Sender" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="senderTextField" layoutX="322.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0">
+      <TextField fx:id="senderTextField" layoutX="322.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0" style="-fx-font-size: 29;">
          <font>
-            <Font size="30.0" />
+            <Font size="29.0" />
          </font>
       </TextField>
       <Button layoutX="1472.0" layoutY="911.0" mnemonicParsing="false" onAction="#add" prefHeight="81.0" prefWidth="166.0" text="Add">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
       <Button fx:id="btn_back" layoutX="1298.0" layoutY="911.0" mnemonicParsing="false" onAction="#cancel" prefHeight="81.0" prefWidth="166.0" text="Cancel">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
-      <Label layoutX="970.0" layoutY="630.0" text="Name of Receiver" textFill="WHITE">
+      <Label layoutX="970.0" layoutY="630.0" styleClass="b" text="Name of Receiver" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="receiverTextField" layoutX="950.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0">
+      <TextField fx:id="receiverTextField" layoutX="950.0" layoutY="692.0" prefHeight="62.0" prefWidth="469.0" style="-fx-font-size: 29;">
          <font>
-            <Font size="30.0" />
+            <Font size="29.0" />
          </font>
       </TextField>
    </children>

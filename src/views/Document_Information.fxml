@@ -7,57 +7,57 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DocumentControllers.DocumentInfoController">
    <children>
-      <Label alignment="CENTER" layoutX="577.0" layoutY="35.0" prefHeight="82.0" prefWidth="766.0" text="Document Information" textFill="#fff9f9">
+      <Label alignment="CENTER" layoutX="577.0" layoutY="35.0" prefHeight="82.0" prefWidth="766.0" styleClass="b" text="Document Information" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="159.0" layoutY="180.0" text="Doc Id:" textFill="WHITE">
+      <Label layoutX="159.0" layoutY="180.0" styleClass="b" text="Doc Id:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="1123.0" layoutY="177.0" text="Doc Name:" textFill="WHITE">
+      <Label layoutX="1123.0" layoutY="177.0" styleClass="b" text="Doc Name:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="159.0" layoutY="445.0" text="Name of Sender:" textFill="WHITE">
+      <Label layoutX="159.0" layoutY="445.0" styleClass="b" text="Name of Sender:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="159.0" layoutY="318.0" text="Doc Subject:" textFill="WHITE">
+      <Label layoutX="159.0" layoutY="318.0" styleClass="b" text="Doc Subject:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="159.0" layoutY="561.0" text="Date:" textFill="WHITE">
+      <Label layoutX="159.0" layoutY="561.0" styleClass="b" text="Date:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="1130.0" layoutY="561.0" text="Time:" textFill="WHITE">
+      <Label layoutX="1130.0" layoutY="561.0" styleClass="b" text="Time:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="idLabel" layoutX="301.0" layoutY="174.0" prefHeight="61.0" prefWidth="144.0" text="123">
+      <Label fx:id="idLabel" layoutX="302.0" layoutY="174.0" prefHeight="61.0" prefWidth="144.0" text="123">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="1354.0" layoutY="168.0" prefHeight="67.0" prefWidth="289.0" text="dasd">
+      <Label fx:id="nameLabel" layoutX="1351.0" layoutY="168.0" prefHeight="67.0" prefWidth="289.0" text="dasd">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="senderLabel" layoutX="485.0" layoutY="438.0" prefHeight="67.0" prefWidth="289.0" text="ddcdc">
+      <Label fx:id="senderLabel" layoutX="499.0" layoutY="435.0" prefHeight="67.0" prefWidth="423.0" text="ddcdc">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="subjectLabel" layoutX="415.0" layoutY="309.0" prefHeight="67.0" prefWidth="1273.0" text="sdvv">
+      <Label fx:id="subjectLabel" layoutX="421.0" layoutY="308.0" prefHeight="67.0" prefWidth="1273.0" text="sdvv">
          <font>
             <Font size="42.0" />
          </font>
@@ -74,25 +74,25 @@
       </Label>
       <Button layoutX="648.0" layoutY="879.0" mnemonicParsing="false" onAction="#delete" prefHeight="81.0" prefWidth="166.0" text="Delete">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
-      <Button layoutX="864.0" layoutY="966.0" mnemonicParsing="false" onAction="#back" prefHeight="81.0" prefWidth="166.0" text="Back">
+      <Button layoutX="877.0" layoutY="967.0" mnemonicParsing="false" onAction="#back" prefHeight="81.0" prefWidth="166.0" text="Back">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
       <Button layoutX="1106.0" layoutY="879.0" mnemonicParsing="false" onAction="#loadEditPage" prefHeight="81.0" prefWidth="166.0" text="Edit">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
-      <Label fx:id="recieverLabel" layoutX="1135.0" layoutY="445.0" text="Name of Receiver:" textFill="WHITE">
+      <Label fx:id="recieverLabel" layoutX="1135.0" layoutY="445.0" styleClass="b" text="Name of Receiver:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <Label fx:id="receiverLabel" layoutX="1490.0" layoutY="438.0" prefHeight="67.0" prefWidth="289.0" text="sdsdd">
+      <Label fx:id="receiverLabel" layoutX="1506.0" layoutY="436.0" prefHeight="67.0" prefWidth="289.0" text="sdsdd">
          <font>
             <Font size="42.0" />
          </font>

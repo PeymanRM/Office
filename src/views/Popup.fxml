@@ -14,7 +14,7 @@
       </Label>
       <Button layoutX="256.0" layoutY="152.0" mnemonicParsing="false" onAction="#ok" prefHeight="51.0" prefWidth="218.0" text="Ok">
          <font>
-            <Font size="25.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
       </Button>
    </children>

@@ -7,118 +7,118 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeControllers.EmployeeCreateController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeControllers.EmployeeCreateController">
    <children>
-      <Label alignment="CENTER" layoutX="666.0" layoutY="14.0" prefHeight="104.0" prefWidth="661.0" text="Add Employee" textFill="#fff9f9">
+      <Label alignment="CENTER" layoutX="712.0" layoutY="14.0" prefHeight="104.0" prefWidth="496.0" styleClass="b" text="Add Employee" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="329.0" layoutY="228.0" text="Full Name" textFill="WHITE">
+      <Label layoutX="342.0" layoutY="183.0" styleClass="b" text="Full Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="nameTextField" layoutX="310.0" layoutY="293.0" prefHeight="62.0" prefWidth="484.0">
+      <TextField fx:id="nameTextField" layoutX="323.0" layoutY="248.0" prefHeight="62.0" prefWidth="484.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="877.0" layoutY="228.0" text="Father Name" textFill="WHITE">
+      <Label layoutX="863.0" layoutY="183.0" styleClass="b" text="Father Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="fatherNameTextField" layoutX="827.0" layoutY="293.0" prefHeight="62.0" prefWidth="515.0">
+      <TextField fx:id="fatherNameTextField" layoutX="840.0" layoutY="248.0" prefHeight="62.0" prefWidth="515.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="1431.0" layoutY="228.0" text="Age" textFill="WHITE">
+      <Label layoutX="1447.0" layoutY="183.0" styleClass="b" text="Age" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="ageTextField" layoutX="1420.0" layoutY="293.0" prefHeight="62.0" prefWidth="149.0">
+      <TextField fx:id="ageTextField" layoutX="1433.0" layoutY="248.0" prefHeight="62.0" prefWidth="149.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="329.0" layoutY="371.0" text="Address" textFill="WHITE">
+      <Label layoutX="342.0" layoutY="326.0" styleClass="b" text="Address" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="addressTextField" layoutX="310.0" layoutY="437.0" prefHeight="62.0" prefWidth="1275.0">
+      <TextField fx:id="addressTextField" layoutX="323.0" layoutY="392.0" prefHeight="62.0" prefWidth="1275.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="329.0" layoutY="534.0" text="Degree" textFill="WHITE">
+      <Label layoutX="342.0" layoutY="489.0" styleClass="b" text="Degree" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="degreeTextField" layoutX="310.0" layoutY="596.0" prefHeight="62.0" prefWidth="469.0">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </TextField>
-      <Label layoutX="877.0" layoutY="534.0" text="Landline" textFill="WHITE">
-         <font>
-            <Font size="42.0" />
-         </font>
-      </Label>
-      <TextField fx:id="landlineTextField" layoutX="862.0" layoutY="596.0" prefHeight="62.0" prefWidth="322.0">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </TextField>
-      <Label layoutX="1256.0" layoutY="534.0" text="Phone" textFill="WHITE">
-         <font>
-            <Font size="42.0" />
-         </font>
-      </Label>
-      <TextField fx:id="phoneNumberTextField" layoutX="1242.0" layoutY="596.0" prefHeight="62.0" prefWidth="337.0">
+      <TextField fx:id="degreeTextField" layoutX="323.0" layoutY="551.0" prefHeight="62.0" prefWidth="469.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="329.0" layoutY="818.0" text="Position" textFill="WHITE">
+      <Label layoutX="890.0" layoutY="489.0" styleClass="b" text="Landline" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="positionTextField" layoutX="310.0" layoutY="880.0" prefHeight="62.0" prefWidth="449.0">
+      <TextField fx:id="landlineTextField" layoutX="875.0" layoutY="551.0" prefHeight="62.0" prefWidth="322.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="877.0" layoutY="818.0" text="Salary" textFill="WHITE">
+      <Label layoutX="1269.0" layoutY="489.0" styleClass="b" text="Phone" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="salaryTextField" layoutX="862.0" layoutY="880.0" prefHeight="62.0" prefWidth="369.0">
+      <TextField fx:id="phoneNumberTextField" layoutX="1255.0" layoutY="551.0" prefHeight="62.0" prefWidth="337.0" style="-fx-font-size: 29;">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </TextField>
+      <Label layoutX="342.0" layoutY="773.0" styleClass="b" text="Position" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="positionTextField" layoutX="309.0" layoutY="835.0" prefHeight="62.0" prefWidth="449.0" style="-fx-font-size: 29;">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </TextField>
+      <Label layoutX="890.0" layoutY="773.0" styleClass="b" text="Salary" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="salaryTextField" layoutX="861.0" layoutY="835.0" prefHeight="62.0" prefWidth="369.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
       <Button layoutX="1456.0" layoutY="942.0" mnemonicParsing="false" onAction="#add" prefHeight="81.0" prefWidth="166.0" text="Add">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
       <Button layoutX="1282.0" layoutY="942.0" mnemonicParsing="false" onAction="#cancel" prefHeight="81.0" prefWidth="166.0" text="Cancel">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
-      <Label layoutX="329.0" layoutY="683.0" text="Department:" textFill="WHITE">
+      <Label layoutX="342.0" layoutY="638.0" styleClass="b" text="Department:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="deptChoiceBox" layoutX="333.0" layoutY="745.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #45a29e; -fx-background-radius: 20px;" />
+      <ChoiceBox fx:id="deptChoiceBox" layoutX="346.0" layoutY="700.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #45a29e; -fx-background-radius: 20px;" />
    </children>
 </AnchorPane>

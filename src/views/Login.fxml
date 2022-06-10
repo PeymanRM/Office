@@ -7,32 +7,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f2833;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="root" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <Label layoutX="854.0" layoutY="14.0" prefHeight="17.0" prefWidth="212.0" text="Office" textFill="#f8f8f8">
+      <Label layoutX="856.0" layoutY="14.0" prefHeight="88.0" prefWidth="207.0" styleClass="b" text="Office" textFill="#f8f8f8">
          <font>
             <Font size="73.0" />
          </font>
       </Label>
-      <Label layoutX="577.0" layoutY="310.0" text="Username :" textFill="#2eced3">
+      <Label layoutX="577.0" layoutY="310.0" styleClass="b" text="Username :" textFill="#2eced3">
          <font>
             <Font size="45.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameTextField" layoutX="857.0" layoutY="310.0" prefHeight="59.0" prefWidth="485.0">
+      <TextField fx:id="usernameTextField" layoutX="857.0" layoutY="310.0" prefHeight="59.0" prefWidth="485.0" style="-fx-font-size: 25;">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <Label layoutX="577.0" layoutY="521.0" prefHeight="66.0" prefWidth="253.0" text="Password :" textFill="#2eced3">
+      <Label layoutX="577.0" layoutY="521.0" prefHeight="66.0" prefWidth="253.0" styleClass="b" text="Password :" textFill="#2eced3">
          <font>
             <Font size="45.0" />
          </font>
       </Label>
-      <PasswordField fx:id="passwordTextField" layoutX="857.0" layoutY="528.0" prefHeight="59.0" prefWidth="485.0" />
+      <PasswordField fx:id="passwordTextField" layoutX="857.0" layoutY="528.0" prefHeight="59.0" prefWidth="485.0" style="-fx-font-size: 25;">
+         <font>
+            <Font size="25.0" />
+         </font></PasswordField>
       <Button layoutX="877.0" layoutY="717.0" mnemonicParsing="false" onAction="#login" prefHeight="81.0" prefWidth="166.0" text="Login">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
    </children>

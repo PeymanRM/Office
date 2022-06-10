@@ -11,4 +11,4 @@ Final project of SRBIAU's advanced programming course
 - Database (SQL - MySQL)
 - MVC
 - GUI (JavaFX)
-- Input validation using Regex
+- Input Validation Using Regex

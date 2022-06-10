@@ -8,39 +8,39 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DepartmentControllers.DepartmentCreateController">
    <children>
-      <Label alignment="CENTER" layoutX="682.0" layoutY="26.0" prefHeight="104.0" prefWidth="554.0" text="Add Department" textFill="#fff9f9">
+      <Label alignment="CENTER" layoutX="683.0" layoutY="26.0" prefHeight="104.0" prefWidth="554.0" styleClass="b" text="Add Department" textFill="#fff9f9">
          <font>
             <Font name="System Bold" size="71.0" />
          </font>
       </Label>
-      <Label layoutX="788.0" layoutY="273.0" text="Department Name" textFill="WHITE">
+      <Label layoutX="780.0" layoutY="273.0" styleClass="b" text="Department Name" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="nameTextField" layoutX="718.0" layoutY="349.0" prefHeight="62.0" prefWidth="484.0">
+      <TextField fx:id="nameTextField" layoutX="718.0" layoutY="349.0" prefHeight="62.0" prefWidth="484.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
-      <Label layoutX="785.0" layoutY="524.0" text="Department Duties" textFill="WHITE">
+      <Label layoutX="773.0" layoutY="524.0" styleClass="b" text="Department Duties" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="dutiesTextField" layoutX="479.0" layoutY="605.0" prefHeight="69.0" prefWidth="960.0">
+      <TextField fx:id="dutiesTextField" layoutX="479.0" layoutY="605.0" prefHeight="69.0" prefWidth="960.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
       </TextField>
       <Button layoutX="1461.0" layoutY="840.0" mnemonicParsing="false" onAction="#add" prefHeight="81.0" prefWidth="166.0" text="Add">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
       <Button layoutX="1287.0" layoutY="840.0" mnemonicParsing="false" onAction="#cancel" prefHeight="81.0" prefWidth="166.0" text="Cancel">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
    </children>
