@@ -43,6 +43,7 @@ public class ErrorHandler {
             dialog.setScene(scene);
             dialog.setResizable(false);
             dialog.setTitle("ERROR");
+            dialog.getIcons().add(stage.getIcons().get(0));
             dialog.show();
         } catch (IOException e){
             System.out.println("IOException errorHandler: " + e.getMessage());
@@ -62,6 +63,7 @@ public class ErrorHandler {
             dialog.setScene(scene);
             dialog.setResizable(false);
             dialog.setTitle("Office");
+            dialog.getIcons().add(stage.getIcons().get(0));
             dialog.show();
         } catch (IOException e){
             System.out.println("IOException errorHandler: " + e.getMessage());
