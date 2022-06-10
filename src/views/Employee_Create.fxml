@@ -89,7 +89,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField fx:id="positionTextField" layoutX="309.0" layoutY="835.0" prefHeight="62.0" prefWidth="449.0" style="-fx-font-size: 29;">
+      <TextField fx:id="positionTextField" layoutX="323.0" layoutY="835.0" prefHeight="62.0" prefWidth="449.0" style="-fx-font-size: 29;">
          <font>
             <Font size="29.0" />
          </font>
