@@ -41,7 +41,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Button>
-      <Label fx:id="noResultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="792.0" layoutY="496.0" prefHeight="109.0" prefWidth="356.0" style="-fx-font-weight: bold; -fx-text-fill: #66fcf1;" text="No Result!" visible="false">
+      <Label fx:id="noResultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="798.0" layoutY="499.0" prefHeight="109.0" prefWidth="324.0" styleClass="b" text="No Result!" visible="false">
          <font>
             <Font size="64.0" />
          </font>

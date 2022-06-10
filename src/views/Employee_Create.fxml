@@ -119,6 +119,6 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="deptChoiceBox" layoutX="346.0" layoutY="700.0" prefHeight="57.0" prefWidth="225.0" style="-fx-background-color: #45a29e; -fx-background-radius: 20px;" />
+      <ChoiceBox fx:id="deptChoiceBox" layoutX="346.0" layoutY="700.0" prefHeight="57.0" prefWidth="225.0" style="-fx-font-size: 18;" />
    </children>
 </AnchorPane>
