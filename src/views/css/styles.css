@@ -41,16 +41,22 @@
     -fx-font-family: sans-serif;
     -fx-alignment: center-left;
 }
+.grid-pane-text-highlight{
+    -fx-fill: #00a693;
+    -fx-font-weight: bold;
+}
+.grid-pane-text{
+    -fx-fill: #008f95;
+}
+
 .grid-pane-label{
     -fx-background-color: #19212b;
     -fx-background-radius: 24px;
-    -fx-font-size: 30px;
+    -fx-font-size: 25px;
     -fx-padding: 0 0 5 0;
     -fx-text-alignment: center;
     -fx-alignment: center;
     -fx-cursor: hand;
-    -fx-text-fill: #008f95;
-    -fx-font-weight: bold;
 }
 
 .button {

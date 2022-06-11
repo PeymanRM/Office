@@ -5,13 +5,19 @@ import controllers.ErrorHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import models.entities.DepartmentEnti;
 import models.entities.EmployeeEnti;
@@ -97,12 +103,28 @@ public class DepartmentInfoController {
 
         int counter = 0;
         for (EmployeeEnti employee : employees) {
-            Label statusLabel = new Label();
-            statusLabel.setText("ID: " + employee.getId() + "\nName: " + employee.getName() + "\nPosition: " + employee.getPosition());
-            statusLabel.setPrefSize(235, 205);
-            statusLabel.getStyleClass().add("grid-pane-label");
+            TextFlow statusLabel = new TextFlow();
+            Text idText = new Text("ID: ");
+            Text idValueText = new Text(String.valueOf(employee.getId()));
+            Text nameText = new Text("\nName: " );
+            Text nameValueText = new Text(employee.getName());
+            Text positionText = new Text("\nPosition: ");
+            Text positionValueText = new Text(employee.getPosition());
 
-            statusLabel.setOnMouseClicked(event -> {
+            idText.getStyleClass().add("grid-pane-text-highlight");
+            nameText.getStyleClass().add("grid-pane-text-highlight");
+            positionText.getStyleClass().add("grid-pane-text-highlight");
+            idValueText.getStyleClass().add("grid-pane-text");
+            nameValueText.getStyleClass().add("grid-pane-text");
+            positionValueText.getStyleClass().add("grid-pane-text");
+
+            statusLabel.getChildren().addAll(idText, idValueText, nameText, nameValueText, positionText, positionValueText);
+            statusLabel.getStyleClass().add("grid-pane-label");
+            statusLabel.setPrefWidth(332);
+            VBox box = new VBox(statusLabel);
+            box.getStyleClass().add("grid-pane-label");
+
+            box.setOnMouseClicked(event -> {
                 try {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_Information.fxml"));
                     root = loader.load();
@@ -117,7 +139,7 @@ public class DepartmentInfoController {
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });
-            membersGridPane.add(statusLabel, counter%5 , (counter-counter%5)/5);
+            membersGridPane.add(box, counter%5 , (counter-counter%5)/5);
             counter++;
         }
     }

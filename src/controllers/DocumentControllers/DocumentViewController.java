@@ -11,7 +11,10 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import models.entities.DocumentEnti;
 import models.services.DocumentServ;
@@ -79,12 +82,28 @@ public class DocumentViewController {
 
         int counter = 0;
         for (DocumentEnti document : documents) {
-            Label statusLabel = new Label();
-            statusLabel.setText("ID: " + document.getId() + "\nName: " + document.getName() + "\nSubject: " + document.getSubject());
-            statusLabel.setPrefSize(368, 211);
-            statusLabel.getStyleClass().add("grid-pane-label");
+            TextFlow statusLabel = new TextFlow();
+            Text idText = new Text("ID: ");
+            Text idValueText = new Text(String.valueOf(document.getId()));
+            Text nameText = new Text("\nName: " );
+            Text nameValueText = new Text(document.getName());
+            Text subjectText = new Text("\nSubject: ");
+            Text subjectValueText = new Text(document.getSubject());
 
-            statusLabel.setOnMouseClicked(event -> {
+            idText.getStyleClass().add("grid-pane-text-highlight");
+            nameText.getStyleClass().add("grid-pane-text-highlight");
+            subjectText.getStyleClass().add("grid-pane-text-highlight");
+            idValueText.getStyleClass().add("grid-pane-text");
+            nameValueText.getStyleClass().add("grid-pane-text");
+            subjectValueText.getStyleClass().add("grid-pane-text");
+
+            statusLabel.getChildren().addAll(idText, idValueText, nameText, nameValueText, subjectText, subjectValueText);
+            statusLabel.getStyleClass().add("grid-pane-label");
+            statusLabel.setPrefWidth(368);
+            VBox box = new VBox(statusLabel);
+            box.getStyleClass().add("grid-pane-label");
+
+            box.setOnMouseClicked(event -> {
                 try {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Document_Information.fxml"));
                     root = loader.load();
@@ -99,7 +118,7 @@ public class DocumentViewController {
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });
-            documentsGridPane.add(statusLabel, counter%5 , (counter-counter%5)/5);
+            documentsGridPane.add(box, counter%5 , (counter-counter%5)/5);
             counter++;
         }
     }

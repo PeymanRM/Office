@@ -11,7 +11,10 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import models.entities.DepartmentEnti;
 import models.services.DepartmentServ;
@@ -79,12 +82,24 @@ public class DepartmentViewController {
 
         int counter = 0;
         for (DepartmentEnti department : departments) {
-            Label statusLabel = new Label();
-            statusLabel.setText("ID: " + department.getId() + "\nName: " + department.getName());
-            statusLabel.setPrefSize(368, 211);
-            statusLabel.getStyleClass().add("grid-pane-label");
+            TextFlow statusLabel = new TextFlow();
+            Text idText = new Text("ID: ");
+            Text idValueText = new Text(String.valueOf(department.getId()));
+            Text nameText = new Text("\nName: " );
+            Text nameValueText = new Text(department.getName());
 
-            statusLabel.setOnMouseClicked(event -> {
+            idText.getStyleClass().add("grid-pane-text-highlight");
+            nameText.getStyleClass().add("grid-pane-text-highlight");
+            idValueText.getStyleClass().add("grid-pane-text");
+            nameValueText.getStyleClass().add("grid-pane-text");
+
+            statusLabel.getChildren().addAll(idText, idValueText, nameText, nameValueText);
+            statusLabel.getStyleClass().add("grid-pane-label");
+            statusLabel.setPrefWidth(368);
+            VBox box = new VBox(statusLabel);
+            box.getStyleClass().add("grid-pane-label");
+
+            box.setOnMouseClicked(event -> {
                 try {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Department_Information.fxml"));
                     root = loader.load();
@@ -99,7 +114,7 @@ public class DepartmentViewController {
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });
-            departmentsGridPane.add(statusLabel, counter%5 , (counter-counter%5)/5);
+            departmentsGridPane.add(box, counter%5 , (counter-counter%5)/5);
             counter++;
         }
     }

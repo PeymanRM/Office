@@ -11,7 +11,10 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import models.entities.EmployeeEnti;
 import models.services.EmployeeServ;
@@ -78,12 +81,28 @@ public class EmployeeViewController {
 
         int counter = 0;
         for (EmployeeEnti employee : employees) {
-            Label statusLabel = new Label();
-            statusLabel.setText("ID: " + employee.getId() + "\nName: " + employee.getName() + "\nPosition: " + employee.getPosition());
-            statusLabel.setPrefSize(368, 211);
-            statusLabel.getStyleClass().add("grid-pane-label");
+            TextFlow statusLabel = new TextFlow();
+            Text idText = new Text("ID: ");
+            Text idValueText = new Text(String.valueOf(employee.getId()));
+            Text nameText = new Text("\nName: " );
+            Text nameValueText = new Text(employee.getName());
+            Text positionText = new Text("\nPosition: ");
+            Text positionValueText = new Text(employee.getPosition());
 
-            statusLabel.setOnMouseClicked(event -> {
+            idText.getStyleClass().add("grid-pane-text-highlight");
+            nameText.getStyleClass().add("grid-pane-text-highlight");
+            positionText.getStyleClass().add("grid-pane-text-highlight");
+            idValueText.getStyleClass().add("grid-pane-text");
+            nameValueText.getStyleClass().add("grid-pane-text");
+            positionValueText.getStyleClass().add("grid-pane-text");
+
+            statusLabel.getChildren().addAll(idText, idValueText, nameText, nameValueText, positionText, positionValueText);
+            statusLabel.getStyleClass().add("grid-pane-label");
+            statusLabel.setPrefWidth(368);
+            VBox box = new VBox(statusLabel);
+            box.getStyleClass().add("grid-pane-label");
+
+            box.setOnMouseClicked(event -> {
                 try {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("../../views/Employee_Information.fxml"));
                     root = loader.load();
@@ -98,7 +117,7 @@ public class EmployeeViewController {
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });
-            employeesGridPane.add(statusLabel, counter%5 , (counter-counter%5)/5);
+            employeesGridPane.add(box, counter%5 , (counter-counter%5)/5);
             counter++;
         }
     }
