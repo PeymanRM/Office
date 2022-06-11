@@ -97,7 +97,7 @@ public class EmployeeCreateController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             departments = DepartmentServ.getInstance().getAllDepartments();
-            deptChoiceBox.getItems().add("-----");
+            deptChoiceBox.getItems().add("----------");
             for (DepartmentEnti department : departments) {
                 deptChoiceBox.getItems().add(department.getName());
             }

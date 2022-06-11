@@ -47,7 +47,7 @@ public class EmployeeInfoController {
             degreeLabel.setText(employee.getDegree());
             landlineLabel.setText(employee.getLandLine());
             phoneNumberLabel.setText(employee.getPhone());
-            departmentNameLabel.setText(employee.getDeptId() == -1 ? "-----" : DepartmentServ.getInstance().getDepartmentName(employee.getDeptId()));
+            departmentNameLabel.setText(employee.getDeptId() == -1 ? "----------" : DepartmentServ.getInstance().getDepartmentName(employee.getDeptId()));
             positionLabel.setText(employee.getPosition());
             salaryLabel.setText(String.valueOf(employee.getSalary()));
             modifiedByLabel.setText(employee.getModifiedBy());

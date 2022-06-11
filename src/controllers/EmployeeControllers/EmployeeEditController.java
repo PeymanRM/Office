@@ -48,7 +48,7 @@ public class EmployeeEditController {
 
             //populate choice box
             departments = DepartmentServ.getInstance().getAllDepartments();
-            deptChoiceBox.getItems().add("-----");
+            deptChoiceBox.getItems().add("----------");
             for (DepartmentEnti department : departments) {
                 deptChoiceBox.getItems().add(department.getName());
                 if(department.getId() != -1 && department.getId() == employee.getDeptId()){
