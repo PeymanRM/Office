@@ -17,7 +17,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="454.0" layoutY="181.0" styleClass="b" text="Full Name:" textFill="WHITE">
+      <Label layoutX="363.0" layoutY="181.0" styleClass="b" text="Full Name:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
@@ -27,7 +27,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Label layoutX="1639.0" layoutY="181.0" styleClass="b" text="Age:" textFill="WHITE">
+      <Label layoutX="1643.0" layoutY="181.0" styleClass="b" text="Age:" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
@@ -69,57 +69,57 @@
       </Label>
       <Label fx:id="idLabel" alignment="BASELINE_LEFT" depthTest="DISABLE" layoutX="178.0" layoutY="175.0" prefHeight="61.0" prefWidth="144.0" text="132">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="673.0" layoutY="172.0" prefHeight="67.0" prefWidth="289.0" text="Ali">
+      <Label fx:id="nameLabel" layoutX="582.0" layoutY="172.0" prefHeight="67.0" prefWidth="450.0" text="Peyman Roohi-Moghadam">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="fatherNameLabel" layoutX="1323.0" layoutY="170.0" prefHeight="67.0" prefWidth="289.0" text="Ali">
+      <Label fx:id="fatherNameLabel" layoutX="1323.0" layoutY="170.0" prefHeight="67.0" prefWidth="312.0">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="ageLabel" layoutX="1732.0" layoutY="175.0" prefHeight="61.0" prefWidth="144.0" text="12">
+      <Label fx:id="ageLabel" layoutX="1736.0" layoutY="175.0" prefHeight="62.0" prefWidth="94.0" text="12">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Label fx:id="addressLabel" layoutX="311.0" layoutY="319.0" prefHeight="67.0" prefWidth="1565.0" text="kwmvsckmcdskndcnldnlsdvljnsdvnljdv">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="degreeLabel" layoutX="291.0" layoutY="445.0" prefHeight="67.0" prefWidth="289.0" text="efpojwefpjw">
+      <Label fx:id="degreeLabel" layoutX="291.0" layoutY="446.0" prefHeight="67.0" prefWidth="289.0" text="efpojwefpjw">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Label fx:id="landlineLabel" layoutX="914.0" layoutY="449.0" prefHeight="67.0" prefWidth="289.0" text="2813289">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Label fx:id="phoneNumberLabel" layoutX="1479.0" layoutY="449.0" prefHeight="67.0" prefWidth="289.0" text="09292109">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Label fx:id="departmentNameLabel" layoutX="376.0" layoutY="568.0" prefHeight="62.0" prefWidth="359.0" text="----------">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Label fx:id="positionLabel" layoutX="938.0" layoutY="565.0" prefHeight="67.0" prefWidth="289.0" text="efweke">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Label fx:id="salaryLabel" layoutX="1477.0" layoutY="570.0" prefHeight="67.0" prefWidth="289.0" text="2938019238">
          <font>
-            <Font size="42.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Button layoutX="661.0" layoutY="867.0" mnemonicParsing="false" onAction="#delete" prefHeight="81.0" prefWidth="166.0" text="Delete">

@@ -74,10 +74,10 @@ public class DepartmentInfoController {
 
     private void initiateMembersSection(int pageNumber, boolean changedPage){
         this.pageNumber = pageNumber;
-        List<EmployeeEnti> pageEmployees = employees.subList((pageNumber-1)*14 , Math.min(pageNumber * 14, employees.size()));
+        List<EmployeeEnti> pageEmployees = employees.subList((pageNumber-1)*10 , Math.min(pageNumber * 10, employees.size()));
         if(!changedPage) {
             int employeesCount = employees.size();
-            pageCount = employeesCount % 14 == 0 ? employeesCount / 14 : employeesCount / 14 + 1;
+            pageCount = employeesCount % 10 == 0 ? employeesCount / 10 : employeesCount / 10 + 1;
             String[] pages = new String[pageCount];
             for (int i = 0; i < pageCount; i++) {
                 pages[i] = "Page " + (i + 1);
@@ -117,7 +117,7 @@ public class DepartmentInfoController {
                     System.out.println("error loading info: " + e.getMessage());
                 }
             });
-            membersGridPane.add(statusLabel, counter%7 , (counter-counter%7)/7);
+            membersGridPane.add(statusLabel, counter%5 , (counter-counter%5)/5);
             counter++;
         }
     }
