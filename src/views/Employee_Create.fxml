@@ -114,11 +114,11 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Button>
-      <Label layoutX="342.0" layoutY="638.0" styleClass="b" text="Department:" textFill="WHITE">
+      <Label layoutX="342.0" layoutY="638.0" styleClass="b" text="Department" textFill="WHITE">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="deptChoiceBox" layoutX="346.0" layoutY="700.0" prefHeight="57.0" prefWidth="225.0" style="-fx-font-size: 18;" />
+      <ChoiceBox fx:id="deptChoiceBox" layoutX="323.0" layoutY="699.0" prefHeight="57.0" prefWidth="322.0" style="-fx-font-size: 20;" />
    </children>
 </AnchorPane>

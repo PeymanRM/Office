@@ -15,17 +15,28 @@
     /*outline: none;*/
     -fx-text-alignment: center;
     -fx-alignment: center;
-    -fx-background-color: #1f2833;
+    -fx-background-color: Transparent;
     -fx-text-fill: #008f95;
     -fx-font-family: sans-serif;
+    -fx-prompt-text-fill: #008f95;
 }
-.choice-box{
-    -fx-background-color: #008f95;
-    -fx-background-radius: 20px;
-    -colo: #07f9ff;
+.choice-box {
+    -fx-background-color: #00a693;
+    -fx-background-radius: 24px;
+    -fx-cursor: hand;
+}
+.choice-box .label {
+    -fx-background-color: Transparent;
+    -fx-text-fill: #1f2833;
+    -fx-font-family: sans-serif;
+    -fx-alignment: center-left;
+}
+.choice-box .context-menu {
+    -fx-cursor: hand;
+    -fx-background-color: #00a693;
 }
 .label {
-    -fx-background-color: #1f2833;
+    -fx-background-color: Transparent;
     -fx-text-fill: #008f95;
     -fx-font-family: sans-serif;
     -fx-alignment: center-left;
@@ -39,6 +50,7 @@
     -fx-alignment: center;
     -fx-cursor: hand;
     -fx-text-fill: #008f95;
+    -fx-font-weight: bold;
 }
 
 .button {
